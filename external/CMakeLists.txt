@@ -64,6 +64,20 @@ if(UNIX AND NOT APPLE)
 endif()
 
 # =============================================================================
+# stb_image - Image Loading (header-only)
+# =============================================================================
+# stb_image es una librería header-only para cargar imágenes (PNG, JPG, etc.)
+# La implementación se compila una sola vez en stb_image_impl.cpp
+
+add_library(stb_image STATIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/stb/stb_image_impl.cpp
+)
+
+target_include_directories(stb_image PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/stb
+)
+
+# =============================================================================
 # Información de dependencias
 # =============================================================================
 message(STATUS "External dependencies configured:")
@@ -71,3 +85,4 @@ message(STATUS "  - GLFW: Window management")
 message(STATUS "  - GLM: Math library")
 message(STATUS "  - spdlog: Logging")
 message(STATUS "  - GLAD: OpenGL loader")
+message(STATUS "  - stb_image: Image loading")

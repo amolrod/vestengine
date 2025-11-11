@@ -18,6 +18,7 @@
 #include <rendering/Shader.h>
 #include <rendering/Buffer.h>
 #include <rendering/Mesh.h>
+#include <rendering/Texture.h>
 
 // En macOS, OpenGL está disponible directamente
 #ifdef PLATFORM_MACOS
@@ -63,11 +64,11 @@ public:
         m_backgroundColor = glm::vec3(0.1f, 0.1f, 0.15f);
         
         // =====================================================================
-        // FASE 2: Test de Shader + Buffer + Mesh (Indexed Drawing)
+        // FASE 2: Test de Shader + Buffer + Mesh + Texture
         // =====================================================================
         
-        // Cargar shader (por ahora ruta absoluta - mejorar en fase de assets)
-        const char* shaderPath = "/Users/angel/Desktop/motor-grafico/shaders/FlatColor.glsl";
+        // Cargar shader de texturas
+        const char* shaderPath = "/Users/angel/Desktop/motor-grafico/shaders/Texture.glsl";
         LOG_INFO("Cargando shader desde: {}", shaderPath);
         m_shader = Engine::Shader::Create(shaderPath);
         
@@ -79,8 +80,11 @@ public:
         // Crear cubo usando MeshFactory
         m_cubeMesh = Engine::MeshFactory::CreateCube(1.0f);
         
-        LOG_INFO("✅ Shader y Mesh creados");
-        LOG_INFO("✅ Cubo con {} vértices y {} índices", 
+        // Crear textura procedural (checkerboard)
+        CreateCheckerboardTexture();
+        
+        LOG_INFO("✅ Shader, Mesh y Texture creados");
+        LOG_INFO("✅ Cubo con {} vértices, {} índices y textura checkerboard", 
                  m_cubeMesh->GetVertexCount(), m_cubeMesh->GetIndexCount());
     }
     
@@ -153,12 +157,11 @@ public:
     }
     
     void OnRender() override {
-        // Renderizar cubo con indexed drawing
-        if (m_shader && m_cubeMesh) {
+        // Renderizar cubo texturizado
+        if (m_shader && m_cubeMesh && m_texture) {
             m_shader->Bind();
             
             // Matrices simples (2D por ahora, sin cámara)
-            // Nota: cubo en 2D se ve raro, necesitamos rotación para verlo bien
             glm::mat4 viewProjection = glm::mat4(1.0f);  // Identidad
             
             // Transformación: escala más pequeña y rotación
@@ -173,13 +176,17 @@ public:
             // Set uniforms
             m_shader->SetUniformMat4("u_ViewProjection", viewProjection);
             m_shader->SetUniformMat4("u_Transform", transform);
-            m_shader->SetUniformFloat4("u_Color", glm::vec4(0.2f, 0.7f, 1.0f, 1.0f));  // Azul claro
+            m_shader->SetUniformInt("u_Texture", 0);  // Texture unit 0
+            
+            // Bind texture
+            m_texture->Bind(0);
             
             // Draw con índices (glDrawElements)
             m_cubeMesh->Bind();
             glDrawElements(GL_TRIANGLES, m_cubeMesh->GetIndexCount(), GL_UNSIGNED_INT, nullptr);
             m_cubeMesh->Unbind();
             
+            m_texture->Unbind();
             m_shader->Unbind();
         }
     }
@@ -188,6 +195,11 @@ public:
         LOG_INFO("Limpieza de SandboxApp");
         
         // Liberar recursos gráficos
+        if (m_texture) {
+            delete m_texture;
+            m_texture = nullptr;
+        }
+        
         if (m_cubeMesh) {
             delete m_cubeMesh;
             m_cubeMesh = nullptr;
@@ -199,12 +211,49 @@ public:
     }
 
 private:
+    /**
+     * @brief Crea una textura checkerboard procedural (8x8)
+     */
+    void CreateCheckerboardTexture() {
+        const uint32_t size = 8;  // 8x8 píxeles
+        const uint32_t totalPixels = size * size;
+        uint32_t* pixels = new uint32_t[totalPixels];
+        
+        // Generar patrón checkerboard
+        for (uint32_t y = 0; y < size; ++y) {
+            for (uint32_t x = 0; x < size; ++x) {
+                bool isWhite = ((x / 2) + (y / 2)) % 2 == 0;
+                uint32_t color = isWhite ? 0xFFFFFFFF : 0xFF404040;  // Blanco o gris oscuro (RGBA)
+                pixels[y * size + x] = color;
+            }
+        }
+        
+        // Crear textura desde datos
+        Engine::TextureSpecification spec;
+        spec.width = size;
+        spec.height = size;
+        spec.format = Engine::TextureFormat::RGBA8;
+        spec.wrapS = Engine::TextureWrap::Repeat;
+        spec.wrapT = Engine::TextureWrap::Repeat;
+        spec.minFilter = Engine::TextureFilter::Nearest;  // Pixelated look
+        spec.magFilter = Engine::TextureFilter::Nearest;
+        spec.generateMipmaps = false;
+        
+        m_texture = Engine::Texture2D::Create(size, size, pixels, spec);
+        
+        delete[] pixels;
+        
+        LOG_INFO("✅ Textura checkerboard creada ({}x{})", size, size);
+    }
+
+private:
     glm::vec3 m_backgroundColor;
     float m_colorPulse = 0.0f;
     
-    // FASE 2: Rendering con Mesh
+    // FASE 2: Rendering con Mesh + Texture
     std::shared_ptr<Engine::Shader> m_shader;
     Engine::Mesh* m_cubeMesh = nullptr;
+    Engine::Texture2D* m_texture = nullptr;
 };
 
 /**

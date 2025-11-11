@@ -43,6 +43,7 @@ target_link_libraries(MotorGrafico PUBLIC
     glad
     glm::glm
     spdlog::spdlog
+    stb_image
 )
 
 # Linkear OpenGL framework en macOS
