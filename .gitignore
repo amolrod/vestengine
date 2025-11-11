@@ -1,0 +1,56 @@
+# Build directories
+build/
+bin/
+lib/
+out/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# External libraries (si usas git submodules, descomenta estas líneas)
+# external/glfw/
+# external/glm/
+# external/spdlog/
+
+# Assets grandes (opcional, según tu workflow)
+# assets/models/*.fbx
+# assets/textures/*.png
+
+# Documentation generated
+docs/html/
+docs/latex/
+
+# Package managers
+vcpkg_installed/
+_deps/
