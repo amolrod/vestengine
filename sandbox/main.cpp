@@ -17,6 +17,7 @@
 #include <core/EntryPoint.h>
 #include <rendering/Shader.h>
 #include <rendering/Buffer.h>
+#include <rendering/Mesh.h>
 
 // En macOS, OpenGL está disponible directamente
 #ifdef PLATFORM_MACOS
@@ -62,7 +63,7 @@ public:
         m_backgroundColor = glm::vec3(0.1f, 0.1f, 0.15f);
         
         // =====================================================================
-        // FASE 2: Test de Shader + Buffer Abstractions
+        // FASE 2: Test de Shader + Buffer + Mesh (Indexed Drawing)
         // =====================================================================
         
         // Cargar shader (por ahora ruta absoluta - mejorar en fase de assets)
@@ -75,27 +76,12 @@ public:
             return;
         }
         
-        // Crear triángulo simple
-        // Vértices: posición (x, y, z)
-        float vertices[] = {
-            -0.5f, -0.5f, 0.0f,  // Inferior izquierda
-             0.5f, -0.5f, 0.0f,  // Inferior derecha
-             0.0f,  0.5f, 0.0f   // Superior centro
-        };
+        // Crear cubo usando MeshFactory
+        m_cubeMesh = Engine::MeshFactory::CreateCube(1.0f);
         
-        // Crear VAO y VBO usando las abstracciones C++
-        m_vertexArray = Engine::VertexArray::Create();
-        
-        // VertexBuffer con layout
-        auto* vertexBuffer = Engine::VertexBuffer::Create(vertices, sizeof(vertices));
-        vertexBuffer->SetLayout({
-            { Engine::ShaderDataType::Float3, "a_Position" }
-        });
-        
-        m_vertexArray->AddVertexBuffer(vertexBuffer);
-        
-        LOG_INFO("✅ Shader y geometría creados con Buffer abstractions");
-        LOG_INFO("✅ Triángulo listo para renderizar");
+        LOG_INFO("✅ Shader y Mesh creados");
+        LOG_INFO("✅ Cubo con {} vértices y {} índices", 
+                 m_cubeMesh->GetVertexCount(), m_cubeMesh->GetIndexCount());
     }
     
     void OnUpdate(float deltaTime) override {
@@ -167,23 +153,32 @@ public:
     }
     
     void OnRender() override {
-        // Renderizar triángulo (FASE 2 test con Buffer abstractions)
-        if (m_shader && m_vertexArray) {
+        // Renderizar cubo con indexed drawing
+        if (m_shader && m_cubeMesh) {
             m_shader->Bind();
             
             // Matrices simples (2D por ahora, sin cámara)
+            // Nota: cubo en 2D se ve raro, necesitamos rotación para verlo bien
             glm::mat4 viewProjection = glm::mat4(1.0f);  // Identidad
-            glm::mat4 transform = glm::mat4(1.0f);        // Sin transformación
+            
+            // Transformación: escala más pequeña y rotación
+            static float rotation = 0.0f;
+            rotation += Engine::Time::DeltaTime() * 45.0f;  // 45 grados/segundo
+            
+            glm::mat4 transform = glm::mat4(1.0f);
+            transform = glm::rotate(transform, glm::radians(rotation), glm::vec3(0, 1, 0));  // Rotar Y
+            transform = glm::rotate(transform, glm::radians(rotation * 0.5f), glm::vec3(1, 0, 0));  // Rotar X
+            transform = glm::scale(transform, glm::vec3(0.5f));  // Escala 0.5
             
             // Set uniforms
             m_shader->SetUniformMat4("u_ViewProjection", viewProjection);
             m_shader->SetUniformMat4("u_Transform", transform);
-            m_shader->SetUniformFloat4("u_Color", glm::vec4(1.0f, 0.5f, 0.2f, 1.0f));  // Naranja
+            m_shader->SetUniformFloat4("u_Color", glm::vec4(0.2f, 0.7f, 1.0f, 1.0f));  // Azul claro
             
-            // Draw usando VAO abstraction
-            m_vertexArray->Bind();
-            glDrawArrays(GL_TRIANGLES, 0, 3);
-            m_vertexArray->Unbind();
+            // Draw con índices (glDrawElements)
+            m_cubeMesh->Bind();
+            glDrawElements(GL_TRIANGLES, m_cubeMesh->GetIndexCount(), GL_UNSIGNED_INT, nullptr);
+            m_cubeMesh->Unbind();
             
             m_shader->Unbind();
         }
@@ -193,9 +188,9 @@ public:
         LOG_INFO("Limpieza de SandboxApp");
         
         // Liberar recursos gráficos
-        if (m_vertexArray) {
-            delete m_vertexArray;
-            m_vertexArray = nullptr;
+        if (m_cubeMesh) {
+            delete m_cubeMesh;
+            m_cubeMesh = nullptr;
         }
     }
     
@@ -207,9 +202,9 @@ private:
     glm::vec3 m_backgroundColor;
     float m_colorPulse = 0.0f;
     
-    // FASE 2: Rendering con Buffer abstractions
+    // FASE 2: Rendering con Mesh
     std::shared_ptr<Engine::Shader> m_shader;
-    Engine::VertexArray* m_vertexArray = nullptr;
+    Engine::Mesh* m_cubeMesh = nullptr;
 };
 
 /**
