@@ -4,13 +4,16 @@ Motor gráfico moderno desarrollado en C++20 con arquitectura modular y diseño 
 
 ## 🎯 Estado del Proyecto
 
-### ✅ FASE 1 COMPLETADA: Core Engine
+### ✅ FASE 1 COMPLETADA: Core Engine ✨
 - [x] Sistema de logging (spdlog)
 - [x] Gestión de ventanas (GLFW + OpenGL)
 - [x] Sistema de tiempo (DeltaTime, FPS)
 - [x] Input polling (teclado y ratón)
 - [x] Application framework (game loop)
 - [x] CMake multiplataforma
+- [x] **Sandbox funcional a 73 FPS**
+
+**🎮 Estado**: Motor corriendo perfectamente en macOS (Apple M1, OpenGL 4.1)
 
 ### 🚧 Próximas Fases
 - [ ] **FASE 2**: Rendering (Shaders, Meshes, Texturas, Cámara)
