@@ -16,6 +16,7 @@
 #include <input/Input.h>
 #include <core/EntryPoint.h>
 #include <rendering/Shader.h>
+#include <rendering/Buffer.h>
 
 // En macOS, OpenGL está disponible directamente
 #ifdef PLATFORM_MACOS
@@ -61,7 +62,7 @@ public:
         m_backgroundColor = glm::vec3(0.1f, 0.1f, 0.15f);
         
         // =====================================================================
-        // FASE 2: Test de Shader
+        // FASE 2: Test de Shader + Buffer Abstractions
         // =====================================================================
         
         // Cargar shader (por ahora ruta absoluta - mejorar en fase de assets)
@@ -82,22 +83,18 @@ public:
              0.0f,  0.5f, 0.0f   // Superior centro
         };
         
-        // Crear VAO (Vertex Array Object)
-        glGenVertexArrays(1, &m_VAO);
-        glBindVertexArray(m_VAO);
+        // Crear VAO y VBO usando las abstracciones C++
+        m_vertexArray = Engine::VertexArray::Create();
         
-        // Crear VBO (Vertex Buffer Object)
-        glGenBuffers(1, &m_VBO);
-        glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+        // VertexBuffer con layout
+        auto* vertexBuffer = Engine::VertexBuffer::Create(vertices, sizeof(vertices));
+        vertexBuffer->SetLayout({
+            { Engine::ShaderDataType::Float3, "a_Position" }
+        });
         
-        // Layout: atributo 0 = posición (3 floats)
-        glEnableVertexAttribArray(0);
-        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
+        m_vertexArray->AddVertexBuffer(vertexBuffer);
         
-        glBindVertexArray(0);  // Unbind
-        
-        LOG_INFO("✅ Shader y geometría creados");
+        LOG_INFO("✅ Shader y geometría creados con Buffer abstractions");
         LOG_INFO("✅ Triángulo listo para renderizar");
     }
     
@@ -170,8 +167,8 @@ public:
     }
     
     void OnRender() override {
-        // Renderizar triángulo (FASE 2 test)
-        if (m_shader && m_VAO != 0) {
+        // Renderizar triángulo (FASE 2 test con Buffer abstractions)
+        if (m_shader && m_vertexArray) {
             m_shader->Bind();
             
             // Matrices simples (2D por ahora, sin cámara)
@@ -183,10 +180,10 @@ public:
             m_shader->SetUniformMat4("u_Transform", transform);
             m_shader->SetUniformFloat4("u_Color", glm::vec4(1.0f, 0.5f, 0.2f, 1.0f));  // Naranja
             
-            // Draw
-            glBindVertexArray(m_VAO);
+            // Draw usando VAO abstraction
+            m_vertexArray->Bind();
             glDrawArrays(GL_TRIANGLES, 0, 3);
-            glBindVertexArray(0);
+            m_vertexArray->Unbind();
             
             m_shader->Unbind();
         }
@@ -194,6 +191,12 @@ public:
     
     void OnShutdown() override {
         LOG_INFO("Limpieza de SandboxApp");
+        
+        // Liberar recursos gráficos
+        if (m_vertexArray) {
+            delete m_vertexArray;
+            m_vertexArray = nullptr;
+        }
     }
     
     void OnWindowResize(uint32_t width, uint32_t height) override {
@@ -204,10 +207,9 @@ private:
     glm::vec3 m_backgroundColor;
     float m_colorPulse = 0.0f;
     
-    // FASE 2: Rendering
+    // FASE 2: Rendering con Buffer abstractions
     std::shared_ptr<Engine::Shader> m_shader;
-    uint32_t m_VAO = 0;  // Vertex Array Object
-    uint32_t m_VBO = 0;  // Vertex Buffer Object
+    Engine::VertexArray* m_vertexArray = nullptr;
 };
 
 /**
