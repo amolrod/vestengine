@@ -19,6 +19,7 @@
 #include <rendering/Buffer.h>
 #include <rendering/Mesh.h>
 #include <rendering/Texture.h>
+#include <rendering/Camera.h>
 
 // En macOS, OpenGL está disponible directamente
 #ifdef PLATFORM_MACOS
@@ -53,6 +54,9 @@ public:
         LOG_INFO("");
         LOG_INFO("Controles:");
         LOG_INFO("  ESC       - Cerrar aplicación");
+        LOG_INFO("  WASD      - Mover cámara (Forward/Left/Back/Right)");
+        LOG_INFO("  Q/E       - Mover cámara (Down/Up)");
+        LOG_INFO("  Mouse     - Rotar cámara (mantén clic izquierdo)");
         LOG_INFO("  1,2,3,4   - Cambiar color de fondo");
         LOG_INFO("  SPACE     - Color aleatorio");
         LOG_INFO("  F1        - Toggle VSync");
@@ -64,7 +68,7 @@ public:
         m_backgroundColor = glm::vec3(0.1f, 0.1f, 0.15f);
         
         // =====================================================================
-        // FASE 2: Test de Shader + Buffer + Mesh + Texture
+        // FASE 2: Test de Shader + Buffer + Mesh + Texture + Camera
         // =====================================================================
         
         // Cargar shader de texturas
@@ -83,19 +87,75 @@ public:
         // Crear textura procedural (checkerboard)
         CreateCheckerboardTexture();
         
-        LOG_INFO("✅ Shader, Mesh y Texture creados");
-        LOG_INFO("✅ Cubo con {} vértices, {} índices y textura checkerboard", 
-                 m_cubeMesh->GetVertexCount(), m_cubeMesh->GetIndexCount());
+        // Crear cámara 3D
+        Engine::PerspectiveCameraConfig cameraConfig;
+        cameraConfig.position = glm::vec3(0.0f, 0.0f, 5.0f);
+        cameraConfig.fov = 45.0f;
+        cameraConfig.aspectRatio = 1280.0f / 720.0f;
+        cameraConfig.movementSpeed = 3.0f;
+        cameraConfig.mouseSensitivity = 0.15f;
+        
+        m_camera = new Engine::PerspectiveCamera(cameraConfig);
+        
+        LOG_INFO("✅ Shader, Mesh, Texture y Camera creados");
+        LOG_INFO("✅ Sistema de rendering completo inicializado");
     }
     
     void OnUpdate(float deltaTime) override {
-        // Input: Cerrar con ESC
+        // =====================================================================
+        // Input: Cerrar aplicación
+        // =====================================================================
         if (Engine::Input::IsKeyPressed(Engine::Key::Escape)) {
             LOG_INFO("ESC presionado - Cerrando aplicación");
             Close();
         }
         
+        // =====================================================================
+        // Input: Controles de cámara (WASD + QE)
+        // =====================================================================
+        if (m_camera) {
+            if (Engine::Input::IsKeyPressed(Engine::Key::W)) {
+                m_camera->ProcessKeyboard(Engine::CameraMovement::Forward, deltaTime);
+            }
+            if (Engine::Input::IsKeyPressed(Engine::Key::S)) {
+                m_camera->ProcessKeyboard(Engine::CameraMovement::Backward, deltaTime);
+            }
+            if (Engine::Input::IsKeyPressed(Engine::Key::A)) {
+                m_camera->ProcessKeyboard(Engine::CameraMovement::Left, deltaTime);
+            }
+            if (Engine::Input::IsKeyPressed(Engine::Key::D)) {
+                m_camera->ProcessKeyboard(Engine::CameraMovement::Right, deltaTime);
+            }
+            if (Engine::Input::IsKeyPressed(Engine::Key::E)) {
+                m_camera->ProcessKeyboard(Engine::CameraMovement::Up, deltaTime);
+            }
+            if (Engine::Input::IsKeyPressed(Engine::Key::Q)) {
+                m_camera->ProcessKeyboard(Engine::CameraMovement::Down, deltaTime);
+            }
+            
+            // Mouse look (solo si el botón izquierdo está presionado)
+            if (Engine::Input::IsMouseButtonPressed(Engine::MouseButton::Left)) {
+                glm::vec2 currentMousePos = Engine::Input::GetMousePosition();
+                
+                if (m_firstMouse) {
+                    m_lastMousePos = currentMousePos;
+                    m_firstMouse = false;
+                }
+                
+                float xoffset = currentMousePos.x - m_lastMousePos.x;
+                float yoffset = m_lastMousePos.y - currentMousePos.y;  // Invertido (Y crece hacia abajo)
+                
+                m_lastMousePos = currentMousePos;
+                
+                m_camera->ProcessMouseMovement(xoffset, yoffset);
+            } else {
+                m_firstMouse = true;
+            }
+        }
+        
+        // =====================================================================
         // Input: Cambiar colores de fondo
+        // =====================================================================
         if (Engine::Input::IsKeyPressed(Engine::Key::D1)) {
             m_backgroundColor = glm::vec3(0.2f, 0.3f, 0.5f);  // Azul
             LOG_INFO("Color: Azul");
@@ -157,21 +217,21 @@ public:
     }
     
     void OnRender() override {
-        // Renderizar cubo texturizado
-        if (m_shader && m_cubeMesh && m_texture) {
+        // Renderizar cubo texturizado con cámara 3D
+        if (m_shader && m_cubeMesh && m_texture && m_camera) {
             m_shader->Bind();
             
-            // Matrices simples (2D por ahora, sin cámara)
-            glm::mat4 viewProjection = glm::mat4(1.0f);  // Identidad
+            // Usar cámara 3D para ViewProjection
+            glm::mat4 viewProjection = m_camera->GetViewProjectionMatrix();
             
-            // Transformación: escala más pequeña y rotación
+            // Transformación del cubo: rotación automática
             static float rotation = 0.0f;
             rotation += Engine::Time::DeltaTime() * 45.0f;  // 45 grados/segundo
             
             glm::mat4 transform = glm::mat4(1.0f);
+            transform = glm::translate(transform, glm::vec3(0.0f, 0.0f, 0.0f));
             transform = glm::rotate(transform, glm::radians(rotation), glm::vec3(0, 1, 0));  // Rotar Y
             transform = glm::rotate(transform, glm::radians(rotation * 0.5f), glm::vec3(1, 0, 0));  // Rotar X
-            transform = glm::scale(transform, glm::vec3(0.5f));  // Escala 0.5
             
             // Set uniforms
             m_shader->SetUniformMat4("u_ViewProjection", viewProjection);
@@ -195,6 +255,11 @@ public:
         LOG_INFO("Limpieza de SandboxApp");
         
         // Liberar recursos gráficos
+        if (m_camera) {
+            delete m_camera;
+            m_camera = nullptr;
+        }
+        
         if (m_texture) {
             delete m_texture;
             m_texture = nullptr;
@@ -250,10 +315,15 @@ private:
     glm::vec3 m_backgroundColor;
     float m_colorPulse = 0.0f;
     
-    // FASE 2: Rendering con Mesh + Texture
+    // FASE 2: Rendering completo con Camera
     std::shared_ptr<Engine::Shader> m_shader;
     Engine::Mesh* m_cubeMesh = nullptr;
     Engine::Texture2D* m_texture = nullptr;
+    Engine::PerspectiveCamera* m_camera = nullptr;
+    
+    // Mouse input
+    glm::vec2 m_lastMousePos = glm::vec2(0.0f);
+    bool m_firstMouse = true;
 };
 
 /**
