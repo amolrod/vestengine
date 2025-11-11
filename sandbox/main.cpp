@@ -15,6 +15,7 @@
 #include <core/Time.h>
 #include <input/Input.h>
 #include <core/EntryPoint.h>
+#include <rendering/Shader.h>
 
 // En macOS, OpenGL está disponible directamente
 #ifdef PLATFORM_MACOS
@@ -26,6 +27,7 @@
 #endif
 
 #include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 /**
  * @class SandboxApp
@@ -51,13 +53,52 @@ public:
         LOG_INFO("  1,2,3,4   - Cambiar color de fondo");
         LOG_INFO("  SPACE     - Color aleatorio");
         LOG_INFO("  F1        - Toggle VSync");
-        LOG_INFO("  Mouse     - Visualizar posición en consola");
         LOG_INFO("");
         
         // Configuración inicial de OpenGL
         glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
         
         m_backgroundColor = glm::vec3(0.1f, 0.1f, 0.15f);
+        
+        // =====================================================================
+        // FASE 2: Test de Shader
+        // =====================================================================
+        
+        // Cargar shader (por ahora ruta absoluta - mejorar en fase de assets)
+        const char* shaderPath = "/Users/angel/Desktop/motor-grafico/shaders/FlatColor.glsl";
+        LOG_INFO("Cargando shader desde: {}", shaderPath);
+        m_shader = Engine::Shader::Create(shaderPath);
+        
+        if (!m_shader) {
+            LOG_ERROR("No se pudo cargar el shader!");
+            return;
+        }
+        
+        // Crear triángulo simple
+        // Vértices: posición (x, y, z)
+        float vertices[] = {
+            -0.5f, -0.5f, 0.0f,  // Inferior izquierda
+             0.5f, -0.5f, 0.0f,  // Inferior derecha
+             0.0f,  0.5f, 0.0f   // Superior centro
+        };
+        
+        // Crear VAO (Vertex Array Object)
+        glGenVertexArrays(1, &m_VAO);
+        glBindVertexArray(m_VAO);
+        
+        // Crear VBO (Vertex Buffer Object)
+        glGenBuffers(1, &m_VBO);
+        glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+        
+        // Layout: atributo 0 = posición (3 floats)
+        glEnableVertexAttribArray(0);
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
+        
+        glBindVertexArray(0);  // Unbind
+        
+        LOG_INFO("✅ Shader y geometría creados");
+        LOG_INFO("✅ Triángulo listo para renderizar");
     }
     
     void OnUpdate(float deltaTime) override {
@@ -129,8 +170,26 @@ public:
     }
     
     void OnRender() override {
-        // Por ahora solo limpiamos la pantalla (ya se hace en Application)
-        // En la FASE 2 renderizaremos geometría aquí
+        // Renderizar triángulo (FASE 2 test)
+        if (m_shader && m_VAO != 0) {
+            m_shader->Bind();
+            
+            // Matrices simples (2D por ahora, sin cámara)
+            glm::mat4 viewProjection = glm::mat4(1.0f);  // Identidad
+            glm::mat4 transform = glm::mat4(1.0f);        // Sin transformación
+            
+            // Set uniforms
+            m_shader->SetUniformMat4("u_ViewProjection", viewProjection);
+            m_shader->SetUniformMat4("u_Transform", transform);
+            m_shader->SetUniformFloat4("u_Color", glm::vec4(1.0f, 0.5f, 0.2f, 1.0f));  // Naranja
+            
+            // Draw
+            glBindVertexArray(m_VAO);
+            glDrawArrays(GL_TRIANGLES, 0, 3);
+            glBindVertexArray(0);
+            
+            m_shader->Unbind();
+        }
     }
     
     void OnShutdown() override {
@@ -144,6 +203,11 @@ public:
 private:
     glm::vec3 m_backgroundColor;
     float m_colorPulse = 0.0f;
+    
+    // FASE 2: Rendering
+    std::shared_ptr<Engine::Shader> m_shader;
+    uint32_t m_VAO = 0;  // Vertex Array Object
+    uint32_t m_VBO = 0;  // Vertex Buffer Object
 };
 
 /**
