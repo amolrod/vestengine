@@ -254,7 +254,7 @@ public:
         
         // 3. Bind texture antes de submit
         m_texture->Bind(0);
-        m_shader->SetUniformInt("u_Texture", 0);
+        m_shader->SetInt("u_Texture", 0);
         
         // 4. Submit mesh para renderizado
         Engine::Renderer::Submit(m_shader, m_cubeMesh, transform);

@@ -27,10 +27,10 @@ void Renderer::Submit(const std::shared_ptr<Shader>& shader,
     
     // Set MVP matrix
     glm::mat4 mvp = s_SceneData->ViewProjectionMatrix * transform;
-    shader->SetUniformMat4("u_MVP", mvp);
+    shader->SetMat4("u_MVP", mvp);
     
     // Optional: Set model matrix (for lighting calculations in shaders)
-    shader->SetUniformMat4("u_Model", transform);
+    shader->SetMat4("u_Model", transform);
     
     // Bind mesh and draw
     mesh->Bind();
