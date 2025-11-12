@@ -6,6 +6,8 @@
 #include "input/Input.h"
 #include "core/Logger.h"
 
+// IMPORTANTE: GLFW_INCLUDE_NONE debe estar ANTES de incluir GLFW
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 
 // Forward declaration

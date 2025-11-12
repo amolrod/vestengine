@@ -46,22 +46,24 @@ FetchContent_MakeAvailable(spdlog)
 # =============================================================================
 # GLAD - OpenGL Loader
 # =============================================================================
-# NOTA: GLAD se debe generar desde https://glad.dav1d.de/
-# Para empezar rápido, lo incluiremos como código fuente directamente.
-# Configuración: OpenGL 4.6, Core Profile
+# Usando glad2 desde GitHub que se genera automáticamente
+message(STATUS "Fetching GLAD2...")
 
-add_library(glad STATIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/glad/src/glad.c
+FetchContent_Declare(
+    glad
+    GIT_REPOSITORY https://github.com/Dav1dde/glad.git
+    GIT_TAG v2.0.8
 )
 
-target_include_directories(glad PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/glad/include
-)
+FetchContent_MakeAvailable(glad)
 
-# Link con dl en Linux
-if(UNIX AND NOT APPLE)
-    target_link_libraries(glad PRIVATE dl)
-endif()
+# Generar GLAD para OpenGL 4.3 Core (mejor compatibilidad)
+add_subdirectory("${glad_SOURCE_DIR}/cmake" glad_cmake)
+
+glad_add_library(glad_gl_core_43 REPRODUCIBLE API gl:core=4.3)
+
+# Alias para mantener compatibilidad con el resto del código
+add_library(glad ALIAS glad_gl_core_43)
 
 # =============================================================================
 # stb_image - Image Loading (header-only)

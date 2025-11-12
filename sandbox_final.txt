@@ -1,0 +1,115 @@
+[DEBUG] main() - INICIO
+[DEBUG] main() - Llamando a CreateApplication()...
+[DEBUG] CreateApplication() - INICIO
+[13:12:02] MOTOR: Sistema de logging inicializado
+[13:12:02] MOTOR: Aplicación: Sandbox - Motor Gráfico 3D
+[13:12:02] MOTOR: Modo: RELEASE
+[13:12:02] MOTOR: Plataforma: Windows
+[13:12:02] MOTOR: ========================================
+[13:12:02] MOTOR: Application::Application - INICIO
+[13:12:02] MOTOR: ========================================
+[13:12:02] MOTOR: [Application] Logger inicializado OK
+[13:12:02] MOTOR: [Application] Inicializando Time...
+[13:12:02] MOTOR: Sistema de tiempo inicializado
+[13:12:02] MOTOR: [Application] Time inicializado OK
+[13:12:02] MOTOR: [Application] Creando ventana...
+[13:12:02] MOTOR: ========================================
+[13:12:02] MOTOR: Window::Init - INICIO
+[13:12:02] MOTOR: ========================================
+[13:12:02] MOTOR: Creando ventana: Sandbox - Motor Gráfico 3D (1280x720)
+[13:12:02] MOTOR: [Window] Inicializando GLFW...
+[13:12:02] MOTOR: GLFW inicializado correctamente
+[13:12:02] MOTOR: [Window] Configurando hints de OpenGL...
+[13:12:02] MOTOR: Solicitando OpenGL 4.3 Core
+[13:12:02] MOTOR: [Window] Creando ventana GLFW...
+[13:12:03] MOTOR: [Window] Ventana GLFW creada exitosamente
+[13:12:03] MOTOR: [Window] Haciendo contexto OpenGL actual...
+[13:12:03] MOTOR: [Window] Contexto OpenGL configurado
+[13:12:03] MOTOR: [Window] Inicializando GLAD...
+[13:12:03] MOTOR: GLAD inicializado correctamente - OpenGL 4.3
+[13:12:03] MOTOR: [Window] Obteniendo información de OpenGL...
+[13:12:03] MOTOR: OpenGL inicializado:
+[13:12:03] MOTOR:   Vendor:   Intel
+[13:12:03] MOTOR:   Renderer: Intel(R) HD Graphics 4600
+[13:12:03] MOTOR:   Version:  4.3.0 - Build 20.19.15.5126
+[13:12:03] MOTOR: [Window] Configurando VSync...
+[13:12:03] MOTOR: VSync: Activado
+[13:12:03] MOTOR: [Window] VSync configurado
+[13:12:03] MOTOR: ========================================
+[13:12:03] MOTOR: Window::Init - COMPLETADO
+[13:12:03] MOTOR: ========================================
+[13:12:03] MOTOR: Ventana creada exitosamente
+[13:12:03] MOTOR: [Application] Ventana creada OK
+[13:12:03] MOTOR: [Application] Configurando callback de ventana...
+[13:12:03] MOTOR: [Application] Callbacks configurados OK
+[13:12:03] MOTOR: ========================================
+[13:12:03] MOTOR: Application::Application - COMPLETADO
+[13:12:03] MOTOR: ========================================
+[13:12:03] MOTOR: Aplicación inicializada correctamente
+[13:12:03] APP: ========================================
+[13:12:03] APP: Constructor de SandboxApp - INICIO
+[13:12:03] APP: ========================================
+[DEBUG] CreateApplication() - SandboxApp creado
+[DEBUG] main() - CreateApplication() completado
+[13:12:03] MOTOR: ╔════════════════════════════════════════╗
+[13:12:03] MOTOR: ║   Motor Gráfico 3D - Versión 1.0.0    ║
+[13:12:03] MOTOR: ║         C++20 Modular Engine           ║
+[13:12:03] MOTOR: ╚════════════════════════════════════════╝
+[13:12:03] MOTOR: === Iniciando Game Loop ===
+[13:12:03] APP: ╔══════════════════════════════════════════════╗
+[13:12:03] APP: ║           SANDBOX INICIALIZADO               ║
+[13:12:03] APP: ╚══════════════════════════════════════════════╝
+[13:12:03] APP: 
+[13:12:03] APP: Controles:
+[13:12:03] APP:   ESC       - Cerrar aplicación
+[13:12:03] APP:   WASD      - Mover cámara (Forward/Left/Back/Right)
+[13:12:03] APP:   Q/E       - Mover cámara (Down/Up)
+[13:12:03] APP:   Mouse     - Rotar cámara (mantén clic izquierdo)
+[13:12:03] APP:   1,2,3,4   - Cambiar color de fondo
+[13:12:03] APP:   SPACE     - Color aleatorio
+[13:12:03] APP:   F1        - Toggle VSync
+[13:12:03] APP: 
+[13:12:03] APP: [OnInit] Paso 1: Inicializando Renderer...
+[13:12:03] APP: RenderCommand inicializado
+[13:12:03] APP: Renderer inicializado
+[13:12:03] APP: [OnInit] Paso 1: Renderer inicializado OK
+[13:12:03] APP: [OnInit] Paso 2: Configurando color de fondo...
+[13:12:03] APP: [OnInit] Paso 2: Color de fondo configurado OK
+[13:12:03] APP: [OnInit] Paso 3: Cargando shader...
+[13:12:03] APP: Cargando shader desde: shaders/Texture.glsl
+[13:12:03] MOTOR: Compilando shader: Texture
+[13:12:03] MOTOR: Shader 'Texture' compilado correctamente (ID: 3)
+[13:12:03] APP: [OnInit] Paso 3: Shader::Create completado
+[13:12:03] APP: [OnInit] Paso 3: Shader cargado OK
+[13:12:03] APP: [OnInit] Paso 4: Creando cubo...
+[13:12:03] APP: VertexArray creado (ID: 1)
+[13:12:03] APP: VertexBuffer creado (ID: 1)
+[13:12:03] APP: VertexBuffer añadido al VAO 1 (Stride: 48, Atributos: 4)
+[13:12:03] APP: IndexBuffer creado (ID: 2, Count: 36)
+[13:12:03] APP: IndexBuffer añadido al VAO 1 (Count: 36)
+[13:12:03] APP: Mesh 'Cube' creada (Vértices: 24, Índices: 36)
+[13:12:03] APP: [OnInit] Paso 4: Cubo creado OK
+[13:12:03] APP: [OnInit] Paso 5: Creando textura...
+[13:12:03] APP: Texture2D creada desde datos raw (8x8, ID: 1)
+[13:12:03] APP: ✅ Textura checkerboard creada (8x8)
+[13:12:03] APP: [OnInit] Paso 5: Textura creada OK
+[13:12:03] APP: [OnInit] Paso 6: Creando cámara...
+[13:12:03] APP: PerspectiveCamera creada (Pos: [0.00, 0.00, 5.00], FOV: 45.0°)
+[13:12:03] APP: ✅ Renderer API inicializado
+[13:12:03] APP: ✅ Shader, Mesh, Texture y Camera creados
+[13:12:03] APP: ✅ Sistema de rendering completo inicializado
+[13:12:03] MOTOR: Delta time muy grande detectado: 0.145s (limitado a 0.1s)
+[13:12:07] MOTOR: Solicitud de cierre de ventana recibida
+[13:12:07] MOTOR: === Finalizando Game Loop ===
+[13:12:07] APP: Limpieza de SandboxApp
+[13:12:07] MOTOR: Aplicación cerrada correctamente
+[13:12:07] APP: ========================================
+[13:12:07] APP: Destructor de SandboxApp
+[13:12:07] APP: ========================================
+[13:12:07] APP: Texture2D destruida (ID: 1, Path: )
+[13:12:07] APP: VertexBuffer destruido (ID: 1)
+[13:12:07] APP: IndexBuffer destruido (ID: 2)
+[13:12:07] APP: VertexArray destruido (ID: 1)
+[13:12:07] APP: Mesh 'Cube' destruida
+[13:12:07] MOTOR: Shader 'Texture' destruido
+[13:12:07] MOTOR: GLFW terminado

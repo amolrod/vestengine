@@ -46,10 +46,17 @@ target_link_libraries(MotorGrafico PUBLIC
     stb_image
 )
 
-# Linkear OpenGL framework en macOS
+# Linkear OpenGL según plataforma
 if(APPLE)
     find_library(OPENGL_LIBRARY OpenGL REQUIRED)
     target_link_libraries(MotorGrafico PUBLIC ${OPENGL_LIBRARY})
+elseif(WIN32)
+    # En Windows, necesitamos linkear con opengl32
+    target_link_libraries(MotorGrafico PUBLIC opengl32)
+elseif(UNIX)
+    # En Linux, necesitamos OpenGL y dl
+    find_package(OpenGL REQUIRED)
+    target_link_libraries(MotorGrafico PUBLIC OpenGL::GL ${CMAKE_DL_LIBS})
 endif()
 
 # Aplicar warnings estrictos solo a nuestro código

@@ -6,11 +6,11 @@
 #include "Texture.h"
 #include "../core/Logger.h"
 
-#ifdef __APPLE__
+#ifdef PLATFORM_MACOS
     #define GL_SILENCE_DEPRECATION
     #include <OpenGL/gl3.h>
 #else
-    #include <glad/glad.h>
+    #include <glad/gl.h>
 #endif
 
 #include <stb_image.h>

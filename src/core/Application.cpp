@@ -11,12 +11,13 @@
 // En macOS, OpenGL está disponible directamente
 #ifdef PLATFORM_MACOS
     #define GL_SILENCE_DEPRECATION
-    #define GLFW_INCLUDE_NONE  // No dejar que GLFW incluya OpenGL headers
     #include <OpenGL/gl3.h>
 #else
-    #include <glad/glad.h>
+    #include <glad/gl.h>
 #endif
 
+// IMPORTANTE: GLFW_INCLUDE_NONE debe estar ANTES de incluir GLFW
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 
 // Variable global para acceso desde Input (temporal, mejorar después)
@@ -29,23 +30,40 @@ Application* Application::s_instance = nullptr;
 Application::Application(const WindowProps& props) {
     // Singleton
     if (s_instance != nullptr) {
-        LOG_CORE_CRITICAL("¡La aplicación ya existe! Solo puede haber una instancia.");
+        fprintf(stderr, "ERROR CRITICO: ¡La aplicación ya existe! Solo puede haber una instancia.\n");
         return;
     }
     s_instance = this;
     
     // Inicializar sistemas core
     Logger::Init(props.title);
+    
+    LOG_CORE_INFO("========================================");
+    LOG_CORE_INFO("Application::Application - INICIO");
+    LOG_CORE_INFO("========================================");
+    LOG_CORE_INFO("[Application] Logger inicializado OK");
+    
+    LOG_CORE_INFO("[Application] Inicializando Time...");
     Time::Init();
+    LOG_CORE_INFO("[Application] Time inicializado OK");
     
     // Crear ventana
+    LOG_CORE_INFO("[Application] Creando ventana...");
     m_window = std::make_unique<Window>(props);
+    LOG_CORE_INFO("[Application] Ventana creada OK");
+    
+    LOG_CORE_INFO("[Application] Configurando callback de ventana...");
     g_currentWindow = m_window->GetNativeWindow();
     
     // Configurar callback de resize
     m_window->SetResizeCallback([this]() {
         OnWindowResize(m_window->GetWidth(), m_window->GetHeight());
     });
+    LOG_CORE_INFO("[Application] Callbacks configurados OK");
+    
+    LOG_CORE_INFO("========================================");
+    LOG_CORE_INFO("Application::Application - COMPLETADO");
+    LOG_CORE_INFO("========================================");
     
     LOG_CORE_INFO("Aplicación inicializada correctamente");
 }

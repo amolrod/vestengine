@@ -31,9 +31,19 @@ int main(int argc, char** argv) {
     (void)argc;  // Evitar warning de parámetro no usado
     (void)argv;
     
+    // Debug temprano
+    fprintf(stderr, "[DEBUG] main() - INICIO\n");
+    fflush(stderr);
+    
     // Crear aplicación (implementada por usuario)
     // NOTA: El logger se inicializa en el constructor de Application
+    fprintf(stderr, "[DEBUG] main() - Llamando a CreateApplication()...\n");
+    fflush(stderr);
+    
     auto* app = CreateApplication();
+    
+    fprintf(stderr, "[DEBUG] main() - CreateApplication() completado\n");
+    fflush(stderr);
     
     if (!app) {
         // No podemos hacer LOG aquí porque el logger aún no está inicializado

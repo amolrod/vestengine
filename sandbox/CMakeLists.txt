@@ -28,10 +28,11 @@ if(WIN32)
     )
 endif()
 
-# Copiar assets al directorio de build (opcional por ahora)
-# add_custom_command(TARGET Sandbox POST_BUILD
-#     COMMAND ${CMAKE_COMMAND} -E copy_directory
-#     ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:Sandbox>/assets
-# )
+# Copiar shaders al directorio de build automáticamente
+add_custom_command(TARGET Sandbox POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/shaders $<TARGET_FILE_DIR:Sandbox>/shaders
+    COMMENT "Copiando shaders al directorio de ejecución..."
+)
 
 message(STATUS "Sandbox application configured")

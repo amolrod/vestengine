@@ -10,6 +10,7 @@
  * - Time management
  */
 
+#include <cstdio>
 #include <core/Application.h>
 #include <core/Logger.h>
 #include <core/Time.h>
@@ -29,7 +30,7 @@
     #define GLFW_INCLUDE_NONE
     #include <OpenGL/gl3.h>
 #else
-    #include <glad/glad.h>
+    #include <glad/gl.h>
 #endif
 
 #include <glm/glm.hpp>
@@ -42,11 +43,15 @@
 class SandboxApp : public Engine::Application {
 public:
     SandboxApp() : Engine::Application(Engine::WindowProps("Sandbox - Motor Gráfico 3D", 1280, 720)) {
-        LOG_INFO("Constructor de SandboxApp");
+        LOG_INFO("========================================");
+        LOG_INFO("Constructor de SandboxApp - INICIO");
+        LOG_INFO("========================================");
     }
     
     ~SandboxApp() override {
+        LOG_INFO("========================================");
         LOG_INFO("Destructor de SandboxApp");
+        LOG_INFO("========================================");
     }
     
     void OnInit() override {
@@ -67,33 +72,45 @@ public:
         // =====================================================================
         // FASE 2: Inicializar Renderer API
         // =====================================================================
+        LOG_INFO("[OnInit] Paso 1: Inicializando Renderer...");
         Engine::Renderer::Init();
+        LOG_INFO("[OnInit] Paso 1: Renderer inicializado OK");
         
         // Configurar color de fondo inicial
+        LOG_INFO("[OnInit] Paso 2: Configurando color de fondo...");
         m_backgroundColor = glm::vec3(0.1f, 0.1f, 0.15f);
         Engine::RenderCommand::SetClearColor(glm::vec4(m_backgroundColor, 1.0f));
+        LOG_INFO("[OnInit] Paso 2: Color de fondo configurado OK");
         
         // =====================================================================
         // Crear recursos: Shader + Mesh + Texture + Camera
         // =====================================================================
         
-        // Cargar shader de texturas
-        const char* shaderPath = "/Users/angel/Desktop/motor-grafico/shaders/Texture.glsl";
+        // Cargar shader de texturas (ruta relativa desde el ejecutable)
+        LOG_INFO("[OnInit] Paso 3: Cargando shader...");
+        const char* shaderPath = "shaders/Texture.glsl";
         LOG_INFO("Cargando shader desde: {}", shaderPath);
         m_shader = Engine::Shader::Create(shaderPath);
+        LOG_INFO("[OnInit] Paso 3: Shader::Create completado");
         
         if (!m_shader) {
             LOG_ERROR("No se pudo cargar el shader!");
             return;
         }
+        LOG_INFO("[OnInit] Paso 3: Shader cargado OK");
         
         // Crear cubo usando MeshFactory
+        LOG_INFO("[OnInit] Paso 4: Creando cubo...");
         m_cubeMesh = std::shared_ptr<Engine::Mesh>(Engine::MeshFactory::CreateCube(1.0f));
+        LOG_INFO("[OnInit] Paso 4: Cubo creado OK");
         
         // Crear textura procedural (checkerboard)
+        LOG_INFO("[OnInit] Paso 5: Creando textura...");
         CreateCheckerboardTexture();
+        LOG_INFO("[OnInit] Paso 5: Textura creada OK");
         
         // Crear cámara 3D
+        LOG_INFO("[OnInit] Paso 6: Creando cámara...");
         Engine::PerspectiveCameraConfig cameraConfig;
         cameraConfig.position = glm::vec3(0.0f, 0.0f, 5.0f);
         cameraConfig.fov = 45.0f;
@@ -327,5 +344,14 @@ private:
  * Requerida por EntryPoint.h
  */
 Engine::Application* CreateApplication() {
-    return new SandboxApp();
+    // Debug: Esto se imprime ANTES de crear la aplicación
+    fprintf(stderr, "[DEBUG] CreateApplication() - INICIO\n");
+    fflush(stderr);
+    
+    auto* app = new SandboxApp();
+    
+    fprintf(stderr, "[DEBUG] CreateApplication() - SandboxApp creado\n");
+    fflush(stderr);
+    
+    return app;
 }

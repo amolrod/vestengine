@@ -1,11 +1,11 @@
 #pragma once
 
 // macOS requires native OpenGL headers
-#ifdef __APPLE__
+#ifdef PLATFORM_MACOS
     #define GL_SILENCE_DEPRECATION
     #include <OpenGL/gl3.h>
 #else
-    #include <glad/glad.h>
+    #include <glad/gl.h>
 #endif
 
 #include <glm/glm.hpp>
