@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/VestEngine.dir/src/Core/Application.cpp.o"
   "CMakeFiles/VestEngine.dir/src/Core/Application.cpp.o.d"
+  "CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o"
+  "CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o.d"
   "CMakeFiles/VestEngine.dir/src/Core/Layer.cpp.o"
   "CMakeFiles/VestEngine.dir/src/Core/Layer.cpp.o.d"
   "CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.o"

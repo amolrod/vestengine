@@ -199,6 +199,30 @@ src/Core/Application.cpp.s:
 	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f VestEngine/CMakeFiles/VestEngine.dir/build.make VestEngine/CMakeFiles/VestEngine.dir/src/Core/Application.cpp.s
 .PHONY : src/Core/Application.cpp.s
 
+src/Core/Input.o: src/Core/Input.cpp.o
+.PHONY : src/Core/Input.o
+
+# target to build an object file
+src/Core/Input.cpp.o:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f VestEngine/CMakeFiles/VestEngine.dir/build.make VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o
+.PHONY : src/Core/Input.cpp.o
+
+src/Core/Input.i: src/Core/Input.cpp.i
+.PHONY : src/Core/Input.i
+
+# target to preprocess a source file
+src/Core/Input.cpp.i:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f VestEngine/CMakeFiles/VestEngine.dir/build.make VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.i
+.PHONY : src/Core/Input.cpp.i
+
+src/Core/Input.s: src/Core/Input.cpp.s
+.PHONY : src/Core/Input.s
+
+# target to generate assembly for a file
+src/Core/Input.cpp.s:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f VestEngine/CMakeFiles/VestEngine.dir/build.make VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.s
+.PHONY : src/Core/Input.cpp.s
+
 src/Core/Layer.o: src/Core/Layer.cpp.o
 .PHONY : src/Core/Layer.o
 
@@ -767,6 +791,9 @@ help:
 	@echo "... src/Core/Application.o"
 	@echo "... src/Core/Application.i"
 	@echo "... src/Core/Application.s"
+	@echo "... src/Core/Input.o"
+	@echo "... src/Core/Input.i"
+	@echo "... src/Core/Input.s"
 	@echo "... src/Core/Layer.o"
 	@echo "... src/Core/Layer.i"
 	@echo "... src/Core/Layer.s"

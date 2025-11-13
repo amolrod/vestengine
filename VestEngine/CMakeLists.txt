@@ -7,6 +7,7 @@ set(VESTENGINE_HEADERS
     src/Core/Layer.h
     src/Core/LayerStack.h
     src/Core/EntryPoint.h
+    src/Core/Input.h
     src/Rendering/RenderAPI.h
     src/Rendering/RendererAPI.h
     src/Rendering/Renderer.h
@@ -36,6 +37,7 @@ set(VESTENGINE_SOURCES
     src/Core/Application.cpp
     src/Core/Layer.cpp
     src/Core/LayerStack.cpp
+    src/Core/Input.cpp
     src/Rendering/Renderer.cpp
     src/Rendering/RenderCommand.cpp
     src/Rendering/Shader.cpp

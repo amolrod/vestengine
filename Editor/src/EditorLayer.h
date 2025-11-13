@@ -4,8 +4,10 @@
 #include <vector>
 
 #include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 #include "Core/Layer.h"
+#include "Core/Input.h"
 #include "Rendering/Framebuffer.h"
 #include "Rendering/Renderer.h"
 #include "Rendering/Shader.h"
@@ -57,6 +59,9 @@ private:
 
     glm::vec3 m_CameraPosition = glm::vec3(0.0f, 0.0f, 1.0f);
     float m_CameraZoom = 1.5f;
+    bool m_ViewportFocused = false;
+    bool m_ViewportHovered = false;
+    glm::vec2 m_LastMousePos = glm::vec2(0.0f);
 };
 
 }  // namespace Vest

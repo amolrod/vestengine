@@ -1,12 +1,15 @@
 #include "EditorLayer.h"
 
+#include <algorithm>
 #include <filesystem>
 
+#include <GLFW/glfw3.h>
 #include <imgui.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include "Core/Input.h"
 #include "Rendering/RenderCommand.h"
 #include "Rendering/Buffer.h"
 
@@ -57,6 +60,7 @@ out vec3 v_Color;
 
 uniform mat4 u_ViewProjection;
 uniform mat4 u_Transform;
+uniform vec4 u_Color;
 
 void main() {
     v_Color = a_Color;
@@ -68,8 +72,10 @@ layout(location = 0) out vec4 o_Color;
 
 in vec3 v_Color;
 
+uniform vec4 u_Color;
+
 void main() {
-    o_Color = vec4(v_Color, 1.0);
+    o_Color = vec4(v_Color, 1.0) * u_Color;
 })";
 
     m_TriangleShader = Shader::Create("EditorTriangle", vertexSrc, fragmentSrc);
@@ -106,15 +112,16 @@ void main() {
     gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
 })";
 
-    const std::string texturedFragmentSrc = R"(#version 410 core
+const std::string texturedFragmentSrc = R"(#version 410 core
 layout(location = 0) out vec4 o_Color;
 
 in vec2 v_TexCoord;
 
 uniform sampler2D u_Texture;
+uniform vec4 u_Color;
 
 void main() {
-    o_Color = texture(u_Texture, v_TexCoord);
+    o_Color = texture(u_Texture, v_TexCoord) * u_Color;
 })";
 
     m_TextureShader = Shader::Create("EditorTexture", texturedVertexSrc, texturedFragmentSrc);
@@ -133,11 +140,13 @@ void main() {
         .name = "Triangle",
         .position = glm::vec3(-0.2f, -0.1f, 0.0f),
         .scale = glm::vec3(1.0f),
+        .color = glm::vec4(1.0f),
         .textured = false});
     m_SceneObjects.push_back(SceneObject{
         .name = "Textured Quad",
         .position = glm::vec3(0.6f, 0.0f, 0.0f),
         .scale = glm::vec3(0.75f),
+        .color = glm::vec4(1.0f),
         .textured = true});
     m_SelectedEntityIndex = 0;
 }
@@ -145,6 +154,39 @@ void main() {
 void EditorLayer::OnUpdate(Timestep ts) {
     m_FPS = ts.GetSeconds() > 0.0f ? 1.0f / ts.GetSeconds() : 0.0f;
     m_DrawCalls = 0;
+
+    ImGuiIO& io = ImGui::GetIO();
+    if (m_ViewportHovered) {
+        m_CameraZoom -= io.MouseWheel * 0.2f;
+        m_CameraZoom = std::clamp(m_CameraZoom, 0.5f, 5.0f);
+
+        if (ImGui::IsMouseDown(ImGuiMouseButton_Middle)) {
+            ImVec2 mousePosIm = ImGui::GetMousePos();
+            glm::vec2 mousePos = {mousePosIm.x, mousePosIm.y};
+            glm::vec2 delta = mousePos - m_LastMousePos;
+            const float panSpeed = 0.002f * m_CameraZoom;
+            m_CameraPosition.x -= delta.x * panSpeed;
+            m_CameraPosition.y += delta.y * panSpeed;
+        }
+        ImVec2 mousePosIm = ImGui::GetMousePos();
+        m_LastMousePos = {mousePosIm.x, mousePosIm.y};
+    }
+
+    if (m_ViewportFocused) {
+        const float cameraSpeed = 2.0f;
+        if (Input::IsKeyPressed(GLFW_KEY_A)) {
+            m_CameraPosition.x -= cameraSpeed * ts.GetSeconds();
+        }
+        if (Input::IsKeyPressed(GLFW_KEY_D)) {
+            m_CameraPosition.x += cameraSpeed * ts.GetSeconds();
+        }
+        if (Input::IsKeyPressed(GLFW_KEY_W)) {
+            m_CameraPosition.y += cameraSpeed * ts.GetSeconds();
+        }
+        if (Input::IsKeyPressed(GLFW_KEY_S)) {
+            m_CameraPosition.y -= cameraSpeed * ts.GetSeconds();
+        }
+    }
 
     if (m_Framebuffer && m_ViewportSize.x > 0.0f && m_ViewportSize.y > 0.0f) {
         m_Framebuffer->Bind();
@@ -165,12 +207,16 @@ void EditorLayer::OnUpdate(Timestep ts) {
 
             if (object.textured) {
                 if (m_TextureShader && m_TextureVA && m_CheckerTexture) {
+                    m_TextureShader->Bind();
+                    m_TextureShader->SetFloat4("u_Color", object.color);
                     m_CheckerTexture->Bind();
                     Renderer::Submit(m_TextureShader, m_TextureVA, transform);
                     ++m_DrawCalls;
                 }
             } else {
                 if (m_TriangleShader && m_TriangleVA) {
+                    m_TriangleShader->Bind();
+                    m_TriangleShader->SetFloat4("u_Color", object.color);
                     Renderer::Submit(m_TriangleShader, m_TriangleVA, transform);
                     ++m_DrawCalls;
                 }
@@ -239,6 +285,8 @@ void EditorLayer::OnImGuiRender() {
     if (viewportSize.x > 0.0f && viewportSize.y > 0.0f && viewportSize != m_ViewportSize) {
         RebuildFramebuffer(static_cast<uint32_t>(viewportSize.x), static_cast<uint32_t>(viewportSize.y));
     }
+    m_ViewportFocused = m_ViewportPanel.IsFocused();
+    m_ViewportHovered = m_ViewportPanel.IsHovered();
 
     m_SceneHierarchyPanel.OnImGuiRender();
     m_PropertiesPanel.OnImGuiRender();
