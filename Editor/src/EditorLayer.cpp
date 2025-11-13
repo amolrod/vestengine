@@ -212,6 +212,29 @@ void EditorLayer::OnUpdate(Timestep ts) {
         }
         Renderer::EndScene();
 
+        m_DrawSelectionOutline = false;
+        if (m_SelectedEntityIndex >= 0 && m_SelectedEntityIndex < static_cast<int>(m_SceneObjects.size())) {
+            const SceneObject& selected = m_SceneObjects[static_cast<size_t>(m_SelectedEntityIndex)];
+            glm::mat4 outlineTransform =
+                glm::translate(glm::mat4(1.0f), selected.position) *
+                glm::rotate(glm::mat4(1.0f), glm::radians(selected.rotation.z), glm::vec3(0, 0, 1)) *
+                glm::scale(glm::mat4(1.0f), selected.scale * 1.05f);
+
+            glm::vec4 corners[4] = {
+                outlineTransform * glm::vec4(-0.5f, -0.5f, 0.0f, 1.0f),
+                outlineTransform * glm::vec4(0.5f, -0.5f, 0.0f, 1.0f),
+                outlineTransform * glm::vec4(0.5f, 0.5f, 0.0f, 1.0f),
+                outlineTransform * glm::vec4(-0.5f, 0.5f, 0.0f, 1.0f)};
+
+            for (int i = 0; i < 4; ++i) {
+                glm::vec4 clip = m_ViewProjectionMatrix * corners[i];
+                glm::vec3 ndc = glm::vec3(clip) / clip.w;
+                m_SelectedOutline[i].x = (ndc.x * 0.5f + 0.5f) * m_ViewportSize.x;
+                m_SelectedOutline[i].y = (1.0f - (ndc.y * 0.5f + 0.5f)) * m_ViewportSize.y;
+            }
+            m_DrawSelectionOutline = true;
+        }
+
         m_Framebuffer->Unbind();
     }
 
@@ -282,6 +305,20 @@ void EditorLayer::OnImGuiRender() {
     m_PropertiesPanel.OnImGuiRender();
     m_ContentBrowserPanel.OnImGuiRender();
     m_StatsPanel.OnImGuiRender();
+
+    if (m_DrawSelectionOutline) {
+        const glm::vec2* bounds = m_ViewportPanel.GetBounds();
+        if (bounds) {
+            ImDrawList* drawList = ImGui::GetForegroundDrawList();
+            for (int i = 0; i < 4; ++i) {
+                glm::vec2 offset1 = m_SelectedOutline[i];
+                glm::vec2 offset2 = m_SelectedOutline[(i + 1) % 4];
+                ImVec2 p1(bounds[0].x + offset1.x, bounds[0].y + offset1.y);
+                ImVec2 p2(bounds[0].x + offset2.x, bounds[0].y + offset2.y);
+                drawList->AddLine(p1, p2, IM_COL32(255, 255, 0, 255), 2.0f);
+            }
+        }
+    }
 
     ImGui::End();
 }
