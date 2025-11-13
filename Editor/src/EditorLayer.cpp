@@ -7,6 +7,7 @@
 #include <imgui.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/matrix_inverse.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
 #include "Core/Input.h"
@@ -140,12 +141,14 @@ void main() {
         .name = "Triangle",
         .position = glm::vec3(-0.2f, -0.1f, 0.0f),
         .scale = glm::vec3(1.0f),
+        .rotation = glm::vec3(0.0f),
         .color = glm::vec4(1.0f),
         .textured = false});
     m_SceneObjects.push_back(SceneObject{
         .name = "Textured Quad",
         .position = glm::vec3(0.6f, 0.0f, 0.0f),
         .scale = glm::vec3(0.75f),
+        .rotation = glm::vec3(0.0f),
         .color = glm::vec4(1.0f),
         .textured = true});
     m_SelectedEntityIndex = 0;
@@ -154,23 +157,6 @@ void main() {
 void EditorLayer::OnUpdate(Timestep ts) {
     m_FPS = ts.GetSeconds() > 0.0f ? 1.0f / ts.GetSeconds() : 0.0f;
     m_DrawCalls = 0;
-
-    ImGuiIO& io = ImGui::GetIO();
-    if (m_ViewportHovered) {
-        m_CameraZoom -= io.MouseWheel * 0.2f;
-        m_CameraZoom = std::clamp(m_CameraZoom, 0.5f, 5.0f);
-
-        if (ImGui::IsMouseDown(ImGuiMouseButton_Middle)) {
-            ImVec2 mousePosIm = ImGui::GetMousePos();
-            glm::vec2 mousePos = {mousePosIm.x, mousePosIm.y};
-            glm::vec2 delta = mousePos - m_LastMousePos;
-            const float panSpeed = 0.002f * m_CameraZoom;
-            m_CameraPosition.x -= delta.x * panSpeed;
-            m_CameraPosition.y += delta.y * panSpeed;
-        }
-        ImVec2 mousePosIm = ImGui::GetMousePos();
-        m_LastMousePos = {mousePosIm.x, mousePosIm.y};
-    }
 
     if (m_ViewportFocused) {
         const float cameraSpeed = 2.0f;
@@ -198,11 +184,13 @@ void EditorLayer::OnUpdate(Timestep ts) {
         const float orthoWidth = orthoHeight * aspect;
         glm::mat4 projection = glm::ortho(-orthoWidth, orthoWidth, -orthoHeight, orthoHeight, -1.0f, 10.0f);
         glm::mat4 view = glm::translate(glm::mat4(1.0f), -m_CameraPosition);
+        m_ViewProjectionMatrix = projection * view;
 
-        Renderer::BeginScene(projection * view);
+        Renderer::BeginScene(m_ViewProjectionMatrix);
         for (const auto& object : m_SceneObjects) {
             glm::mat4 transform =
                 glm::translate(glm::mat4(1.0f), object.position) *
+                glm::rotate(glm::mat4(1.0f), glm::radians(object.rotation.z), glm::vec3(0, 0, 1)) *
                 glm::scale(glm::mat4(1.0f), object.scale);
 
             if (object.textured) {
@@ -287,6 +275,8 @@ void EditorLayer::OnImGuiRender() {
     }
     m_ViewportFocused = m_ViewportPanel.IsFocused();
     m_ViewportHovered = m_ViewportPanel.IsHovered();
+    HandleViewportCameraControls();
+    HandleViewportPicking();
 
     m_SceneHierarchyPanel.OnImGuiRender();
     m_PropertiesPanel.OnImGuiRender();
@@ -297,6 +287,80 @@ void EditorLayer::OnImGuiRender() {
 }
 
 void EditorLayer::OnEvent(Event&) {}
+
+void EditorLayer::HandleViewportCameraControls() {
+    if (!m_ViewportHovered) {
+        return;
+    }
+
+    ImGuiIO& io = ImGui::GetIO();
+    if (io.MouseWheel != 0.0f) {
+        m_CameraZoom -= io.MouseWheel * 0.2f;
+        m_CameraZoom = std::clamp(m_CameraZoom, 0.5f, 5.0f);
+    }
+
+    const bool panWithMiddle = ImGui::IsMouseDown(ImGuiMouseButton_Middle);
+    const bool panWithRight = ImGui::IsMouseDown(ImGuiMouseButton_Right);
+    if (panWithMiddle || panWithRight) {
+        ImVec2 mousePosIm = ImGui::GetMousePos();
+        glm::vec2 mousePos = {mousePosIm.x, mousePosIm.y};
+        glm::vec2 delta = mousePos - m_LastMousePos;
+        const float panSpeed = 0.002f * m_CameraZoom;
+        m_CameraPosition.x -= delta.x * panSpeed;
+        m_CameraPosition.y += delta.y * panSpeed;
+        m_LastMousePos = mousePos;
+    } else {
+        ImVec2 mousePosIm = ImGui::GetMousePos();
+        m_LastMousePos = {mousePosIm.x, mousePosIm.y};
+    }
+}
+
+static bool PointInEntity(const glm::vec2& point, const SceneObject& object) {
+    glm::mat4 transform =
+        glm::translate(glm::mat4(1.0f), object.position) *
+        glm::rotate(glm::mat4(1.0f), glm::radians(object.rotation.z), glm::vec3(0, 0, 1)) *
+        glm::scale(glm::mat4(1.0f), object.scale);
+
+    glm::mat4 invTransform = glm::inverse(transform);
+    glm::vec4 local = invTransform * glm::vec4(point, 0.0f, 1.0f);
+    return local.x >= -0.5f && local.x <= 0.5f && local.y >= -0.5f && local.y <= 0.5f;
+}
+
+void EditorLayer::HandleViewportPicking() {
+    if (!m_ViewportHovered || !ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {
+        return;
+    }
+
+    const glm::vec2* bounds = m_ViewportPanel.GetBounds();
+    if (!bounds) {
+        return;
+    }
+
+    ImVec2 mouseIm = ImGui::GetMousePos();
+    glm::vec2 mouse = {mouseIm.x, mouseIm.y};
+    if (mouse.x < bounds[0].x || mouse.y < bounds[0].y || mouse.x > bounds[1].x || mouse.y > bounds[1].y) {
+        return;
+    }
+
+    glm::vec2 viewportPoint = mouse - bounds[0];
+    glm::vec2 ndc;
+    ndc.x = (viewportPoint.x / m_ViewportSize.x) * 2.0f - 1.0f;
+    ndc.y = 1.0f - (viewportPoint.y / m_ViewportSize.y) * 2.0f;
+
+    glm::vec4 clip = {ndc.x, ndc.y, 0.0f, 1.0f};
+    glm::vec4 world = glm::inverse(m_ViewProjectionMatrix) * clip;
+    if (world.w != 0.0f) {
+        world /= world.w;
+    }
+
+    glm::vec2 point = {world.x, world.y};
+    for (int i = static_cast<int>(m_SceneObjects.size()) - 1; i >= 0; --i) {
+        if (PointInEntity(point, m_SceneObjects[static_cast<size_t>(i)])) {
+            m_SelectedEntityIndex = i;
+            return;
+        }
+    }
+}
 
 void EditorLayer::RebuildFramebuffer(uint32_t width, uint32_t height) {
     m_ViewportSize = {static_cast<float>(width), static_cast<float>(height)};

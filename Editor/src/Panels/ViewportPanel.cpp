@@ -12,6 +12,7 @@ void ViewportPanel::OnImGuiRender() {
     m_Focused = ImGui::IsWindowFocused();
     m_Hovered = ImGui::IsWindowHovered();
 
+    ImVec2 viewportMinRegion = ImGui::GetCursorScreenPos();
     ImVec2 size = ImGui::GetContentRegionAvail();
     if (size.x > 0.0f && size.y > 0.0f) {
         m_ViewportSize = {size.x, size.y};
@@ -23,6 +24,10 @@ void ViewportPanel::OnImGuiRender() {
     } else {
         ImGui::TextUnformatted("Framebuffer not available");
     }
+
+    ImVec2 viewportMaxRegion = {viewportMinRegion.x + size.x, viewportMinRegion.y + size.y};
+    m_Bounds[0] = {viewportMinRegion.x, viewportMinRegion.y};
+    m_Bounds[1] = {viewportMaxRegion.x, viewportMaxRegion.y};
 
     ImGui::End();
     ImGui::PopStyleVar();

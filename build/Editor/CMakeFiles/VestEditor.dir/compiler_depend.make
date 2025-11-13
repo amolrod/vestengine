@@ -1340,6 +1340,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   _deps/glm-src/glm/fwd.hpp \
   _deps/glm-src/glm/geometric.hpp \
   _deps/glm-src/glm/glm.hpp \
+  _deps/glm-src/glm/detail/setup.hpp \
   _deps/glm-src/glm/ext/scalar_constants.hpp \
   _deps/glm-src/glm/geometric.hpp \
   _deps/glm-src/glm/detail/setup.hpp \
@@ -1448,6 +1449,8 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   _deps/glm-src/glm/vec2.hpp \
   _deps/glm-src/glm/vec3.hpp \
   _deps/glm-src/glm/vec4.hpp \
+  _deps/glm-src/glm/gtc/matrix_inverse.hpp \
+  _deps/glm-src/glm/gtc/matrix_inverse.inl \
   _deps/glm-src/glm/gtc/matrix_transform.hpp \
   _deps/glm-src/glm/gtc/matrix_transform.inl \
   _deps/glm-src/glm/gtc/type_ptr.hpp \
@@ -3899,6 +3902,8 @@ _deps/imgui-src/imgui.h:
 
 _deps/glm-src/glm/gtc/type_ptr.hpp:
 
+_deps/glm-src/glm/gtc/matrix_inverse.inl:
+
 _deps/glm-src/glm/gtc/quaternion.inl:
 
 _deps/glm-src/glm/gtc/epsilon.hpp:
@@ -4082,6 +4087,8 @@ _deps/glm-src/glm/detail/type_mat4x3.inl:
 _deps/glm-src/glm/geometric.hpp:
 
 _deps/glm-src/glm/detail/type_mat3x4.hpp:
+
+_deps/glm-src/glm/gtc/matrix_inverse.hpp:
 
 _deps/glm-src/glm/detail/type_mat3x3.inl:
 

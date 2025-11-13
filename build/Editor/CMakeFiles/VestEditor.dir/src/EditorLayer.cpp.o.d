@@ -691,6 +691,11 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: \
   /Users/angel/Desktop/C++/build/_deps/glfw-src/include/GLFW/glfw3.h \
   /Users/angel/Desktop/C++/build/_deps/imgui-src/imgui.h \
   /Users/angel/Desktop/C++/build/_deps/imgui-src/imconfig.h \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/matrix_inverse.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../detail/setup.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat2x2.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat3x3.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/matrix_inverse.inl \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/type_ptr.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/quaternion.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../gtc/constants.hpp \
@@ -770,11 +775,9 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/vector_uint1_sized.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../ext/vector_uint1.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../ext/scalar_uint_sized.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat2x2.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat2x3.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat2x4.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat3x2.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat3x3.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat3x4.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat4x2.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat4x3.hpp \

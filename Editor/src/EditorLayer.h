@@ -62,6 +62,10 @@ private:
     bool m_ViewportFocused = false;
     bool m_ViewportHovered = false;
     glm::vec2 m_LastMousePos = glm::vec2(0.0f);
+    glm::mat4 m_ViewProjectionMatrix = glm::mat4(1.0f);
+
+    void HandleViewportCameraControls();
+    void HandleViewportPicking();
 };
 
 }  // namespace Vest

@@ -1342,6 +1342,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/fwd.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/geometric.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/glm.hpp
+ /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/setup.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/ext/scalar_constants.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/geometric.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/setup.hpp
@@ -1450,6 +1451,8 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/vec2.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/vec3.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/vec4.hpp
+ /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/matrix_inverse.hpp
+ /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/matrix_inverse.inl
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/matrix_transform.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/matrix_transform.inl
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/type_ptr.hpp

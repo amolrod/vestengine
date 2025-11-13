@@ -20,6 +20,7 @@ void PropertiesPanel::OnImGuiRender() {
     ImGui::Separator();
 
     ImGui::DragFloat3("Position", &object.position.x, 0.01f);
+    ImGui::DragFloat3("Rotation", &object.rotation.x, 0.1f, -180.0f, 180.0f);
     ImGui::DragFloat3("Scale", &object.scale.x, 0.01f, 0.1f, 10.0f);
     ImGui::ColorEdit4("Color", &object.color.x);
     ImGui::Checkbox("Textured", &object.textured);
