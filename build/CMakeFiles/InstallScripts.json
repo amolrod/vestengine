@@ -1,0 +1,14 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/angel/Desktop/C++/build/cmake_install.cmake",
+		"/Users/angel/Desktop/C++/build/_deps/glfw-build/cmake_install.cmake",
+		"/Users/angel/Desktop/C++/build/_deps/glfw-build/src/cmake_install.cmake",
+		"/Users/angel/Desktop/C++/build/_deps/glfw-build/docs/cmake_install.cmake",
+		"/Users/angel/Desktop/C++/build/_deps/glm-build/cmake_install.cmake",
+		"/Users/angel/Desktop/C++/build/_deps/glm-build/glm/cmake_install.cmake",
+		"/Users/angel/Desktop/C++/build/VestEngine/cmake_install.cmake",
+		"/Users/angel/Desktop/C++/build/Editor/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

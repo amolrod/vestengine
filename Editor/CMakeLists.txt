@@ -1,0 +1,13 @@
+add_executable(VestEditor
+    src/EditorApplication.cpp
+    src/EditorLayer.cpp
+    src/Panels/ViewportPanel.cpp
+    src/Panels/SceneHierarchyPanel.cpp
+    src/Panels/PropertiesPanel.cpp
+    src/Panels/ContentBrowserPanel.cpp
+    src/Panels/StatsPanel.cpp
+)
+
+target_include_directories(VestEditor PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+
+target_link_libraries(VestEditor PRIVATE VestEngine)

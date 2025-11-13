@@ -1,0 +1,14 @@
+# Target labels
+ glfw-populate
+# Source files and their labels
+/Users/angel/Desktop/C++/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate
+/Users/angel/Desktop/C++/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.rule
+/Users/angel/Desktop/C++/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate-complete.rule
+/Users/angel/Desktop/C++/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-build.rule
+/Users/angel/Desktop/C++/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-configure.rule
+/Users/angel/Desktop/C++/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-download.rule
+/Users/angel/Desktop/C++/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-install.rule
+/Users/angel/Desktop/C++/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-mkdir.rule
+/Users/angel/Desktop/C++/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-patch.rule
+/Users/angel/Desktop/C++/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-test.rule
+/Users/angel/Desktop/C++/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-update.rule
