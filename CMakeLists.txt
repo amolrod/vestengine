@@ -8,6 +8,7 @@ option(VEST_BUILD_EDITOR "Build VestEngine Editor" ON)
 option(VEST_BUILD_EXAMPLES "Build examples" OFF)
 set(VEST_RENDERER_API "OpenGL" CACHE STRING "Rendering API (OpenGL/Vulkan)")
 set_property(CACHE VEST_RENDERER_API PROPERTY STRINGS "OpenGL" "Vulkan")
+option(VEST_ENABLE_SERIALIZATION "Enable scene serialization" ON)
 
 include(FetchContent)
 
@@ -18,8 +19,14 @@ FetchContent_Declare(glm
     GIT_SHALLOW TRUE
 )
 FetchContent_Declare(imgui URL https://github.com/ocornut/imgui/archive/refs/tags/v1.91.8-docking.tar.gz)
+if(VEST_ENABLE_SERIALIZATION)
+    FetchContent_Declare(nlohmann_json URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
+endif()
 
 FetchContent_MakeAvailable(glfw glm)
+if(VEST_ENABLE_SERIALIZATION)
+    FetchContent_MakeAvailable(nlohmann_json)
+endif()
 
 add_library(glad STATIC ${CMAKE_CURRENT_SOURCE_DIR}/external/glad/src/glad.c)
 target_include_directories(glad PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/external/glad/include)

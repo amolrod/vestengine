@@ -33,6 +33,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/angel/Desktop/C++/VestEngine/src/Rendering/Shader.cpp" "VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.o" "gcc" "VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.o.d"
   "/Users/angel/Desktop/C++/VestEngine/src/Rendering/Texture.cpp" "VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o" "gcc" "VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o.d"
   "/Users/angel/Desktop/C++/VestEngine/src/Rendering/VertexArray.cpp" "VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o" "gcc" "VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o.d"
+  "/Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.cpp" "VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o" "gcc" "VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

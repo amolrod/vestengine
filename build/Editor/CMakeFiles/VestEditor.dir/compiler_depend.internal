@@ -363,6 +363,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__string
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__thread/poll_with_backoff.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__threading_support
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/__tree
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__tuple
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__undef_macros
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/__decay_copy.h
@@ -381,6 +382,8 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/to_underlying.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__variant/monostate.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/any
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/array
  /Library/Developer/CommandLineTools/usr/include/c++/v1/atomic
  /Library/Developer/CommandLineTools/usr/include/c++/v1/bitset
  /Library/Developer/CommandLineTools/usr/include/c++/v1/cassert
@@ -389,6 +392,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/cfloat
  /Library/Developer/CommandLineTools/usr/include/c++/v1/chrono
  /Library/Developer/CommandLineTools/usr/include/c++/v1/climits
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/clocale
  /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath
  /Library/Developer/CommandLineTools/usr/include/c++/v1/compare
  /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts
@@ -401,11 +405,15 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/ctype.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/cwchar
  /Library/Developer/CommandLineTools/usr/include/c++/v1/cwctype
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/deque
  /Library/Developer/CommandLineTools/usr/include/c++/v1/errno.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/exception
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/filesystem
  /Library/Developer/CommandLineTools/usr/include/c++/v1/float.h
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/forward_list
  /Library/Developer/CommandLineTools/usr/include/c++/v1/functional
  /Library/Developer/CommandLineTools/usr/include/c++/v1/initializer_list
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/iomanip
  /Library/Developer/CommandLineTools/usr/include/c++/v1/ios
  /Library/Developer/CommandLineTools/usr/include/c++/v1/iosfwd
  /Library/Developer/CommandLineTools/usr/include/c++/v1/istream
@@ -414,14 +422,17 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/locale
  /Library/Developer/CommandLineTools/usr/include/c++/v1/locale.h
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/map
  /Library/Developer/CommandLineTools/usr/include/c++/v1/math.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/memory
  /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex
  /Library/Developer/CommandLineTools/usr/include/c++/v1/new
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/numeric
  /Library/Developer/CommandLineTools/usr/include/c++/v1/optional
  /Library/Developer/CommandLineTools/usr/include/c++/v1/ostream
  /Library/Developer/CommandLineTools/usr/include/c++/v1/ratio
  /Library/Developer/CommandLineTools/usr/include/c++/v1/sstream
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/stack
  /Library/Developer/CommandLineTools/usr/include/c++/v1/stddef.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdexcept
  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdint.h
@@ -437,6 +448,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo
  /Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map
  /Library/Developer/CommandLineTools/usr/include/c++/v1/utility
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/valarray
  /Library/Developer/CommandLineTools/usr/include/c++/v1/variant
  /Library/Developer/CommandLineTools/usr/include/c++/v1/vector
  /Library/Developer/CommandLineTools/usr/include/c++/v1/version
@@ -487,6 +499,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o
  /Users/angel/Desktop/C++/VestEngine/src/Rendering/Shader.h
  /Users/angel/Desktop/C++/VestEngine/src/Rendering/Texture.h
  /Users/angel/Desktop/C++/VestEngine/src/Rendering/VertexArray.h
+ /Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.h
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/matrix.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/type_mat2x2.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/type_mat2x3.hpp
@@ -691,6 +704,51 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/vec3.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/vec4.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/vector_relational.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/adl_serializer.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/byte_container_with_subtype.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/abi_macros.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/from_json.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_chars.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_json.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/exceptions.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/hash.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/binary_reader.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/input_adapters.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/json_sax.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/lexer.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/parser.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/position_t.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/internal_iterator.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iterator_traits.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/primitive_iterator.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_custom_base_class.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_pointer.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_ref.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_scope.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/begin.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/end.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/cpp_future.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/detected.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/identity_tag.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/is_sax.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/std_fs.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/type_traits.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/void_t.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/binary_writer.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/output_adapters.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/serializer.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_concat.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_escape.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/value_t.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/json.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/json_fwd.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
 
 Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Users/angel/Desktop/C++/Editor/src/EditorLayer.cpp
@@ -1054,6 +1112,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__string
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__thread/poll_with_backoff.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__threading_support
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/__tree
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__tuple
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__undef_macros
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/__decay_copy.h
@@ -1072,6 +1131,8 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/to_underlying.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/__variant/monostate.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/any
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/array
  /Library/Developer/CommandLineTools/usr/include/c++/v1/atomic
  /Library/Developer/CommandLineTools/usr/include/c++/v1/bitset
  /Library/Developer/CommandLineTools/usr/include/c++/v1/cassert
@@ -1080,6 +1141,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/cfloat
  /Library/Developer/CommandLineTools/usr/include/c++/v1/chrono
  /Library/Developer/CommandLineTools/usr/include/c++/v1/climits
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/clocale
  /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath
  /Library/Developer/CommandLineTools/usr/include/c++/v1/compare
  /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts
@@ -1097,6 +1159,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/exception
  /Library/Developer/CommandLineTools/usr/include/c++/v1/filesystem
  /Library/Developer/CommandLineTools/usr/include/c++/v1/float.h
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/forward_list
  /Library/Developer/CommandLineTools/usr/include/c++/v1/functional
  /Library/Developer/CommandLineTools/usr/include/c++/v1/initializer_list
  /Library/Developer/CommandLineTools/usr/include/c++/v1/iomanip
@@ -1108,10 +1171,12 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/locale
  /Library/Developer/CommandLineTools/usr/include/c++/v1/locale.h
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/map
  /Library/Developer/CommandLineTools/usr/include/c++/v1/math.h
  /Library/Developer/CommandLineTools/usr/include/c++/v1/memory
  /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex
  /Library/Developer/CommandLineTools/usr/include/c++/v1/new
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/numeric
  /Library/Developer/CommandLineTools/usr/include/c++/v1/optional
  /Library/Developer/CommandLineTools/usr/include/c++/v1/ostream
  /Library/Developer/CommandLineTools/usr/include/c++/v1/ratio
@@ -1132,6 +1197,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo
  /Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map
  /Library/Developer/CommandLineTools/usr/include/c++/v1/utility
+ /Library/Developer/CommandLineTools/usr/include/c++/v1/valarray
  /Library/Developer/CommandLineTools/usr/include/c++/v1/variant
  /Library/Developer/CommandLineTools/usr/include/c++/v1/vector
  /Library/Developer/CommandLineTools/usr/include/c++/v1/version
@@ -1178,6 +1244,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Users/angel/Desktop/C++/VestEngine/src/Rendering/Shader.h
  /Users/angel/Desktop/C++/VestEngine/src/Rendering/Texture.h
  /Users/angel/Desktop/C++/VestEngine/src/Rendering/VertexArray.h
+ /Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.h
  /Users/angel/Desktop/C++/build/_deps/glfw-src/include/GLFW/glfw3.h
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/matrix.hpp
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/type_mat2x2.hpp
@@ -1476,6 +1543,51 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/vector_relational.hpp
  /Users/angel/Desktop/C++/build/_deps/imgui-src/imconfig.h
  /Users/angel/Desktop/C++/build/_deps/imgui-src/imgui.h
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/adl_serializer.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/byte_container_with_subtype.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/abi_macros.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/from_json.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_chars.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_json.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/exceptions.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/hash.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/binary_reader.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/input_adapters.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/json_sax.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/lexer.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/parser.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/position_t.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/internal_iterator.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iterator_traits.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/primitive_iterator.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_custom_base_class.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_pointer.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_ref.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_scope.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/begin.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/end.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/cpp_future.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/detected.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/identity_tag.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/is_sax.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/std_fs.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/type_traits.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/void_t.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/binary_writer.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/output_adapters.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/serializer.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_concat.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_escape.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/value_t.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/json.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/json_fwd.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp
+ /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
 
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o
  /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.cpp

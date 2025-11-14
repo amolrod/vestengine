@@ -775,6 +775,30 @@ src/Rendering/VertexArray.cpp.s:
 	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f VestEngine/CMakeFiles/VestEngine.dir/build.make VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.s
 .PHONY : src/Rendering/VertexArray.cpp.s
 
+src/Serialization/SceneSerializer.o: src/Serialization/SceneSerializer.cpp.o
+.PHONY : src/Serialization/SceneSerializer.o
+
+# target to build an object file
+src/Serialization/SceneSerializer.cpp.o:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f VestEngine/CMakeFiles/VestEngine.dir/build.make VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o
+.PHONY : src/Serialization/SceneSerializer.cpp.o
+
+src/Serialization/SceneSerializer.i: src/Serialization/SceneSerializer.cpp.i
+.PHONY : src/Serialization/SceneSerializer.i
+
+# target to preprocess a source file
+src/Serialization/SceneSerializer.cpp.i:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f VestEngine/CMakeFiles/VestEngine.dir/build.make VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.i
+.PHONY : src/Serialization/SceneSerializer.cpp.i
+
+src/Serialization/SceneSerializer.s: src/Serialization/SceneSerializer.cpp.s
+.PHONY : src/Serialization/SceneSerializer.s
+
+# target to generate assembly for a file
+src/Serialization/SceneSerializer.cpp.s:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f VestEngine/CMakeFiles/VestEngine.dir/build.make VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.s
+.PHONY : src/Serialization/SceneSerializer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -863,6 +887,9 @@ help:
 	@echo "... src/Rendering/VertexArray.o"
 	@echo "... src/Rendering/VertexArray.i"
 	@echo "... src/Rendering/VertexArray.s"
+	@echo "... src/Serialization/SceneSerializer.o"
+	@echo "... src/Serialization/SceneSerializer.i"
+	@echo "... src/Serialization/SceneSerializer.s"
 .PHONY : help
 
 

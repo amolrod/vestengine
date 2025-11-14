@@ -362,6 +362,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__string \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__thread/poll_with_backoff.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__threading_support \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__tuple \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__undef_macros \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/__decay_copy.h \
@@ -380,6 +381,8 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/to_underlying.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__variant/monostate.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/any \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/array \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/atomic \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cassert \
@@ -388,6 +391,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cfloat \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/climits \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/clocale \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/compare \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts \
@@ -400,11 +404,15 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ctype.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cwchar \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cwctype \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/errno.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/exception \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/float.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/forward_list \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/functional \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/initializer_list \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ios \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/iosfwd \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/istream \
@@ -413,14 +421,17 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/locale.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/new \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/numeric \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/optional \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/sstream \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stack \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stddef.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stdexcept \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stdint.h \
@@ -436,6 +447,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/utility \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/valarray \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/variant \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/version \
@@ -486,6 +498,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Shader.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Texture.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/VertexArray.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.h \
   _deps/glm-src/glm/matrix.hpp \
   _deps/glm-src/glm/detail/type_mat2x2.hpp \
   _deps/glm-src/glm/detail/type_mat2x3.hpp \
@@ -689,7 +702,52 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   _deps/glm-src/glm/vec2.hpp \
   _deps/glm-src/glm/vec3.hpp \
   _deps/glm-src/glm/vec4.hpp \
-  _deps/glm-src/glm/vector_relational.hpp
+  _deps/glm-src/glm/vector_relational.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/adl_serializer.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/byte_container_with_subtype.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/abi_macros.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/conversions/from_json.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_chars.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_json.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/exceptions.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/hash.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/binary_reader.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/input_adapters.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/json_sax.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/lexer.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/parser.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/position_t.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/json_custom_base_class.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/json_pointer.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/json_ref.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/macro_scope.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/begin.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/end.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/cpp_future.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/detected.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/identity_tag.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/is_sax.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/std_fs.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/type_traits.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/void_t.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/output/binary_writer.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/output/output_adapters.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/output/serializer.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/string_concat.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/string_escape.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/value_t.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/json.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/json_fwd.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
 
 Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++/Editor/src/EditorLayer.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -1052,6 +1110,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__string \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__thread/poll_with_backoff.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__threading_support \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__tuple \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__undef_macros \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/__decay_copy.h \
@@ -1070,6 +1129,8 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/to_underlying.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__variant/monostate.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/any \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/array \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/atomic \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cassert \
@@ -1078,6 +1139,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cfloat \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/climits \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/clocale \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/compare \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts \
@@ -1095,6 +1157,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Library/Developer/CommandLineTools/usr/include/c++/v1/exception \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/float.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/forward_list \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/functional \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/initializer_list \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/iomanip \
@@ -1106,10 +1169,12 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/locale.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/new \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/numeric \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/optional \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ratio \
@@ -1130,6 +1195,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/utility \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/valarray \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/variant \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/version \
@@ -1176,6 +1242,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Shader.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Texture.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/VertexArray.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.h \
   _deps/glfw-src/include/GLFW/glfw3.h \
   _deps/glm-src/glm/matrix.hpp \
   _deps/glm-src/glm/detail/type_mat2x2.hpp \
@@ -1473,7 +1540,52 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   _deps/glm-src/glm/vec4.hpp \
   _deps/glm-src/glm/vector_relational.hpp \
   _deps/imgui-src/imconfig.h \
-  _deps/imgui-src/imgui.h
+  _deps/imgui-src/imgui.h \
+  _deps/nlohmann_json-src/include/nlohmann/adl_serializer.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/byte_container_with_subtype.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/abi_macros.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/conversions/from_json.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_chars.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_json.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/exceptions.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/hash.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/binary_reader.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/input_adapters.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/json_sax.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/lexer.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/parser.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/input/position_t.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/json_custom_base_class.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/json_pointer.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/json_ref.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/macro_scope.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/begin.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/end.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/cpp_future.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/detected.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/identity_tag.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/is_sax.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/std_fs.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/type_traits.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/meta/void_t.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/output/binary_writer.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/output/output_adapters.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/output/serializer.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/string_concat.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/string_escape.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/detail/value_t.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/json.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/json_fwd.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
 
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o: /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -3924,8 +4036,6 @@ _deps/glm-src/glm/ext/quaternion_trigonometric.hpp:
 
 _deps/glm-src/glm/ext/quaternion_transform.inl:
 
-_deps/glm-src/glm/ext/quaternion_transform.hpp:
-
 _deps/glm-src/glm/ext/quaternion_float.hpp:
 
 _deps/glm-src/glm/ext/quaternion_common.inl:
@@ -3940,15 +4050,47 @@ _deps/glm-src/glm/ext/quaternion_relational.hpp:
 
 _deps/glm-src/glm/ext/quaternion_common.hpp:
 
-/Library/Developer/CommandLineTools/usr/include/c++/v1/iomanip:
+_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp:
 
-/Library/Developer/CommandLineTools/usr/include/c++/v1/filesystem:
+_deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/json_fwd.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/value_t.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/string_concat.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/output/binary_writer.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/meta/void_t.hpp:
+
+_deps/glm-src/glm/ext/quaternion_transform.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/meta/type_traits.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/meta/identity_tag.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/end.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/begin.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/iterators/primitive_iterator.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iterator_traits.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/iterators/internal_iterator.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/input/position_t.hpp:
 
 _deps/glm-src/glm/integer.hpp:
 
 _deps/glm-src/glm/gtc/matrix_transform.inl:
 
 _deps/glm-src/glm/ext/matrix_transform.inl:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/json_pointer.hpp:
 
 _deps/glm-src/glm/ext/matrix_projection.hpp:
 
@@ -3977,6 +4119,8 @@ _deps/glm-src/glm/ext/vector_double4_precision.hpp:
 _deps/glm-src/glm/ext/vector_double4.hpp:
 
 _deps/glm-src/glm/ext/vector_double2_precision.hpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/string_escape.hpp:
 
 _deps/glm-src/glm/ext/vector_bool4_precision.hpp:
 
@@ -4048,6 +4192,8 @@ _deps/glm-src/glm/ext/matrix_float4x3_precision.hpp:
 
 _deps/glm-src/glm/ext/matrix_float4x3.hpp:
 
+_deps/nlohmann_json-src/include/nlohmann/detail/conversions/from_json.hpp:
+
 _deps/glm-src/glm/ext/matrix_float4x2.hpp:
 
 _deps/glm-src/glm/ext/matrix_float3x2_precision.hpp:
@@ -4063,10 +4209,6 @@ _deps/glm-src/glm/ext/matrix_float2x3.hpp:
 _deps/glm-src/glm/ext/matrix_double4x4_precision.hpp:
 
 _deps/glm-src/glm/ext/matrix_double4x3.hpp:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/stack:
-
-_deps/glm-src/glm/ext/matrix_double3x4_precision.hpp:
 
 _deps/glm-src/glm/ext/matrix_double3x4.hpp:
 
@@ -4160,17 +4302,23 @@ _deps/glm-src/glm/matrix.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg___va_copy.h:
 
+_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp:
+
 /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg___gnuc_va_list.h:
 
 _deps/glm-src/glm/ext/matrix_clip_space.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/wctype.h:
 
+_deps/nlohmann_json-src/include/nlohmann/detail/input/parser.hpp:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/wchar.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/version:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/variant:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/valarray:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/utility:
 
@@ -4182,11 +4330,15 @@ _deps/glm-src/glm/ext/matrix_clip_space.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/string:
 
-/Library/Developer/CommandLineTools/usr/include/c++/v1/stdint.h:
-
 /Library/Developer/CommandLineTools/usr/include/c++/v1/stdexcept:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/stddef.h:
+
+_deps/glm-src/glm/ext/matrix_double3x4_precision.hpp:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/stack:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_chars.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/ratio:
 
@@ -4194,15 +4346,25 @@ _deps/glm-src/glm/ext/vector_bool1_precision.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/optional:
 
+/Library/Developer/CommandLineTools/usr/include/c++/v1/stdint.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/numeric:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/new:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_json.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/math.h:
 
+/Library/Developer/CommandLineTools/usr/include/c++/v1/map:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/locale.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/locale:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/output/output_adapters.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h:
 
@@ -4216,21 +4378,25 @@ _deps/glm-src/glm/ext/vector_bool1_precision.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/ios:
 
+/Library/Developer/CommandLineTools/usr/include/c++/v1/iomanip:
+
 /Users/angel/Desktop/C++/Editor/src/EditorLayer.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/functional:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/forward_list:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/16/include/float.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/float.h:
 
+/Library/Developer/CommandLineTools/usr/include/c++/v1/filesystem:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/exception:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/errno.h:
 
-/Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/push_heap.h:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/cstdlib:
+/Library/Developer/CommandLineTools/usr/include/c++/v1/ctime:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio:
 
@@ -4243,6 +4409,10 @@ _deps/glm-src/glm/ext/vector_bool1_precision.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/types.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/atomic:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/any:
 
 _deps/glm-src/glm/gtc/matrix_transform.hpp:
 
@@ -4259,6 +4429,8 @@ _deps/glm-src/glm/ext/matrix_float4x2_precision.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/pair.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/integer_sequence.h:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/in_place.h:
 
@@ -4280,13 +4452,11 @@ _deps/glm-src/glm/detail/type_mat3x2.inl:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__undef_macros:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/cstring:
-
 _deps/glm-src/glm/detail/type_mat3x4.inl:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__tuple:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__tree:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h:
 
@@ -4299,10 +4469,6 @@ _deps/glm-src/glm/fwd.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__ranges/enable_view.h:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/set_union.h:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/ctype.h:
 
 /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.cpp:
 
@@ -4402,6 +4568,8 @@ _deps/glm-src/glm/ext/vector_float1_precision.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/weak_result_type.h:
 
+_deps/nlohmann_json-src/include/nlohmann/detail/macro_scope.hpp:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/unwrap_ref.h:
 
 /Users/angel/Desktop/C++/VestEngine/src/Core/Event.h:
@@ -4423,6 +4591,8 @@ _deps/glm-src/glm/ext/vector_float2.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/mem_fn.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/invoke.h:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/meta/cpp_future.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/hash.h:
 
@@ -4476,6 +4646,8 @@ _deps/glm-src/glm/ext/quaternion_float_precision.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/addressof.h:
 
+/Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.h:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/deque:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/bind_front.h:
@@ -4483,6 +4655,8 @@ _deps/glm-src/glm/ext/quaternion_float_precision.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/transform.h:
 
 /Users/angel/Desktop/C++/Editor/src/Panels/ViewportPanel.cpp:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/json_ref.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h:
 
@@ -4506,6 +4680,8 @@ _deps/glm-src/glm/ext/quaternion_float_precision.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/shuffle.h:
 
+_deps/nlohmann_json-src/include/nlohmann/detail/meta/std_fs.hpp:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/istream_iterator.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/shift_right.h:
@@ -4521,6 +4697,10 @@ _deps/glm-src/glm/mat3x3.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/cassert:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/shift_left.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/array:
 
 _deps/glm-src/glm/ext/vector_int2.hpp:
 
@@ -4558,6 +4738,8 @@ _deps/glm-src/glm/detail/type_float.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/rotate_copy.h:
 
+_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/rotate.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/min_element.h:
@@ -4574,6 +4756,10 @@ _deps/glm-src/glm/detail/type_vec3.inl:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/remove.h:
 
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cstdlib:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/push_heap.h:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/partition.h:
 
 _deps/glm-src/glm/ext/vector_int4_sized.hpp:
@@ -4588,6 +4774,10 @@ _deps/glm-src/glm/ext/matrix_double4x3_precision.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/none_of.h:
 
+_deps/nlohmann_json-src/include/nlohmann/detail/abi_macros.hpp:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/clocale:
+
 _deps/glm-src/glm/ext/vector_float4.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/shared_ptr.h:
@@ -4601,6 +4791,8 @@ _deps/glm-src/glm/detail/func_matrix.inl:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/piecewise_construct.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/min.h:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/meta/is_sax.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/make_heap.h:
 
@@ -4674,6 +4866,8 @@ _deps/glm-src/glm/ext/scalar_constants.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/count_if.h:
 
+_deps/nlohmann_json-src/include/nlohmann/detail/json_custom_base_class.hpp:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/stdlib.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/copy_backward.h:
@@ -4687,6 +4881,8 @@ _deps/glm-src/glm/ext/scalar_constants.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/binary_search.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__bsd_locale_defaults.h:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/input/json_sax.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/comp_ref_type.h:
 
@@ -4732,6 +4928,12 @@ _deps/glm-src/glm/detail/type_mat2x4.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__config_site:
 
+/Library/Developer/CommandLineTools/usr/include/c++/v1/ctype.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/set_union.h:
+
+_deps/nlohmann_json-src/include/nlohmann/adl_serializer.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_types.h:
@@ -4747,6 +4949,8 @@ _deps/glm-src/glm/ext/vector_double2.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/memory:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_useconds_t.h:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/exceptions.hpp:
 
 _deps/glm-src/glm/ext/matrix_double4x4.hpp:
 
@@ -4792,6 +4996,10 @@ _deps/glm-src/glm/mat3x4.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h:
 
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cstring:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h:
+
 _deps/glm-src/glm/detail/type_mat3x3.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/remove_if.h:
@@ -4803,8 +5011,6 @@ _deps/glm-src/glm/detail/type_mat3x3.hpp:
 _deps/glm-src/glm/detail/type_mat4x2.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/ostreambuf_iterator.h:
 
@@ -4825,6 +5031,8 @@ _deps/glm-src/glm/detail/type_mat4x2.inl:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/__decay_copy.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__errc:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/hash.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_addr_t.h:
 
@@ -4988,6 +5196,8 @@ _deps/glm-src/glm/gtc/constants.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/max_element.h:
 
+_deps/nlohmann_json-src/include/nlohmann/detail/output/serializer.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_time.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/max.h:
@@ -5007,6 +5217,8 @@ _deps/glm-src/glm/ext/matrix_double4x2.hpp:
 _deps/glm-src/glm/detail/func_trigonometric.inl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sched.h:
+
+_deps/nlohmann_json-src/include/nlohmann/byte_container_with_subtype.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h:
 
@@ -5052,9 +5264,13 @@ _deps/glm-src/glm/ext/vector_int3_sized.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/qos.h:
 
+_deps/nlohmann_json-src/include/nlohmann/detail/input/binary_reader.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/alloca.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/projected.h:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/input/input_adapters.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_clock_t.h:
 
@@ -5128,8 +5344,6 @@ _deps/glm-src/glm/ext/matrix_double2x3_precision.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/partial_sort_copy.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h:
-
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/remove_copy.h:
 
 _deps/glm-src/glm/ext/matrix_double2x4_precision.hpp:
@@ -5160,11 +5374,15 @@ _deps/glm-src/glm/ext/vector_float1.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts:
 
+_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h:
 
 _deps/glm-src/glm/ext/matrix_double3x2.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_setsize.h:
+
+_deps/nlohmann_json-src/include/nlohmann/detail/meta/detected.hpp:
 
 /Users/angel/Desktop/C++/Editor/src/Panels/StatsPanel.h:
 
@@ -5194,6 +5412,8 @@ _deps/glm-src/glm/vector_relational.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h:
 
+_deps/nlohmann_json-src/include/nlohmann/json.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_string.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/back_insert_iterator.h:
@@ -5214,6 +5434,8 @@ _deps/glm-src/glm/gtc/constants.inl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int16_t.h:
 
+_deps/nlohmann_json-src/include/nlohmann/detail/input/lexer.hpp:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/equal_range.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h:
@@ -5225,8 +5447,6 @@ _deps/glm-src/glm/ext/matrix_float3x4_precision.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_limits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/ctime:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h:
 

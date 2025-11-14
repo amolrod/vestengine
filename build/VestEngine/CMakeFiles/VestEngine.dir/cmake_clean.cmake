@@ -49,6 +49,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o.d"
   "CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o"
   "CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o.d"
+  "CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o"
+  "CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o.d"
   "libVestEngine.a"
   "libVestEngine.pdb"
 )

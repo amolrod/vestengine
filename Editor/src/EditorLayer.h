@@ -13,6 +13,7 @@
 #include "Rendering/Shader.h"
 #include "Rendering/VertexArray.h"
 #include "Rendering/Texture.h"
+#include "Serialization/SceneSerializer.h"
 
 #include "Panels/ContentBrowserPanel.h"
 #include "Panels/PropertiesPanel.h"

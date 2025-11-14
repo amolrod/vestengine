@@ -678,6 +678,64 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__node_handle \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/optional \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Texture.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.h \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/json.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/adl_serializer.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/abi_macros.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/from_json.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/forward_list \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/map \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tree \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/valarray \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/exceptions.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/value_t.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_scope.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/detected.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/void_t.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_escape.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/position_t.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/cpp_future.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/type_traits.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/begin.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/end.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/json_fwd.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_concat.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/identity_tag.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/std_fs.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stack \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/deque \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iomanip \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_json.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/byte_container_with_subtype.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/hash.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/binary_reader.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/input_adapters.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/numeric \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/json_sax.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/lexer.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/clocale \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/is_sax.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/parser.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_custom_base_class.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_pointer.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_ref.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/binary_writer.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/output_adapters.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/serializer.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_chars.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/any \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp \
+  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
   /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/PropertiesPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
