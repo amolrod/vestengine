@@ -31,6 +31,10 @@ void EditorLayer::OnAttach() {
     m_Framebuffer = Framebuffer::Create(spec);
     m_ViewportPanel.SetFramebuffer(m_Framebuffer);
 
+    // Initialize camera
+    float aspectRatio = static_cast<float>(spec.width) / static_cast<float>(spec.height);
+    m_EditorCamera = EditorCamera(aspectRatio, 1.5f);
+
     m_SceneHierarchyPanel.SetSceneContext(&m_SceneObjects, &m_SelectedEntityIndex);
     m_PropertiesPanel.SetSceneContext(&m_SceneObjects, &m_SelectedEntityIndex);
 
@@ -166,20 +170,9 @@ void EditorLayer::OnUpdate(Timestep ts) {
     m_FPS = ts.GetSeconds() > 0.0f ? 1.0f / ts.GetSeconds() : 0.0f;
     m_DrawCalls = 0;
 
+    // Update camera
     if (m_ViewportFocused) {
-        const float cameraSpeed = 2.0f;
-        if (Input::IsKeyPressed(GLFW_KEY_A)) {
-            m_CameraPosition.x -= cameraSpeed * ts.GetSeconds();
-        }
-        if (Input::IsKeyPressed(GLFW_KEY_D)) {
-            m_CameraPosition.x += cameraSpeed * ts.GetSeconds();
-        }
-        if (Input::IsKeyPressed(GLFW_KEY_W)) {
-            m_CameraPosition.y += cameraSpeed * ts.GetSeconds();
-        }
-        if (Input::IsKeyPressed(GLFW_KEY_S)) {
-            m_CameraPosition.y -= cameraSpeed * ts.GetSeconds();
-        }
+        m_EditorCamera.OnUpdate(ts);
     }
 
     if (m_Framebuffer && m_ViewportSize.x > 0.0f && m_ViewportSize.y > 0.0f) {
@@ -187,16 +180,11 @@ void EditorLayer::OnUpdate(Timestep ts) {
         RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1.0f});
         RenderCommand::Clear();
 
-        const float aspect = m_ViewportSize.x / m_ViewportSize.y;
-        const float orthoHeight = m_CameraZoom;
-        const float orthoWidth = orthoHeight * aspect;
-        glm::mat4 projection = glm::ortho(-orthoWidth, orthoWidth, -orthoHeight, orthoHeight, -1.0f, 10.0f);
-        glm::mat4 view = glm::translate(glm::mat4(1.0f), -m_CameraPosition);
-        m_ProjectionMatrix = projection;
-        m_ViewMatrix = view;
-        m_ViewProjectionMatrix = projection * view;
+        // Update camera aspect ratio if viewport changed
+        float aspect = m_ViewportSize.x / m_ViewportSize.y;
+        m_EditorCamera.SetAspectRatio(aspect);
 
-        Renderer::BeginScene(m_ViewProjectionMatrix);
+        Renderer::BeginScene(m_EditorCamera.GetViewProjectionMatrix());
         for (const auto& object : m_SceneObjects) {
             glm::mat4 transform = CalculateTransform(object);
 
@@ -233,8 +221,9 @@ void EditorLayer::OnUpdate(Timestep ts) {
                 outlineTransform * glm::vec4(0.5f, 0.5f, 0.0f, 1.0f),
                 outlineTransform * glm::vec4(-0.5f, 0.5f, 0.0f, 1.0f)};
 
+            glm::mat4 viewProjectionMatrix = m_EditorCamera.GetViewProjectionMatrix();
             for (int i = 0; i < 4; ++i) {
-                glm::vec4 clip = m_ViewProjectionMatrix * corners[i];
+                glm::vec4 clip = viewProjectionMatrix * corners[i];
                 glm::vec3 ndc = glm::vec3(clip) / clip.w;
                 m_SelectedOutline[i].x = (ndc.x * 0.5f + 0.5f) * m_ViewportSize.x;
                 m_SelectedOutline[i].y = (1.0f - (ndc.y * 0.5f + 0.5f)) * m_ViewportSize.y;
@@ -402,20 +391,20 @@ void EditorLayer::HandleViewportCameraControls() {
     }
 
     ImGuiIO& io = ImGui::GetIO();
+    
+    // Mouse wheel zoom
     if (io.MouseWheel != 0.0f) {
-        m_CameraZoom -= io.MouseWheel * 0.2f;
-        m_CameraZoom = std::clamp(m_CameraZoom, 0.5f, 5.0f);
+        m_EditorCamera.OnMouseScroll(io.MouseWheel);
     }
 
+    // Pan with middle or right mouse button
     const bool panWithMiddle = ImGui::IsMouseDown(ImGuiMouseButton_Middle);
     const bool panWithRight = ImGui::IsMouseDown(ImGuiMouseButton_Right);
     if (panWithMiddle || panWithRight) {
         ImVec2 mousePosIm = ImGui::GetMousePos();
         glm::vec2 mousePos = {mousePosIm.x, mousePosIm.y};
         glm::vec2 delta = mousePos - m_LastMousePos;
-        const float panSpeed = 0.002f * m_CameraZoom;
-        m_CameraPosition.x -= delta.x * panSpeed;
-        m_CameraPosition.y += delta.y * panSpeed;
+        m_EditorCamera.Pan(delta);
         m_LastMousePos = mousePos;
     } else {
         ImVec2 mousePosIm = ImGui::GetMousePos();
@@ -450,20 +439,15 @@ void EditorLayer::HandleViewportPicking() {
         return;
     }
 
+    // Convert screen to viewport coordinates
     glm::vec2 viewportPoint = mouse - bounds[0];
-    glm::vec2 ndc;
-    ndc.x = (viewportPoint.x / m_ViewportSize.x) * 2.0f - 1.0f;
-    ndc.y = 1.0f - (viewportPoint.y / m_ViewportSize.y) * 2.0f;
+    
+    // Use EditorCamera to convert to world space
+    glm::vec2 worldPoint = m_EditorCamera.ScreenToWorld(viewportPoint, m_ViewportSize);
 
-    glm::vec4 clip = {ndc.x, ndc.y, 0.0f, 1.0f};
-    glm::vec4 world = glm::inverse(m_ViewProjectionMatrix) * clip;
-    if (world.w != 0.0f) {
-        world /= world.w;
-    }
-
-    glm::vec2 point = {world.x, world.y};
+    // Check entities from front to back
     for (int i = static_cast<int>(m_SceneObjects.size()) - 1; i >= 0; --i) {
-        if (PointInEntity(point, m_SceneObjects[static_cast<size_t>(i)])) {
+        if (PointInEntity(worldPoint, m_SceneObjects[static_cast<size_t>(i)])) {
             m_SelectedEntityIndex = i;
             return;
         }
@@ -563,7 +547,10 @@ void EditorLayer::HandleGizmos() {
     SceneObject& object = m_SceneObjects[static_cast<size_t>(m_SelectedEntityIndex)];
     glm::mat4 transform = CalculateTransform(object);
 
-    ImGuizmo::Manipulate(glm::value_ptr(m_ViewMatrix), glm::value_ptr(m_ProjectionMatrix), m_GizmoOperation, m_GizmoMode, glm::value_ptr(transform));
+    glm::mat4 viewMatrix = m_EditorCamera.GetViewMatrix();
+    glm::mat4 projectionMatrix = m_EditorCamera.GetProjectionMatrix();
+
+    ImGuizmo::Manipulate(glm::value_ptr(viewMatrix), glm::value_ptr(projectionMatrix), m_GizmoOperation, m_GizmoMode, glm::value_ptr(transform));
 
     if (ImGuizmo::IsUsing()) {
         if (!m_GizmoWasUsing) {
