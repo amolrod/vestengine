@@ -31,6 +31,7 @@ set(VESTENGINE_HEADERS
     src/Rendering/Platform/Vulkan/VulkanRendererAPI.h
     src/ImGui/ImGuiLayer.h
     src/Platform/Windows/WindowsWindow.h
+    src/Scene/SceneObject.h
 )
 
 set(VESTENGINE_SOURCES
@@ -69,7 +70,6 @@ target_include_directories(VestEngine PUBLIC
     ${glfw_SOURCE_DIR}/include
     ${glm_SOURCE_DIR}
     ${glad_SOURCE_DIR}/include
-    ${CMAKE_SOURCE_DIR}/Editor/src
     ${CMAKE_SOURCE_DIR}/external/stb
 )
 

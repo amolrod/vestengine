@@ -4,7 +4,7 @@
 #include <vector>
 #include <utility>
 
-#include "Scene/SceneObject.h"
+#include <Scene/SceneObject.h>
 
 namespace Vest {
 

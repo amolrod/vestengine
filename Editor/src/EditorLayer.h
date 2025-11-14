@@ -26,7 +26,7 @@
 #include "Panels/SceneHierarchyPanel.h"
 #include "Panels/StatsPanel.h"
 #include "Panels/ViewportPanel.h"
-#include "Scene/SceneObject.h"
+#include <Scene/SceneObject.h>
 
 namespace Vest {
 

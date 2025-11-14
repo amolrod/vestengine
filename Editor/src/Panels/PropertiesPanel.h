@@ -6,7 +6,7 @@
 
 #include <glm/glm.hpp>
 
-#include "Scene/SceneObject.h"
+#include <Scene/SceneObject.h>
 
 namespace Vest {
 
