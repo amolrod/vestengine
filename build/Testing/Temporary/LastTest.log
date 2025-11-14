@@ -1,0 +1,891 @@
+Start testing: Nov 14 17:19 CET
+----------------------------------------------------------
+1/37 Testing: LogTests.LoggerInitialization
+1/37 Test: LogTests.LoggerInitialization
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=LogTests.LoggerInitialization" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"LogTests.LoggerInitialization" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = LogTests.LoggerInitialization
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LogTests
+[ RUN      ] LogTests.LoggerInitialization
+[17:19:11] VEST: VestEngine logging initialized
+/Users/angel/Desktop/C++/Tests/Core/LogTests.cpp:29: Failure
+Expected: Log::Init() doesn't throw an exception.
+  Actual: it throws spdlog::spdlog_ex with description "logger with name 'VEST' already exists".
+
+[  FAILED  ] LogTests.LoggerInitialization (2 ms)
+[----------] 1 test from LogTests (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LogTests.LoggerInitialization
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"LogTests.LoggerInitialization" end time: Nov 14 17:19 CET
+"LogTests.LoggerInitialization" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/37 Testing: LogTests.CoreLoggerOutput
+2/37 Test: LogTests.CoreLoggerOutput
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=LogTests.CoreLoggerOutput" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"LogTests.CoreLoggerOutput" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = LogTests.CoreLoggerOutput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LogTests
+[ RUN      ] LogTests.CoreLoggerOutput
+[17:19:11] VEST: VestEngine logging initialized
+[17:19:11] VEST: Test info message
+[17:19:11] VEST: Test warning message
+[17:19:11] VEST: Test error message
+[       OK ] LogTests.CoreLoggerOutput (0 ms)
+[----------] 1 test from LogTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"LogTests.CoreLoggerOutput" end time: Nov 14 17:19 CET
+"LogTests.CoreLoggerOutput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/37 Testing: LogTests.ClientLoggerOutput
+3/37 Test: LogTests.ClientLoggerOutput
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=LogTests.ClientLoggerOutput" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"LogTests.ClientLoggerOutput" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = LogTests.ClientLoggerOutput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LogTests
+[ RUN      ] LogTests.ClientLoggerOutput
+[17:19:11] VEST: VestEngine logging initialized
+[17:19:11] APP: Client info message
+[17:19:11] APP: Client warning message
+[17:19:11] APP: Client error message
+[       OK ] LogTests.ClientLoggerOutput (0 ms)
+[----------] 1 test from LogTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"LogTests.ClientLoggerOutput" end time: Nov 14 17:19 CET
+"LogTests.ClientLoggerOutput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/37 Testing: LogTests.LogFileCreation
+4/37 Test: LogTests.LogFileCreation
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=LogTests.LogFileCreation" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"LogTests.LogFileCreation" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = LogTests.LogFileCreation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LogTests
+[ RUN      ] LogTests.LogFileCreation
+[17:19:11] VEST: VestEngine logging initialized
+[17:19:11] VEST: Testing file creation
+/Users/angel/Desktop/C++/Tests/Core/LogTests.cpp:53: Failure
+Value of: std::filesystem::exists("VestEngine.log")
+  Actual: false
+Expected: true
+
+[  FAILED  ] LogTests.LogFileCreation (0 ms)
+[----------] 1 test from LogTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LogTests.LogFileCreation
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"LogTests.LogFileCreation" end time: Nov 14 17:19 CET
+"LogTests.LogFileCreation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/37 Testing: LogTests.FormattedLogging
+5/37 Test: LogTests.FormattedLogging
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=LogTests.FormattedLogging" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"LogTests.FormattedLogging" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = LogTests.FormattedLogging
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LogTests
+[ RUN      ] LogTests.FormattedLogging
+[17:19:11] VEST: VestEngine logging initialized
+[17:19:11] VEST: Value: 42, Text: test
+[17:19:11] APP: Formatted: 1 + 2 = 3
+[       OK ] LogTests.FormattedLogging (0 ms)
+[----------] 1 test from LogTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"LogTests.FormattedLogging" end time: Nov 14 17:19 CET
+"LogTests.FormattedLogging" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/37 Testing: LogTests.TraceLogging
+6/37 Test: LogTests.TraceLogging
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=LogTests.TraceLogging" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"LogTests.TraceLogging" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = LogTests.TraceLogging
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LogTests
+[ RUN      ] LogTests.TraceLogging
+[17:19:11] VEST: VestEngine logging initialized
+[17:19:11] VEST: Trace message
+[17:19:11] APP: Client trace message
+[       OK ] LogTests.TraceLogging (0 ms)
+[----------] 1 test from LogTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"LogTests.TraceLogging" end time: Nov 14 17:19 CET
+"LogTests.TraceLogging" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/37 Testing: SceneSerializerTests.SerializeEmptyScene
+7/37 Test: SceneSerializerTests.SerializeEmptyScene
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=SceneSerializerTests.SerializeEmptyScene" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"SceneSerializerTests.SerializeEmptyScene" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = SceneSerializerTests.SerializeEmptyScene
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SceneSerializerTests
+[ RUN      ] SceneSerializerTests.SerializeEmptyScene
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Failed.
+"SceneSerializerTests.SerializeEmptyScene" end time: Nov 14 17:19 CET
+"SceneSerializerTests.SerializeEmptyScene" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/37 Testing: SceneSerializerTests.SerializeValidScene
+8/37 Test: SceneSerializerTests.SerializeValidScene
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=SceneSerializerTests.SerializeValidScene" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"SceneSerializerTests.SerializeValidScene" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = SceneSerializerTests.SerializeValidScene
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SceneSerializerTests
+[ RUN      ] SceneSerializerTests.SerializeValidScene
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Failed.
+"SceneSerializerTests.SerializeValidScene" end time: Nov 14 17:19 CET
+"SceneSerializerTests.SerializeValidScene" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/37 Testing: SceneSerializerTests.DeserializeEmptyScene
+9/37 Test: SceneSerializerTests.DeserializeEmptyScene
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=SceneSerializerTests.DeserializeEmptyScene" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"SceneSerializerTests.DeserializeEmptyScene" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = SceneSerializerTests.DeserializeEmptyScene
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SceneSerializerTests
+[ RUN      ] SceneSerializerTests.DeserializeEmptyScene
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"SceneSerializerTests.DeserializeEmptyScene" end time: Nov 14 17:19 CET
+"SceneSerializerTests.DeserializeEmptyScene" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/37 Testing: SceneSerializerTests.DeserializeValidScene
+10/37 Test: SceneSerializerTests.DeserializeValidScene
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=SceneSerializerTests.DeserializeValidScene" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"SceneSerializerTests.DeserializeValidScene" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = SceneSerializerTests.DeserializeValidScene
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SceneSerializerTests
+[ RUN      ] SceneSerializerTests.DeserializeValidScene
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Failed.
+"SceneSerializerTests.DeserializeValidScene" end time: Nov 14 17:19 CET
+"SceneSerializerTests.DeserializeValidScene" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/37 Testing: SceneSerializerTests.PreserveObjectProperties
+11/37 Test: SceneSerializerTests.PreserveObjectProperties
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=SceneSerializerTests.PreserveObjectProperties" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"SceneSerializerTests.PreserveObjectProperties" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = SceneSerializerTests.PreserveObjectProperties
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SceneSerializerTests
+[ RUN      ] SceneSerializerTests.PreserveObjectProperties
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"SceneSerializerTests.PreserveObjectProperties" end time: Nov 14 17:19 CET
+"SceneSerializerTests.PreserveObjectProperties" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/37 Testing: SceneSerializerTests.BackupCreation
+12/37 Test: SceneSerializerTests.BackupCreation
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=SceneSerializerTests.BackupCreation" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"SceneSerializerTests.BackupCreation" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = SceneSerializerTests.BackupCreation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SceneSerializerTests
+[ RUN      ] SceneSerializerTests.BackupCreation
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Failed.
+"SceneSerializerTests.BackupCreation" end time: Nov 14 17:19 CET
+"SceneSerializerTests.BackupCreation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/37 Testing: SceneSerializerTests.InvalidFilePath
+13/37 Test: SceneSerializerTests.InvalidFilePath
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=SceneSerializerTests.InvalidFilePath" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"SceneSerializerTests.InvalidFilePath" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = SceneSerializerTests.InvalidFilePath
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SceneSerializerTests
+[ RUN      ] SceneSerializerTests.InvalidFilePath
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Failed.
+"SceneSerializerTests.InvalidFilePath" end time: Nov 14 17:19 CET
+"SceneSerializerTests.InvalidFilePath" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/37 Testing: SceneSerializerTests.DeserializeNonexistentFile
+14/37 Test: SceneSerializerTests.DeserializeNonexistentFile
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=SceneSerializerTests.DeserializeNonexistentFile" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"SceneSerializerTests.DeserializeNonexistentFile" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = SceneSerializerTests.DeserializeNonexistentFile
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SceneSerializerTests
+[ RUN      ] SceneSerializerTests.DeserializeNonexistentFile
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Failed.
+"SceneSerializerTests.DeserializeNonexistentFile" end time: Nov 14 17:19 CET
+"SceneSerializerTests.DeserializeNonexistentFile" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/37 Testing: SceneSerializerTests.DeserializeCorruptedJSON
+15/37 Test: SceneSerializerTests.DeserializeCorruptedJSON
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=SceneSerializerTests.DeserializeCorruptedJSON" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"SceneSerializerTests.DeserializeCorruptedJSON" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = SceneSerializerTests.DeserializeCorruptedJSON
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SceneSerializerTests
+[ RUN      ] SceneSerializerTests.DeserializeCorruptedJSON
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"SceneSerializerTests.DeserializeCorruptedJSON" end time: Nov 14 17:19 CET
+"SceneSerializerTests.DeserializeCorruptedJSON" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/37 Testing: SceneSerializerTests.VersionCheck
+16/37 Test: SceneSerializerTests.VersionCheck
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=SceneSerializerTests.VersionCheck" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"SceneSerializerTests.VersionCheck" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = SceneSerializerTests.VersionCheck
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SceneSerializerTests
+[ RUN      ] SceneSerializerTests.VersionCheck
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Failed.
+"SceneSerializerTests.VersionCheck" end time: Nov 14 17:19 CET
+"SceneSerializerTests.VersionCheck" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/37 Testing: SceneSerializerTests.RoundTripConsistency
+17/37 Test: SceneSerializerTests.RoundTripConsistency
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=SceneSerializerTests.RoundTripConsistency" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"SceneSerializerTests.RoundTripConsistency" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = SceneSerializerTests.RoundTripConsistency
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SceneSerializerTests
+[ RUN      ] SceneSerializerTests.RoundTripConsistency
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"SceneSerializerTests.RoundTripConsistency" end time: Nov 14 17:19 CET
+"SceneSerializerTests.RoundTripConsistency" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/37 Testing: CommandTests.TransformCommandPosition
+18/37 Test: CommandTests.TransformCommandPosition
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.TransformCommandPosition" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.TransformCommandPosition" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.TransformCommandPosition
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.TransformCommandPosition
+[       OK ] CommandTests.TransformCommandPosition (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.TransformCommandPosition" end time: Nov 14 17:19 CET
+"CommandTests.TransformCommandPosition" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/37 Testing: CommandTests.TransformCommandRotation
+19/37 Test: CommandTests.TransformCommandRotation
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.TransformCommandRotation" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.TransformCommandRotation" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.TransformCommandRotation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.TransformCommandRotation
+[       OK ] CommandTests.TransformCommandRotation (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.TransformCommandRotation" end time: Nov 14 17:19 CET
+"CommandTests.TransformCommandRotation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/37 Testing: CommandTests.TransformCommandScale
+20/37 Test: CommandTests.TransformCommandScale
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.TransformCommandScale" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.TransformCommandScale" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.TransformCommandScale
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.TransformCommandScale
+[       OK ] CommandTests.TransformCommandScale (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.TransformCommandScale" end time: Nov 14 17:19 CET
+"CommandTests.TransformCommandScale" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/37 Testing: CommandTests.TransformCommandMerge
+21/37 Test: CommandTests.TransformCommandMerge
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.TransformCommandMerge" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.TransformCommandMerge" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.TransformCommandMerge
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.TransformCommandMerge
+[       OK ] CommandTests.TransformCommandMerge (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.TransformCommandMerge" end time: Nov 14 17:19 CET
+"CommandTests.TransformCommandMerge" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/37 Testing: CommandTests.TransformCommandNoMergeDifferentTypes
+22/37 Test: CommandTests.TransformCommandNoMergeDifferentTypes
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.TransformCommandNoMergeDifferentTypes" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.TransformCommandNoMergeDifferentTypes" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.TransformCommandNoMergeDifferentTypes
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.TransformCommandNoMergeDifferentTypes
+[       OK ] CommandTests.TransformCommandNoMergeDifferentTypes (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.TransformCommandNoMergeDifferentTypes" end time: Nov 14 17:19 CET
+"CommandTests.TransformCommandNoMergeDifferentTypes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/37 Testing: CommandTests.CreateEntityCommand
+23/37 Test: CommandTests.CreateEntityCommand
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.CreateEntityCommand" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.CreateEntityCommand" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.CreateEntityCommand
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.CreateEntityCommand
+[       OK ] CommandTests.CreateEntityCommand (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.CreateEntityCommand" end time: Nov 14 17:19 CET
+"CommandTests.CreateEntityCommand" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/37 Testing: CommandTests.DeleteEntityCommand
+24/37 Test: CommandTests.DeleteEntityCommand
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.DeleteEntityCommand" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.DeleteEntityCommand" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.DeleteEntityCommand
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.DeleteEntityCommand
+[       OK ] CommandTests.DeleteEntityCommand (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.DeleteEntityCommand" end time: Nov 14 17:19 CET
+"CommandTests.DeleteEntityCommand" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/37 Testing: CommandTests.DeleteEntityCommandInvalidIndex
+25/37 Test: CommandTests.DeleteEntityCommandInvalidIndex
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.DeleteEntityCommandInvalidIndex" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.DeleteEntityCommandInvalidIndex" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.DeleteEntityCommandInvalidIndex
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.DeleteEntityCommandInvalidIndex
+[       OK ] CommandTests.DeleteEntityCommandInvalidIndex (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.DeleteEntityCommandInvalidIndex" end time: Nov 14 17:19 CET
+"CommandTests.DeleteEntityCommandInvalidIndex" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/37 Testing: CommandTests.ModifyColorCommand
+26/37 Test: CommandTests.ModifyColorCommand
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.ModifyColorCommand" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.ModifyColorCommand" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.ModifyColorCommand
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.ModifyColorCommand
+[       OK ] CommandTests.ModifyColorCommand (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.ModifyColorCommand" end time: Nov 14 17:19 CET
+"CommandTests.ModifyColorCommand" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/37 Testing: CommandTests.CommandManagerExecute
+27/37 Test: CommandTests.CommandManagerExecute
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.CommandManagerExecute" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.CommandManagerExecute" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.CommandManagerExecute
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.CommandManagerExecute
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Failed.
+"CommandTests.CommandManagerExecute" end time: Nov 14 17:19 CET
+"CommandTests.CommandManagerExecute" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/37 Testing: CommandTests.CommandManagerUndoRedo
+28/37 Test: CommandTests.CommandManagerUndoRedo
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.CommandManagerUndoRedo" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.CommandManagerUndoRedo" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.CommandManagerUndoRedo
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.CommandManagerUndoRedo
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"CommandTests.CommandManagerUndoRedo" end time: Nov 14 17:19 CET
+"CommandTests.CommandManagerUndoRedo" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/37 Testing: CommandTests.CommandManagerMultipleCommands
+29/37 Test: CommandTests.CommandManagerMultipleCommands
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.CommandManagerMultipleCommands" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.CommandManagerMultipleCommands" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.CommandManagerMultipleCommands
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.CommandManagerMultipleCommands
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"CommandTests.CommandManagerMultipleCommands" end time: Nov 14 17:19 CET
+"CommandTests.CommandManagerMultipleCommands" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/37 Testing: CommandTests.CommandManagerClearHistory
+30/37 Test: CommandTests.CommandManagerClearHistory
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.CommandManagerClearHistory" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.CommandManagerClearHistory" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.CommandManagerClearHistory
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.CommandManagerClearHistory
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"CommandTests.CommandManagerClearHistory" end time: Nov 14 17:19 CET
+"CommandTests.CommandManagerClearHistory" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/37 Testing: CommandTests.CommandManagerHistoryLimit
+31/37 Test: CommandTests.CommandManagerHistoryLimit
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.CommandManagerHistoryLimit" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.CommandManagerHistoryLimit" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.CommandManagerHistoryLimit
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.CommandManagerHistoryLimit
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"CommandTests.CommandManagerHistoryLimit" end time: Nov 14 17:19 CET
+"CommandTests.CommandManagerHistoryLimit" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/37 Testing: CommandTests.CommandManagerRedoClearedAfterNewCommand
+32/37 Test: CommandTests.CommandManagerRedoClearedAfterNewCommand
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.CommandManagerRedoClearedAfterNewCommand" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.CommandManagerRedoClearedAfterNewCommand" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.CommandManagerRedoClearedAfterNewCommand
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.CommandManagerRedoClearedAfterNewCommand
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"CommandTests.CommandManagerRedoClearedAfterNewCommand" end time: Nov 14 17:19 CET
+"CommandTests.CommandManagerRedoClearedAfterNewCommand" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/37 Testing: CommandTests.CommandManagerRegisterExecuted
+33/37 Test: CommandTests.CommandManagerRegisterExecuted
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.CommandManagerRegisterExecuted" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.CommandManagerRegisterExecuted" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.CommandManagerRegisterExecuted
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.CommandManagerRegisterExecuted
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Failed.
+"CommandTests.CommandManagerRegisterExecuted" end time: Nov 14 17:19 CET
+"CommandTests.CommandManagerRegisterExecuted" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/37 Testing: CommandTests.MacroCommandExecution
+34/37 Test: CommandTests.MacroCommandExecution
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.MacroCommandExecution" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.MacroCommandExecution" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.MacroCommandExecution
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.MacroCommandExecution
+[       OK ] CommandTests.MacroCommandExecution (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.MacroCommandExecution" end time: Nov 14 17:19 CET
+"CommandTests.MacroCommandExecution" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/37 Testing: CommandTests.MacroCommandUndo
+35/37 Test: CommandTests.MacroCommandUndo
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.MacroCommandUndo" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.MacroCommandUndo" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.MacroCommandUndo
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.MacroCommandUndo
+[       OK ] CommandTests.MacroCommandUndo (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.MacroCommandUndo" end time: Nov 14 17:19 CET
+"CommandTests.MacroCommandUndo" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/37 Testing: CommandTests.MacroCommandEmpty
+36/37 Test: CommandTests.MacroCommandEmpty
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.MacroCommandEmpty" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.MacroCommandEmpty" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.MacroCommandEmpty
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.MacroCommandEmpty
+[       OK ] CommandTests.MacroCommandEmpty (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.MacroCommandEmpty" end time: Nov 14 17:19 CET
+"CommandTests.MacroCommandEmpty" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/37 Testing: CommandTests.MacroCommandCount
+37/37 Test: CommandTests.MacroCommandCount
+Command: "/Users/angel/Desktop/C++/build/Tests/VestTests" "--gtest_filter=CommandTests.MacroCommandCount" "--gtest_also_run_disabled_tests"
+Directory: /Users/angel/Desktop/C++/build/Tests
+"CommandTests.MacroCommandCount" start time: Nov 14 17:19 CET
+Output:
+----------------------------------------------------------
+Note: Google Test filter = CommandTests.MacroCommandCount
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CommandTests
+[ RUN      ] CommandTests.MacroCommandCount
+[       OK ] CommandTests.MacroCommandCount (0 ms)
+[----------] 1 test from CommandTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CommandTests.MacroCommandCount" end time: Nov 14 17:19 CET
+"CommandTests.MacroCommandCount" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 14 17:19 CET

@@ -1,16 +1,33 @@
-[16:58:28] [info] VEST: VestEngine logging initialized
-[16:58:28] [info] VEST: VestEngine Application 'VestEditor' starting...
-[16:58:29] [info] VEST: Window created: VestEditor (1600x900)
-[16:58:29] [info] VEST: Initializing Render API: OpenGL
-[16:58:29] [info] VEST: OpenGL Renderer initializing...
-[16:58:29] [info] VEST: OpenGL Info:
-[16:58:29] [info] VEST:   Vendor: Apple
-[16:58:29] [info] VEST:   Renderer: Apple M1
-[16:58:29] [info] VEST:   Version: 4.1 Metal - 89.3
-[16:58:29] [info] VEST: Renderer initialized
-[16:58:39] [info] VEST: Serializing scene to: /Users/angel/Desktop/C++/assets/scenes/assets/scenes/Default.json
-[16:58:39] [info] VEST: Created backup: /Users/angel/Desktop/C++/assets/scenes/assets/scenes/Default.json.bak
-[16:58:39] [info] VEST: Scene serialized successfully: 2 objects
-[16:58:43] [info] VEST: Deserializing scene from: /Users/angel/Desktop/C++/assets/scenes/assets/scenes/Default.json
-[16:58:43] [info] VEST: Scene deserialized successfully: 2 objects
-[16:59:08] [info] VEST: VestEngine Application shutting down...
+[19:00:54] [info] VEST: VestEngine logging initialized
+[19:00:54] [info] VEST: VestEngine Application 'VestEditor' starting...
+[19:00:54] [info] VEST: Window created: VestEditor (1600x900)
+[19:00:54] [info] VEST: Initializing Render API: OpenGL
+[19:00:54] [info] VEST: OpenGL Renderer initializing...
+[19:00:54] [info] VEST: OpenGL Info:
+[19:00:54] [info] VEST:   Vendor: Apple
+[19:00:54] [info] VEST:   Renderer: Apple M1
+[19:00:54] [info] VEST:   Version: 4.1 Metal - 89.3
+[19:00:54] [info] VEST: Renderer initialized
+[19:00:54] [info] VEST: Content Browser initialized at: assets
+[19:00:59] [trace] VEST: Navigated to: assets/scenes/assets
+[19:01:00] [trace] VEST: Navigated to: assets/scenes/assets/scenes
+[19:01:13] [trace] VEST: Navigated to: assets
+[19:01:15] [trace] VEST: Navigated to: assets/scenes/assets
+[19:01:16] [trace] VEST: Navigated to: assets/scenes/assets/scenes
+[19:01:17] [trace] VEST: Navigated to: assets/scenes
+[19:01:17] [trace] VEST: Navigated to: assets
+[19:01:18] [trace] VEST: Navigated to: assets/textures/White.png
+[19:01:19] [info] VEST: Opening asset: assets/textures/Checkerboard.png
+[19:01:19] [info] VEST: Opening asset: assets/textures/White.png
+[19:01:22] [trace] VEST: Navigated to: assets
+[19:01:28] [trace] VEST: Navigated to: assets/scenes
+[19:01:28] [trace] VEST: Navigated to: assets/textures
+[19:01:29] [trace] VEST: Navigated to: assets/textures
+[19:01:30] [trace] VEST: Navigated to: assets/scenes
+[19:01:30] [trace] VEST: Navigated to: assets/scenes
+[19:01:30] [trace] VEST: Navigated to: assets/scenes/assets
+[19:01:31] [trace] VEST: Navigated to: assets/scenes/assets
+[19:01:31] [trace] VEST: Navigated to: assets/scenes/assets/scenes
+[19:01:32] [trace] VEST: Navigated to: assets/scenes/assets/scenes
+[19:01:33] [info] VEST: Opening asset: assets/scenes/assets/scenes/Default.json.bak
+[19:01:59] [info] VEST: VestEngine Application shutting down...

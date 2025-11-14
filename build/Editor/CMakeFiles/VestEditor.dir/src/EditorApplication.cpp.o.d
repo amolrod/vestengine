@@ -840,6 +840,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: \
   /Users/angel/Desktop/C++/Editor/src/Panels/SceneHierarchyPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/StatsPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/ViewportPanel.h \
+  /Users/angel/Desktop/C++/Editor/src/EditorCamera.h \
   /Users/angel/Desktop/C++/Editor/src/Commands/CommandManager.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Log.h \
   /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/spdlog.h \
@@ -872,6 +873,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: \
   /Users/angel/Desktop/C++/Editor/src/Commands/TransformCommand.h \
   /Users/angel/Desktop/C++/Editor/src/Commands/EntityCommands.h \
   /Users/angel/Desktop/C++/Editor/src/Commands/MacroCommand.h \
+  /Users/angel/Desktop/C++/Editor/src/Rendering/SelectionRenderer.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/EntryPoint.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Application.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/LayerStack.h \

@@ -170,10 +170,11 @@ void EditorLayer::OnUpdate(Timestep ts) {
     m_FPS = ts.GetSeconds() > 0.0f ? 1.0f / ts.GetSeconds() : 0.0f;
     m_DrawCalls = 0;
 
-    // Update camera
+    // Update camera and selection renderer
     if (m_ViewportFocused) {
         m_EditorCamera.OnUpdate(ts);
     }
+    m_SelectionRenderer.Update(ts.GetSeconds());
 
     if (m_Framebuffer && m_ViewportSize.x > 0.0f && m_ViewportSize.y > 0.0f) {
         m_Framebuffer->Bind();
@@ -210,6 +211,7 @@ void EditorLayer::OnUpdate(Timestep ts) {
         }
         Renderer::EndScene();
 
+        // Calculate selection outline
         m_DrawSelectionOutline = false;
         if (m_SelectedEntityIndex >= 0 && m_SelectedEntityIndex < static_cast<int>(m_SceneObjects.size())) {
             const SceneObject& selected = m_SceneObjects[static_cast<size_t>(m_SelectedEntityIndex)];
@@ -229,6 +231,29 @@ void EditorLayer::OnUpdate(Timestep ts) {
                 m_SelectedOutline[i].y = (1.0f - (ndc.y * 0.5f + 0.5f)) * m_ViewportSize.y;
             }
             m_DrawSelectionOutline = true;
+        }
+
+        // Calculate hovered outline
+        m_DrawHoveredOutline = false;
+        if (m_HoveredEntityIndex >= 0 && m_HoveredEntityIndex < static_cast<int>(m_SceneObjects.size()) 
+            && m_HoveredEntityIndex != m_SelectedEntityIndex) {
+            const SceneObject& hovered = m_SceneObjects[static_cast<size_t>(m_HoveredEntityIndex)];
+            glm::mat4 outlineTransform = CalculateTransform(hovered) * glm::scale(glm::mat4(1.0f), glm::vec3(1.03f));
+
+            glm::vec4 corners[4] = {
+                outlineTransform * glm::vec4(-0.5f, -0.5f, 0.0f, 1.0f),
+                outlineTransform * glm::vec4(0.5f, -0.5f, 0.0f, 1.0f),
+                outlineTransform * glm::vec4(0.5f, 0.5f, 0.0f, 1.0f),
+                outlineTransform * glm::vec4(-0.5f, 0.5f, 0.0f, 1.0f)};
+
+            glm::mat4 viewProjectionMatrix = m_EditorCamera.GetViewProjectionMatrix();
+            for (int i = 0; i < 4; ++i) {
+                glm::vec4 clip = viewProjectionMatrix * corners[i];
+                glm::vec3 ndc = glm::vec3(clip) / clip.w;
+                m_HoveredOutline[i].x = (ndc.x * 0.5f + 0.5f) * m_ViewportSize.x;
+                m_HoveredOutline[i].y = (1.0f - (ndc.y * 0.5f + 0.5f)) * m_ViewportSize.y;
+            }
+            m_DrawHoveredOutline = true;
         }
 
         m_Framebuffer->Unbind();
@@ -358,6 +383,7 @@ void EditorLayer::OnImGuiRender() {
     m_ViewportFocused = m_ViewportPanel.IsFocused();
     m_ViewportHovered = m_ViewportPanel.IsHovered();
     HandleViewportCameraControls();
+    HandleViewportHover();
     HandleViewportPicking();
     HandleGizmos();
 
@@ -366,17 +392,23 @@ void EditorLayer::OnImGuiRender() {
     m_ContentBrowserPanel.OnImGuiRender();
     m_StatsPanel.OnImGuiRender();
 
-    if (m_DrawSelectionOutline) {
-        const glm::vec2* bounds = m_ViewportPanel.GetBounds();
-        if (bounds) {
-            ImDrawList* drawList = ImGui::GetForegroundDrawList();
-            for (int i = 0; i < 4; ++i) {
-                glm::vec2 offset1 = m_SelectedOutline[i];
-                glm::vec2 offset2 = m_SelectedOutline[(i + 1) % 4];
-                ImVec2 p1(bounds[0].x + offset1.x, bounds[0].y + offset1.y);
-                ImVec2 p2(bounds[0].x + offset2.x, bounds[0].y + offset2.y);
-                drawList->AddLine(p1, p2, IM_COL32(255, 255, 0, 255), 2.0f);
-            }
+    // Draw selection and hover highlights
+    const glm::vec2* bounds = m_ViewportPanel.GetBounds();
+    if (bounds) {
+        ImDrawList* drawList = ImGui::GetForegroundDrawList();
+        
+        // Draw hovered outline first (underneath)
+        if (m_DrawHoveredOutline) {
+            m_SelectionRenderer.DrawHighlight(drawList, m_HoveredOutline, bounds[0], SelectionState::Hovered);
+            m_SelectionRenderer.DrawOutline(drawList, m_HoveredOutline, bounds[0], SelectionState::Hovered);
+        }
+        
+        // Draw selected outline on top
+        if (m_DrawSelectionOutline) {
+            SelectionState state = (m_HoveredEntityIndex == m_SelectedEntityIndex && m_HoveredEntityIndex >= 0)
+                ? SelectionState::HoveredAndSelected
+                : SelectionState::Selected;
+            m_SelectionRenderer.DrawOutline(drawList, m_SelectedOutline, bounds[0], state);
         }
     }
 
@@ -421,6 +453,39 @@ static bool PointInEntity(const glm::vec2& point, const SceneObject& object) {
     glm::mat4 invTransform = glm::inverse(transform);
     glm::vec4 local = invTransform * glm::vec4(point, 0.0f, 1.0f);
     return local.x >= -0.5f && local.x <= 0.5f && local.y >= -0.5f && local.y <= 0.5f;
+}
+
+void EditorLayer::HandleViewportHover() {
+    m_HoveredEntityIndex = -1;
+    
+    if (!m_ViewportHovered || ImGuizmo::IsOver()) {
+        return;
+    }
+
+    const glm::vec2* bounds = m_ViewportPanel.GetBounds();
+    if (!bounds) {
+        return;
+    }
+
+    ImVec2 mouseIm = ImGui::GetMousePos();
+    glm::vec2 mouse = {mouseIm.x, mouseIm.y};
+    if (mouse.x < bounds[0].x || mouse.y < bounds[0].y || mouse.x > bounds[1].x || mouse.y > bounds[1].y) {
+        return;
+    }
+
+    // Convert screen to viewport coordinates
+    glm::vec2 viewportPoint = mouse - bounds[0];
+    
+    // Use EditorCamera to convert to world space
+    glm::vec2 worldPoint = m_EditorCamera.ScreenToWorld(viewportPoint, m_ViewportSize);
+
+    // Check entities from front to back
+    for (int i = static_cast<int>(m_SceneObjects.size()) - 1; i >= 0; --i) {
+        if (PointInEntity(worldPoint, m_SceneObjects[static_cast<size_t>(i)])) {
+            m_HoveredEntityIndex = i;
+            return;
+        }
+    }
 }
 
 void EditorLayer::HandleViewportPicking() {
