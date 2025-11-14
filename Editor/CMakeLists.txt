@@ -8,6 +8,9 @@ add_executable(VestEditor
     src/Panels/StatsPanel.cpp
 )
 
-target_include_directories(VestEditor PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
+target_include_directories(VestEditor PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_SOURCE_DIR}/external/imguizmo
+)
 
 target_link_libraries(VestEditor PRIVATE VestEngine)

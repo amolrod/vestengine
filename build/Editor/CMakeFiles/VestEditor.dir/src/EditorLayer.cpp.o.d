@@ -745,6 +745,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: \
   /Users/angel/Desktop/C++/build/_deps/glfw-src/include/GLFW/glfw3.h \
   /Users/angel/Desktop/C++/build/_deps/imgui-src/imgui.h \
   /Users/angel/Desktop/C++/build/_deps/imgui-src/imconfig.h \
+  /Users/angel/Desktop/C++/external/imguizmo/ImGuizmo.h \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/matrix_inverse.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../detail/setup.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat2x2.hpp \

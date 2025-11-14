@@ -5,6 +5,7 @@
 
 #include <GLFW/glfw3.h>
 #include <imgui.h>
+#include <ImGuizmo.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/matrix_inverse.hpp>
@@ -273,7 +274,13 @@ void EditorLayer::OnImGuiRender() {
 
     if (ImGui::BeginMenuBar()) {
         if (ImGui::BeginMenu("File")) {
-            ImGui::MenuItem("New Scene", nullptr, false, true);
+            if (ImGui::MenuItem("Save Scene", "Ctrl+S")) {
+                SaveScene("assets/scenes/Default.json");
+            }
+            if (ImGui::MenuItem("Load Scene", "Ctrl+L")) {
+                LoadScene("assets/scenes/Default.json");
+            }
+            ImGui::Separator();
             if (ImGui::MenuItem("Exit")) {
                 dockspaceOpen = false;
             }
@@ -407,6 +414,27 @@ void EditorLayer::RebuildFramebuffer(uint32_t width, uint32_t height) {
     spec.height = height;
     m_Framebuffer = Framebuffer::Create(spec);
     m_ViewportPanel.SetFramebuffer(m_Framebuffer);
+}
+
+void EditorLayer::SaveScene(const std::string& filepath) {
+    std::filesystem::path path = filepath;
+    if (!path.is_absolute()) {
+        path = std::filesystem::path(VEST_ASSET_DIR) / "scenes" / path;
+    }
+    std::filesystem::create_directories(path.parent_path());
+    SceneSerializer::Serialize(path.string(), m_SceneObjects);
+}
+
+void EditorLayer::LoadScene(const std::string& filepath) {
+    std::filesystem::path path = filepath;
+    if (!path.is_absolute()) {
+        path = std::filesystem::path(VEST_ASSET_DIR) / "scenes" / path;
+    }
+    std::vector<SceneObject> loaded;
+    if (SceneSerializer::Deserialize(path.string(), loaded)) {
+        m_SceneObjects = std::move(loaded);
+        m_SelectedEntityIndex = m_SceneObjects.empty() ? -1 : 0;
+    }
 }
 
 }  // namespace Vest

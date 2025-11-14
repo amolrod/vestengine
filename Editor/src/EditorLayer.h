@@ -69,6 +69,8 @@ private:
 
     void HandleViewportCameraControls();
     void HandleViewportPicking();
+    void SaveScene(const std::string& filepath);
+    void LoadScene(const std::string& filepath);
 };
 
 }  // namespace Vest

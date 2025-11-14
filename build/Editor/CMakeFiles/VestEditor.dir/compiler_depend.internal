@@ -1588,6 +1588,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp
  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp
  /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+ /Users/angel/Desktop/C++/external/imguizmo/ImGuizmo.h
 
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o
  /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.cpp

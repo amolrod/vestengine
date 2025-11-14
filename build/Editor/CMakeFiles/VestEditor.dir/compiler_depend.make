@@ -1585,7 +1585,8 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   _deps/nlohmann_json-src/include/nlohmann/json_fwd.hpp \
   _deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp \
   _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
-  _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+  _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /Users/angel/Desktop/C++/external/imguizmo/ImGuizmo.h
 
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o: /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -4397,6 +4398,8 @@ _deps/nlohmann_json-src/include/nlohmann/detail/output/output_adapters.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/errno.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/ctime:
+
+/Users/angel/Desktop/C++/external/imguizmo/ImGuizmo.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio:
 

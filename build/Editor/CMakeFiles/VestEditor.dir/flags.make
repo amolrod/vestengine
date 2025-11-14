@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DGLFW_INCLUDE_NONE -DIMGUI_IMPL_OPENGL_LOADER_GLAD -DVEST_ASSET_DIR=\"/Users/angel/Desktop/C++/assets\" -DVEST_RENDERER_API_DEFAULT=\"OpenGL\"
 
-CXX_INCLUDES = -I/Users/angel/Desktop/C++/Editor/src -I/Users/angel/Desktop/C++/VestEngine/src -I/Users/angel/Desktop/C++/build/_deps/glfw-src/include -I/Users/angel/Desktop/C++/build/_deps/glm-src -I/include -I/Users/angel/Desktop/C++/external/stb -I/Users/angel/Desktop/C++/external/glad/include -I/Users/angel/Desktop/C++/build/_deps/imgui-src -I/Users/angel/Desktop/C++/build/_deps/imgui-src/backends -I/Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include
+CXX_INCLUDES = -I/Users/angel/Desktop/C++/Editor/src -I/Users/angel/Desktop/C++/external/imguizmo -I/Users/angel/Desktop/C++/VestEngine/src -I/Users/angel/Desktop/C++/build/_deps/glfw-src/include -I/Users/angel/Desktop/C++/build/_deps/glm-src -I/include -I/Users/angel/Desktop/C++/external/stb -I/Users/angel/Desktop/C++/external/glad/include -I/Users/angel/Desktop/C++/build/_deps/imgui-src -I/Users/angel/Desktop/C++/build/_deps/imgui-src/backends -I/Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include
 
 CXX_FLAGSarm64 = -std=gnu++20 -arch arm64
 

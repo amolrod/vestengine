@@ -57,9 +57,19 @@ Soporte objetivo: Windows (prioritario), Linux y macOS.
    - Naming: Clases PascalCase, métodos PascalCase, variables camelCase, miembros privados `m_CamelCase`, estáticos `s_CamelCase`.
    - Comentarios estilo Doxygen para API pública, SOLID principles, asserts/logging según build.
 
-## Próximos Pasos (Iterativos)
-1. Renderizado real en el viewport: shaders + mesh básica para validar `Renderer::Submit`.
-2. Integrar `stb_image` y completar carga de texturas.
-3. Implementar cámara y matrices view/projection para escenas.
-4. Conectar paneles del editor a datos reales (SceneHierarchy + Properties).
-5. Añadir logging (spdlog) y serialización de layouts/escenas en fases posteriores.
+## Estado actual y próximos pasos
+
+### Completado
+- Renderizado base (triángulo + quad texturizado) con shaders personalizados.
+- Integración `stb_image`, texturas OpenGL compatibles con macOS.
+- Cámara ortográfica con controles WASD + rueda + pan drag.
+- SceneHierarchy/Properties conectados a entidades reales (posición/rotación/escala/color/textura).
+- Picking en viewport y resaltado visual.
+- CRUD básico de entidades (add/delete) desde la jerarquía.
+- Serialización JSON (`SceneSerializer`) con comandos de guardado/carga desde el menú.
+
+### Pendiente
+1. Gizmos (ImGuizmo) para manipular entidades en el viewport.
+2. Undo/redo y duplicado de entidades.
+3. Persistencia de layout del editor y rutas de assets.
+4. Integración de sistemas avanzados (ECS, yaml-cpp, logging) en fases futuras.
