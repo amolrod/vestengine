@@ -160,8 +160,6 @@ void main() {
         .textured = true,
         .mesh = SceneObject::MeshType::Quad});
     m_SelectedEntityIndex = 0;
-
-    PushUndoState();
 }
 
 void EditorLayer::OnUpdate(Timestep ts) {
@@ -282,10 +280,10 @@ void EditorLayer::OnImGuiRender() {
 
     ImGuiIO& io = ImGui::GetIO();
     if (io.KeyCtrl && ImGui::IsKeyPressed(ImGuiKey_Z)) {
-        Undo();
+        m_CommandManager.Undo();
     }
     if (io.KeyCtrl && ImGui::IsKeyPressed(ImGuiKey_Y)) {
-        Redo();
+        m_CommandManager.Redo();
     }
     if (io.KeyCtrl && ImGui::IsKeyPressed(ImGuiKey_D)) {
         DuplicateSelected();
@@ -306,13 +304,17 @@ void EditorLayer::OnImGuiRender() {
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Edit")) {
-            bool canUndo = !m_UndoStack.empty();
-            bool canRedo = !m_RedoStack.empty();
-            if (ImGui::MenuItem("Undo", "Ctrl+Z", false, canUndo)) {
-                Undo();
+            bool canUndo = m_CommandManager.CanUndo();
+            bool canRedo = m_CommandManager.CanRedo();
+            
+            std::string undoLabel = canUndo ? "Undo " + m_CommandManager.GetUndoCommandName() : "Undo";
+            std::string redoLabel = canRedo ? "Redo " + m_CommandManager.GetRedoCommandName() : "Redo";
+            
+            if (ImGui::MenuItem(undoLabel.c_str(), "Ctrl+Z", false, canUndo)) {
+                m_CommandManager.Undo();
             }
-            if (ImGui::MenuItem("Redo", "Ctrl+Y", false, canRedo)) {
-                Redo();
+            if (ImGui::MenuItem(redoLabel.c_str(), "Ctrl+Y", false, canRedo)) {
+                m_CommandManager.Redo();
             }
             ImGui::Separator();
             if (ImGui::MenuItem("Duplicate", "Ctrl+D", false, m_SelectedEntityIndex >= 0)) {
@@ -497,63 +499,30 @@ void EditorLayer::LoadScene(const std::string& filepath) {
     if (SceneSerializer::Deserialize(path.string(), loaded)) {
         m_SceneObjects = std::move(loaded);
         m_SelectedEntityIndex = m_SceneObjects.empty() ? -1 : 0;
-        m_UndoStack.clear();
-        m_RedoStack.clear();
-        PushUndoState();
-    }
-}
-
-void EditorLayer::PushUndoState() {
-    m_UndoStack.push_back(m_SceneObjects);
-    if (m_UndoStack.size() > 50) {
-        m_UndoStack.erase(m_UndoStack.begin());
-    }
-    m_RedoStack.clear();
-}
-
-void EditorLayer::Undo() {
-    if (m_UndoStack.empty()) {
-        return;
-    }
-
-    m_RedoStack.push_back(m_SceneObjects);
-    m_SceneObjects = m_UndoStack.back();
-    m_UndoStack.pop_back();
-    if (m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
-        m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
-    }
-}
-
-void EditorLayer::Redo() {
-    if (m_RedoStack.empty()) {
-        return;
-    }
-
-    m_UndoStack.push_back(m_SceneObjects);
-    m_SceneObjects = m_RedoStack.back();
-    m_RedoStack.pop_back();
-    if (m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
-        m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+        m_CommandManager.Clear();
     }
 }
 
 void EditorLayer::AddEntity() {
-    PushUndoState();
     SceneObject entity;
     entity.name = "Entity " + std::to_string(m_SceneObjects.size());
     entity.mesh = SceneObject::MeshType::Quad;
-    m_SceneObjects.push_back(entity);
-    m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+    
+    auto cmd = CreateScope<CreateEntityCommand>(&m_SceneObjects, entity);
+    if (m_CommandManager.ExecuteCommand(std::move(cmd))) {
+        m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+    }
 }
 
 void EditorLayer::DeleteSelected() {
     if (m_SelectedEntityIndex < 0 || m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
         return;
     }
-    PushUndoState();
-    m_SceneObjects.erase(m_SceneObjects.begin() + m_SelectedEntityIndex);
-    if (m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
-        m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+    auto cmd = CreateScope<DeleteEntityCommand>(&m_SceneObjects, m_SelectedEntityIndex);
+    if (m_CommandManager.ExecuteCommand(std::move(cmd))) {
+        if (m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
+            m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+        }
     }
 }
 
@@ -561,11 +530,13 @@ void EditorLayer::DuplicateSelected() {
     if (m_SelectedEntityIndex < 0 || m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
         return;
     }
-    PushUndoState();
     SceneObject copy = m_SceneObjects[static_cast<size_t>(m_SelectedEntityIndex)];
     copy.name += " Copy";
-    m_SceneObjects.push_back(copy);
-    m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+    
+    auto cmd = CreateScope<CreateEntityCommand>(&m_SceneObjects, copy);
+    if (m_CommandManager.ExecuteCommand(std::move(cmd))) {
+        m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+    }
 }
 
 void EditorLayer::HandleGizmos() {
@@ -596,7 +567,10 @@ void EditorLayer::HandleGizmos() {
 
     if (ImGuizmo::IsUsing()) {
         if (!m_GizmoWasUsing) {
-            PushUndoState();
+            // Start of drag - save old values
+            m_GizmoOldPosition = object.position;
+            m_GizmoOldRotation = object.rotation;
+            m_GizmoOldScale = object.scale;
         }
         m_GizmoWasUsing = true;
 
@@ -607,8 +581,30 @@ void EditorLayer::HandleGizmos() {
         object.position = translation;
         object.rotation = glm::vec3(0.0f, 0.0f, rotation.z);
         object.scale = scale;
-    } else {
+    } else if (m_GizmoWasUsing) {
+        // End of drag - create command for undo history
         m_GizmoWasUsing = false;
+        
+        Scope<ICommand> cmd = nullptr;
+        switch (m_GizmoOperation) {
+            case ImGuizmo::TRANSLATE:
+                cmd = CreateScope<TransformCommand>(&m_SceneObjects, m_SelectedEntityIndex, 
+                    TransformCommand::Type::Position, m_GizmoOldPosition, object.position);
+                break;
+            case ImGuizmo::ROTATE:
+                cmd = CreateScope<TransformCommand>(&m_SceneObjects, m_SelectedEntityIndex, 
+                    TransformCommand::Type::Rotation, m_GizmoOldRotation, object.rotation);
+                break;
+            case ImGuizmo::SCALE:
+                cmd = CreateScope<TransformCommand>(&m_SceneObjects, m_SelectedEntityIndex, 
+                    TransformCommand::Type::Scale, m_GizmoOldScale, object.scale);
+                break;
+        }
+        
+        if (cmd) {
+            // Register without executing (already applied by gizmo)
+            m_CommandManager.RegisterExecutedCommand(std::move(cmd));
+        }
     }
 }
 

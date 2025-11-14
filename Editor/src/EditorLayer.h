@@ -28,6 +28,11 @@
 #include "Panels/ViewportPanel.h"
 #include <Scene/SceneObject.h>
 
+#include "Commands/CommandManager.h"
+#include "Commands/TransformCommand.h"
+#include "Commands/EntityCommands.h"
+#include "Commands/MacroCommand.h"
+
 namespace Vest {
 
 class EditorLayer : public Layer {
@@ -78,18 +83,17 @@ private:
     ImGuizmo::OPERATION m_GizmoOperation = ImGuizmo::TRANSLATE;
     ImGuizmo::MODE m_GizmoMode = ImGuizmo::WORLD;
     bool m_GizmoWasUsing = false;
+    glm::vec3 m_GizmoOldPosition;
+    glm::vec3 m_GizmoOldRotation;
+    glm::vec3 m_GizmoOldScale;
 
-    std::vector<std::vector<SceneObject>> m_UndoStack;
-    std::vector<std::vector<SceneObject>> m_RedoStack;
+    CommandManager m_CommandManager;
 
     void HandleViewportCameraControls();
     void HandleViewportPicking();
     void HandleGizmos();
     void SaveScene(const std::string& filepath);
     void LoadScene(const std::string& filepath);
-    void PushUndoState();
-    void Undo();
-    void Redo();
     void AddEntity();
     void DeleteSelected();
     void DuplicateSelected();

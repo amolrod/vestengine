@@ -533,6 +533,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/compare \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio \
@@ -580,6 +581,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
@@ -611,6 +613,11 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/CommandManager.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/EntityCommands.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/ICommand.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/MacroCommand.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/TransformCommand.h \
   /Users/angel/Desktop/C++/Editor/src/EditorLayer.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/PropertiesPanel.h \
@@ -624,6 +631,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Users/angel/Desktop/C++/VestEngine/src/Core/Input.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Layer.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/LayerStack.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Core/Log.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Timestep.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Window.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Buffer.h \
@@ -984,6 +992,30 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   _deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp \
   _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
   _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  _deps/spdlog-src/include/spdlog/common.h \
+  _deps/spdlog-src/include/spdlog/details/backtracer.h \
+  _deps/spdlog-src/include/spdlog/details/circular_q.h \
+  _deps/spdlog-src/include/spdlog/details/console_globals.h \
+  _deps/spdlog-src/include/spdlog/details/file_helper.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg_buffer.h \
+  _deps/spdlog-src/include/spdlog/details/null_mutex.h \
+  _deps/spdlog-src/include/spdlog/details/periodic_worker.h \
+  _deps/spdlog-src/include/spdlog/details/registry.h \
+  _deps/spdlog-src/include/spdlog/details/synchronous_factory.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/core.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/format.h \
+  _deps/spdlog-src/include/spdlog/fmt/fmt.h \
+  _deps/spdlog-src/include/spdlog/formatter.h \
+  _deps/spdlog-src/include/spdlog/logger.h \
+  _deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/base_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h \
+  _deps/spdlog-src/include/spdlog/spdlog.h \
+  _deps/spdlog-src/include/spdlog/tweakme.h \
+  _deps/spdlog-src/include/spdlog/version.h \
   /Users/angel/Desktop/C++/external/imguizmo/ImGuizmo.h
 
 Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++/Editor/src/EditorLayer.cpp \
@@ -1379,6 +1411,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/compare \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio \
@@ -1426,6 +1459,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
@@ -1457,6 +1491,11 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/CommandManager.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/EntityCommands.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/ICommand.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/MacroCommand.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/TransformCommand.h \
   /Users/angel/Desktop/C++/Editor/src/EditorLayer.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/PropertiesPanel.h \
@@ -1467,6 +1506,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Users/angel/Desktop/C++/VestEngine/src/Core/Event.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Input.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Layer.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Core/Log.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Timestep.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Buffer.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Framebuffer.h \
@@ -1857,6 +1897,30 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   _deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp \
   _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
   _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  _deps/spdlog-src/include/spdlog/common.h \
+  _deps/spdlog-src/include/spdlog/details/backtracer.h \
+  _deps/spdlog-src/include/spdlog/details/circular_q.h \
+  _deps/spdlog-src/include/spdlog/details/console_globals.h \
+  _deps/spdlog-src/include/spdlog/details/file_helper.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg_buffer.h \
+  _deps/spdlog-src/include/spdlog/details/null_mutex.h \
+  _deps/spdlog-src/include/spdlog/details/periodic_worker.h \
+  _deps/spdlog-src/include/spdlog/details/registry.h \
+  _deps/spdlog-src/include/spdlog/details/synchronous_factory.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/core.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/format.h \
+  _deps/spdlog-src/include/spdlog/fmt/fmt.h \
+  _deps/spdlog-src/include/spdlog/formatter.h \
+  _deps/spdlog-src/include/spdlog/logger.h \
+  _deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/base_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h \
+  _deps/spdlog-src/include/spdlog/spdlog.h \
+  _deps/spdlog-src/include/spdlog/tweakme.h \
+  _deps/spdlog-src/include/spdlog/version.h \
   /Users/angel/Desktop/C++/external/imguizmo/ImGuizmo.h
 
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o: /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.cpp \
@@ -4291,6 +4355,28 @@ _deps/glm-src/glm/ext/vector_bool1.hpp:
 
 _deps/glm-src/glm/ext/vector_int1.hpp:
 
+_deps/spdlog-src/include/spdlog/version.h:
+
+_deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h:
+
+_deps/spdlog-src/include/spdlog/sinks/sink.h:
+
+_deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h:
+
+_deps/spdlog-src/include/spdlog/sinks/base_sink.h:
+
+_deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h:
+
+_deps/spdlog-src/include/spdlog/details/registry.h:
+
+_deps/spdlog-src/include/spdlog/details/periodic_worker.h:
+
+_deps/spdlog-src/include/spdlog/details/null_mutex.h:
+
+_deps/spdlog-src/include/spdlog/details/console_globals.h:
+
+_deps/spdlog-src/include/spdlog/details/circular_q.h:
+
 _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp:
 
 _deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp:
@@ -4318,6 +4404,8 @@ _deps/nlohmann_json-src/include/nlohmann/detail/iterators/internal_iterator.hpp:
 _deps/nlohmann_json-src/include/nlohmann/detail/input/position_t.hpp:
 
 _deps/glm-src/glm/integer.hpp:
+
+_deps/spdlog-src/include/spdlog/details/file_helper.h:
 
 _deps/glm-src/glm/gtx/quaternion.inl:
 
@@ -4376,10 +4464,6 @@ _deps/glm-src/glm/ext/matrix_projection.hpp:
 _deps/glm-src/glm/detail/type_half.inl:
 
 _deps/glm-src/glm/detail/type_half.hpp:
-
-_deps/glm-src/glm/ext/vector_relational.hpp:
-
-_deps/glm-src/glm/detail/func_integer.inl:
 
 _deps/glm-src/glm/simd/platform.h:
 
@@ -4465,6 +4549,8 @@ _deps/glm-src/glm/detail/_vectorize.hpp:
 
 _deps/glm-src/glm/detail/_fixes.hpp:
 
+_deps/spdlog-src/include/spdlog/details/backtracer.h:
+
 _deps/glm-src/glm/detail/qualifier.hpp:
 
 _deps/glm-src/glm/detail/func_vector_relational.inl:
@@ -4497,8 +4583,6 @@ _deps/glm-src/glm/ext/matrix_double3x4.hpp:
 
 _deps/glm-src/glm/ext/matrix_double3x3_precision.hpp:
 
-_deps/glm-src/glm/ext/matrix_double3x3.hpp:
-
 _deps/glm-src/glm/ext/matrix_double4x2_precision.hpp:
 
 _deps/glm-src/glm/ext/matrix_double3x2_precision.hpp:
@@ -4524,6 +4608,8 @@ _deps/glm-src/glm/detail/type_mat2x3.inl:
 _deps/glm-src/glm/detail/type_vec2.hpp:
 
 _deps/glm-src/glm/detail/type_mat2x3.hpp:
+
+_deps/spdlog-src/include/spdlog/details/log_msg.h:
 
 _deps/glm-src/glm/detail/type_mat2x2.hpp:
 
@@ -4561,6 +4647,12 @@ _deps/glm-src/glm/matrix.hpp:
 
 /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.h:
 
+/Users/angel/Desktop/C++/Editor/src/Commands/ICommand.h:
+
+_deps/glm-src/glm/ext/matrix_double3x3.hpp:
+
+/Users/angel/Desktop/C++/Editor/src/Commands/CommandManager.h:
+
 _deps/glm-src/glm/ext/matrix_clip_space.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/wctype.h:
@@ -4578,6 +4670,12 @@ _deps/nlohmann_json-src/include/nlohmann/detail/input/parser.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:
+
+_deps/glm-src/glm/ext/vector_relational.hpp:
+
+_deps/glm-src/glm/detail/func_integer.inl:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/thread:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:
 
@@ -4708,6 +4806,8 @@ _deps/glm-src/glm/fwd.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__ranges/enable_view.h:
 
 /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.cpp:
+
+_deps/spdlog-src/include/spdlog/common.h:
 
 _deps/glm-src/glm/ext/matrix_float3x2.hpp:
 
@@ -4993,6 +5093,8 @@ _deps/glm-src/glm/ext/matrix_transform.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/is_heap.h:
 
+_deps/spdlog-src/include/spdlog/fmt/bundled/core.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_key_t.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/includes.h:
@@ -5040,6 +5142,8 @@ _deps/nlohmann_json-src/include/nlohmann/detail/json_custom_base_class.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/copy_backward.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/copy.h:
+
+_deps/spdlog-src/include/spdlog/logger.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/binary_search.h:
 
@@ -5108,6 +5212,8 @@ _deps/glm-src/glm/ext/quaternion_geometric.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino_t.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_list.h:
+
+/Users/angel/Desktop/C++/Editor/src/Commands/TransformCommand.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino64_t.h:
 
@@ -5291,6 +5397,8 @@ _deps/glm-src/glm/ext/quaternion_float_precision.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/allocator.h:
 
+_deps/spdlog-src/include/spdlog/details/log_msg_buffer.h:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/allocator_traits.h:
 
 _deps/glm-src/glm/ext/quaternion_relational.inl:
@@ -5312,6 +5420,8 @@ _deps/glm-src/glm/common.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_in_port_t.h:
+
+_deps/spdlog-src/include/spdlog/tweakme.h:
 
 /Users/angel/Desktop/C++/VestEngine/src/Rendering/VertexArray.h:
 
@@ -5352,6 +5462,10 @@ _deps/nlohmann_json-src/include/nlohmann/detail/output/output_adapters.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/limits:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/generate_n.h:
+
+_deps/spdlog-src/include/spdlog/spdlog.h:
+
+_deps/spdlog-src/include/spdlog/formatter.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h:
 
@@ -5437,6 +5551,8 @@ _deps/imgui-src/imgui_internal.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h:
 
+_deps/spdlog-src/include/spdlog/fmt/bundled/format.h:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/istreambuf_iterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/arm/_structs.h:
@@ -5509,6 +5625,8 @@ _deps/glm-src/glm/gtc/matrix_transform.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h:
 
+_deps/spdlog-src/include/spdlog/fmt/fmt.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/limits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/limits.h:
@@ -5528,6 +5646,8 @@ _deps/glm-src/glm/mat3x4.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_time.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_posix_availability.h:
+
+/Users/angel/Desktop/C++/Editor/src/Commands/EntityCommands.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/string.h:
 
@@ -5629,6 +5749,8 @@ _deps/glm-src/glm/mat2x4.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/all_of.h:
 
+_deps/spdlog-src/include/spdlog/details/synchronous_factory.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine/_structs.h:
@@ -5640,6 +5762,8 @@ _deps/glm-src/glm/ext/matrix_clip_space.inl:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/partition_point.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/condition_variable:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_endian.h:
 
@@ -5739,6 +5863,8 @@ _deps/glm-src/glm/ext/matrix_float4x4_precision.hpp:
 
 _deps/glm-src/glm/ext/matrix_double3x2.hpp:
 
+/Users/angel/Desktop/C++/Editor/src/Commands/MacroCommand.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_setsize.h:
 
 _deps/nlohmann_json-src/include/nlohmann/detail/meta/detected.hpp:
@@ -5750,6 +5876,8 @@ _deps/nlohmann_json-src/include/nlohmann/detail/meta/detected.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h:
 
 _deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp:
+
+/Users/angel/Desktop/C++/VestEngine/src/Core/Log.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h:
 

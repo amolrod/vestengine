@@ -67,6 +67,43 @@ public:
     }
 
     /**
+     * @brief Register a command that has already been executed
+     * Useful for interactive operations like gizmo manipulation where the 
+     * change is applied in real-time but needs to be added to undo history
+     * @param command Already-executed command
+     * @return true if successful
+     */
+    bool RegisterExecutedCommand(Scope<ICommand> command) {
+        if (!command) {
+            VEST_CORE_WARN("Attempted to register null command");
+            return false;
+        }
+
+        VEST_CORE_TRACE("Registered executed command: {0}", command->GetName());
+
+        // Try to merge with previous command
+        if (!m_UndoStack.empty() && m_UndoStack.back()->CanMergeWith(command.get())) {
+            if (m_UndoStack.back()->MergeWith(command.get())) {
+                VEST_CORE_TRACE("Merged with previous command");
+                return true;
+            }
+        }
+
+        // Add to undo stack without executing
+        m_UndoStack.push_back(std::move(command));
+
+        // Clear redo stack
+        m_RedoStack.clear();
+
+        // Enforce history limit
+        while (m_UndoStack.size() > m_MaxHistorySize) {
+            m_UndoStack.pop_front();
+        }
+
+        return true;
+    }
+
+    /**
      * @brief Undo the last command
      * @return true if successful
      */

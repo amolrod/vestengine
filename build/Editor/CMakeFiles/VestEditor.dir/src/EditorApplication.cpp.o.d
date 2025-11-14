@@ -840,6 +840,38 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: \
   /Users/angel/Desktop/C++/Editor/src/Panels/SceneHierarchyPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/StatsPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/ViewportPanel.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/CommandManager.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Core/Log.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/spdlog.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/common.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/tweakme.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/null_mutex.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/fmt/fmt.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/fmt/bundled/core.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/fmt/bundled/format.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/registry.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/periodic_worker.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/condition_variable \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/thread \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/logger.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/log_msg.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/backtracer.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/log_msg_buffer.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/circular_q.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/version.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/synchronous_factory.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/console_globals.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/sinks/sink.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/formatter.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/file_helper.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/sinks/base_sink.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/ICommand.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/TransformCommand.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/EntityCommands.h \
+  /Users/angel/Desktop/C++/Editor/src/Commands/MacroCommand.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/EntryPoint.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Application.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/LayerStack.h \

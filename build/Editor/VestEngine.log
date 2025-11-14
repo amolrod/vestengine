@@ -1,11 +1,11 @@
-[16:39:39] [info] VEST: VestEngine logging initialized
-[16:39:39] [info] VEST: VestEngine Application 'VestEditor' starting...
-[16:39:39] [info] VEST: Window created: VestEditor (1600x900)
-[16:39:39] [info] VEST: Initializing Render API: OpenGL
-[16:39:39] [info] VEST: OpenGL Renderer initializing...
-[16:39:39] [info] VEST: OpenGL Info:
-[16:39:39] [info] VEST:   Vendor: Apple
-[16:39:39] [info] VEST:   Renderer: Apple M1
-[16:39:39] [info] VEST:   Version: 4.1 Metal - 89.3
-[16:39:39] [info] VEST: Renderer initialized
-[16:40:48] [info] VEST: VestEngine Application shutting down...
+[17:06:17] [info] VEST: VestEngine logging initialized
+[17:06:17] [info] VEST: VestEngine Application 'VestEditor' starting...
+[17:06:18] [info] VEST: Window created: VestEditor (1600x900)
+[17:06:18] [info] VEST: Initializing Render API: OpenGL
+[17:06:18] [info] VEST: OpenGL Renderer initializing...
+[17:06:18] [info] VEST: OpenGL Info:
+[17:06:18] [info] VEST:   Vendor: Apple
+[17:06:18] [info] VEST:   Renderer: Apple M1
+[17:06:18] [info] VEST:   Version: 4.1 Metal - 89.3
+[17:06:18] [info] VEST: Renderer initialized
+[17:06:32] [info] VEST: VestEngine Application shutting down...
