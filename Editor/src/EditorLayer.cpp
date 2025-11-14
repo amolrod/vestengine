@@ -137,6 +137,11 @@ void main() {
         checkerPath = std::filesystem::path("assets/textures/Checkerboard.png");
     }
     m_CheckerTexture = Texture2D::Create(checkerPath.string());
+    std::filesystem::path whitePath = std::filesystem::path(VEST_ASSET_DIR) / "textures" / "White.png";
+    if (!std::filesystem::exists(whitePath)) {
+        whitePath = std::filesystem::path("assets/textures/White.png");
+    }
+    m_WhiteTexture = Texture2D::Create(whitePath.string());
 
     m_SceneObjects.push_back(SceneObject{
         .name = "Triangle",
@@ -144,15 +149,19 @@ void main() {
         .scale = glm::vec3(1.0f),
         .rotation = glm::vec3(0.0f),
         .color = glm::vec4(1.0f),
-        .textured = false});
+        .textured = false,
+        .mesh = SceneObject::MeshType::Triangle});
     m_SceneObjects.push_back(SceneObject{
         .name = "Textured Quad",
         .position = glm::vec3(0.6f, 0.0f, 0.0f),
         .scale = glm::vec3(0.75f),
         .rotation = glm::vec3(0.0f),
         .color = glm::vec4(1.0f),
-        .textured = true});
+        .textured = true,
+        .mesh = SceneObject::MeshType::Quad});
     m_SelectedEntityIndex = 0;
+
+    PushUndoState();
 }
 
 void EditorLayer::OnUpdate(Timestep ts) {
@@ -185,22 +194,24 @@ void EditorLayer::OnUpdate(Timestep ts) {
         const float orthoWidth = orthoHeight * aspect;
         glm::mat4 projection = glm::ortho(-orthoWidth, orthoWidth, -orthoHeight, orthoHeight, -1.0f, 10.0f);
         glm::mat4 view = glm::translate(glm::mat4(1.0f), -m_CameraPosition);
+        m_ProjectionMatrix = projection;
+        m_ViewMatrix = view;
         m_ViewProjectionMatrix = projection * view;
 
         Renderer::BeginScene(m_ViewProjectionMatrix);
         for (const auto& object : m_SceneObjects) {
-            glm::mat4 transform =
-                glm::translate(glm::mat4(1.0f), object.position) *
-                glm::rotate(glm::mat4(1.0f), glm::radians(object.rotation.z), glm::vec3(0, 0, 1)) *
-                glm::scale(glm::mat4(1.0f), object.scale);
+            glm::mat4 transform = CalculateTransform(object);
 
-            if (object.textured) {
-                if (m_TextureShader && m_TextureVA && m_CheckerTexture) {
-                    m_TextureShader->Bind();
-                    m_TextureShader->SetFloat4("u_Color", object.color);
-                    m_CheckerTexture->Bind();
-                    Renderer::Submit(m_TextureShader, m_TextureVA, transform);
-                    ++m_DrawCalls;
+            if (object.mesh == SceneObject::MeshType::Quad) {
+                if (m_TextureShader && m_TextureVA) {
+                    Ref<Texture2D> tex = object.textured ? m_CheckerTexture : m_WhiteTexture;
+                    if (tex) {
+                        m_TextureShader->Bind();
+                        m_TextureShader->SetFloat4("u_Color", object.color);
+                        tex->Bind();
+                        Renderer::Submit(m_TextureShader, m_TextureVA, transform);
+                        ++m_DrawCalls;
+                    }
                 }
             } else {
                 if (m_TriangleShader && m_TriangleVA) {
@@ -216,10 +227,7 @@ void EditorLayer::OnUpdate(Timestep ts) {
         m_DrawSelectionOutline = false;
         if (m_SelectedEntityIndex >= 0 && m_SelectedEntityIndex < static_cast<int>(m_SceneObjects.size())) {
             const SceneObject& selected = m_SceneObjects[static_cast<size_t>(m_SelectedEntityIndex)];
-            glm::mat4 outlineTransform =
-                glm::translate(glm::mat4(1.0f), selected.position) *
-                glm::rotate(glm::mat4(1.0f), glm::radians(selected.rotation.z), glm::vec3(0, 0, 1)) *
-                glm::scale(glm::mat4(1.0f), selected.scale * 1.05f);
+            glm::mat4 outlineTransform = CalculateTransform(selected) * glm::scale(glm::mat4(1.0f), glm::vec3(1.05f));
 
             glm::vec4 corners[4] = {
                 outlineTransform * glm::vec4(-0.5f, -0.5f, 0.0f, 1.0f),
@@ -272,6 +280,17 @@ void EditorLayer::OnImGuiRender() {
     ImGuiID dockspaceId = ImGui::GetID("VestEditorDockspace");
     ImGui::DockSpace(dockspaceId, ImVec2(0.0f, 0.0f), dockspaceFlags);
 
+    ImGuiIO& io = ImGui::GetIO();
+    if (io.KeyCtrl && ImGui::IsKeyPressed(ImGuiKey_Z)) {
+        Undo();
+    }
+    if (io.KeyCtrl && ImGui::IsKeyPressed(ImGuiKey_Y)) {
+        Redo();
+    }
+    if (io.KeyCtrl && ImGui::IsKeyPressed(ImGuiKey_D)) {
+        DuplicateSelected();
+    }
+
     if (ImGui::BeginMenuBar()) {
         if (ImGui::BeginMenu("File")) {
             if (ImGui::MenuItem("Save Scene", "Ctrl+S")) {
@@ -286,6 +305,21 @@ void EditorLayer::OnImGuiRender() {
             }
             ImGui::EndMenu();
         }
+        if (ImGui::BeginMenu("Edit")) {
+            bool canUndo = !m_UndoStack.empty();
+            bool canRedo = !m_RedoStack.empty();
+            if (ImGui::MenuItem("Undo", "Ctrl+Z", false, canUndo)) {
+                Undo();
+            }
+            if (ImGui::MenuItem("Redo", "Ctrl+Y", false, canRedo)) {
+                Redo();
+            }
+            ImGui::Separator();
+            if (ImGui::MenuItem("Duplicate", "Ctrl+D", false, m_SelectedEntityIndex >= 0)) {
+                DuplicateSelected();
+            }
+            ImGui::EndMenu();
+        }
         if (ImGui::BeginMenu("View")) {
             ImGui::MenuItem("Viewport", nullptr, true, true);
             ImGui::MenuItem("Scene Hierarchy", nullptr, true, true);
@@ -295,7 +329,34 @@ void EditorLayer::OnImGuiRender() {
     }
 
     ImGui::Begin("Toolbar", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoScrollbar);
-    ImGui::TextUnformatted("[Play] [Pause] [Step]");
+    if (ImGui::RadioButton("Translate", m_GizmoOperation == ImGuizmo::TRANSLATE)) {
+        m_GizmoOperation = ImGuizmo::TRANSLATE;
+    }
+    ImGui::SameLine();
+    if (ImGui::RadioButton("Rotate", m_GizmoOperation == ImGuizmo::ROTATE)) {
+        m_GizmoOperation = ImGuizmo::ROTATE;
+    }
+    ImGui::SameLine();
+    if (ImGui::RadioButton("Scale", m_GizmoOperation == ImGuizmo::SCALE)) {
+        m_GizmoOperation = ImGuizmo::SCALE;
+    }
+
+    ImGui::SameLine(0.0f, 20.0f);
+    bool hasSelection = m_SelectedEntityIndex >= 0;
+    if (ImGui::Button("Add")) {
+        AddEntity();
+    }
+    ImGui::SameLine();
+    ImGui::BeginDisabled(!hasSelection);
+    if (ImGui::Button("Duplicate")) {
+        DuplicateSelected();
+    }
+    ImGui::SameLine();
+    if (ImGui::Button("Delete")) {
+        DeleteSelected();
+    }
+    ImGui::EndDisabled();
+
     ImGui::End();
 
     m_ViewportPanel.OnImGuiRender();
@@ -307,6 +368,7 @@ void EditorLayer::OnImGuiRender() {
     m_ViewportHovered = m_ViewportPanel.IsHovered();
     HandleViewportCameraControls();
     HandleViewportPicking();
+    HandleGizmos();
 
     m_SceneHierarchyPanel.OnImGuiRender();
     m_PropertiesPanel.OnImGuiRender();
@@ -371,7 +433,7 @@ static bool PointInEntity(const glm::vec2& point, const SceneObject& object) {
 }
 
 void EditorLayer::HandleViewportPicking() {
-    if (!m_ViewportHovered || !ImGui::IsMouseClicked(ImGuiMouseButton_Left)) {
+    if (!m_ViewportHovered || !ImGui::IsMouseClicked(ImGuiMouseButton_Left) || ImGuizmo::IsUsing()) {
         return;
     }
 
@@ -406,6 +468,7 @@ void EditorLayer::HandleViewportPicking() {
     }
 }
 
+
 void EditorLayer::RebuildFramebuffer(uint32_t width, uint32_t height) {
     m_ViewportSize = {static_cast<float>(width), static_cast<float>(height)};
 
@@ -434,7 +497,133 @@ void EditorLayer::LoadScene(const std::string& filepath) {
     if (SceneSerializer::Deserialize(path.string(), loaded)) {
         m_SceneObjects = std::move(loaded);
         m_SelectedEntityIndex = m_SceneObjects.empty() ? -1 : 0;
+        m_UndoStack.clear();
+        m_RedoStack.clear();
+        PushUndoState();
     }
+}
+
+void EditorLayer::PushUndoState() {
+    m_UndoStack.push_back(m_SceneObjects);
+    if (m_UndoStack.size() > 50) {
+        m_UndoStack.erase(m_UndoStack.begin());
+    }
+    m_RedoStack.clear();
+}
+
+void EditorLayer::Undo() {
+    if (m_UndoStack.empty()) {
+        return;
+    }
+
+    m_RedoStack.push_back(m_SceneObjects);
+    m_SceneObjects = m_UndoStack.back();
+    m_UndoStack.pop_back();
+    if (m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
+        m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+    }
+}
+
+void EditorLayer::Redo() {
+    if (m_RedoStack.empty()) {
+        return;
+    }
+
+    m_UndoStack.push_back(m_SceneObjects);
+    m_SceneObjects = m_RedoStack.back();
+    m_RedoStack.pop_back();
+    if (m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
+        m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+    }
+}
+
+void EditorLayer::AddEntity() {
+    PushUndoState();
+    SceneObject entity;
+    entity.name = "Entity " + std::to_string(m_SceneObjects.size());
+    entity.mesh = SceneObject::MeshType::Quad;
+    m_SceneObjects.push_back(entity);
+    m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+}
+
+void EditorLayer::DeleteSelected() {
+    if (m_SelectedEntityIndex < 0 || m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
+        return;
+    }
+    PushUndoState();
+    m_SceneObjects.erase(m_SceneObjects.begin() + m_SelectedEntityIndex);
+    if (m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
+        m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+    }
+}
+
+void EditorLayer::DuplicateSelected() {
+    if (m_SelectedEntityIndex < 0 || m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
+        return;
+    }
+    PushUndoState();
+    SceneObject copy = m_SceneObjects[static_cast<size_t>(m_SelectedEntityIndex)];
+    copy.name += " Copy";
+    m_SceneObjects.push_back(copy);
+    m_SelectedEntityIndex = static_cast<int>(m_SceneObjects.size()) - 1;
+}
+
+void EditorLayer::HandleGizmos() {
+    if (m_SelectedEntityIndex < 0 || m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
+        m_GizmoWasUsing = false;
+        return;
+    }
+
+    if (!m_ViewportHovered) {
+        m_GizmoWasUsing = false;
+        return;
+    }
+
+    const glm::vec2* bounds = m_ViewportPanel.GetBounds();
+    if (!bounds) {
+        return;
+    }
+
+    ImGuizmo::SetOrthographic(true);
+    ImGuizmo::BeginFrame();
+    ImGuizmo::SetDrawlist();
+    ImGuizmo::SetRect(bounds[0].x, bounds[0].y, m_ViewportSize.x, m_ViewportSize.y);
+
+    SceneObject& object = m_SceneObjects[static_cast<size_t>(m_SelectedEntityIndex)];
+    glm::mat4 transform = CalculateTransform(object);
+
+    ImGuizmo::Manipulate(glm::value_ptr(m_ViewMatrix), glm::value_ptr(m_ProjectionMatrix), m_GizmoOperation, m_GizmoMode, glm::value_ptr(transform));
+
+    if (ImGuizmo::IsUsing()) {
+        if (!m_GizmoWasUsing) {
+            PushUndoState();
+        }
+        m_GizmoWasUsing = true;
+
+        glm::vec3 translation;
+        glm::vec3 rotation;
+        glm::vec3 scale;
+        DecomposeTransform(transform, translation, rotation, scale);
+        object.position = translation;
+        object.rotation = glm::vec3(0.0f, 0.0f, rotation.z);
+        object.scale = scale;
+    } else {
+        m_GizmoWasUsing = false;
+    }
+}
+
+glm::mat4 EditorLayer::CalculateTransform(const SceneObject& object) const {
+    return glm::translate(glm::mat4(1.0f), object.position) *
+           glm::rotate(glm::mat4(1.0f), glm::radians(object.rotation.z), glm::vec3(0, 0, 1)) *
+           glm::scale(glm::mat4(1.0f), object.scale);
+}
+
+void EditorLayer::DecomposeTransform(const glm::mat4& transform, glm::vec3& translation, glm::vec3& rotation, glm::vec3& scale) {
+    glm::vec3 skew;
+    glm::vec4 perspective;
+    glm::quat orientation;
+    glm::decompose(transform, scale, orientation, translation, skew, perspective);
+    rotation = glm::degrees(glm::eulerAngles(orientation));
 }
 
 }  // namespace Vest

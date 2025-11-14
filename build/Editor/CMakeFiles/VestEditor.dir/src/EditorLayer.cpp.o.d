@@ -603,6 +603,105 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../geometric.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../trigonometric.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../matrix.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/matrix_decompose.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../mat4x4.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../vec3.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../vec4.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../geometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/quaternion.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../gtc/constants.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../gtc/matrix_transform.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/vector_relational.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/qualifier.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/vector_relational.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../vector_relational.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../common.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/type_float.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/setup.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_common.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../ext/scalar_constants.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../ext/quaternion_geometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../ext/../geometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../ext/../exponential.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../ext/../ext/vector_relational.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../ext/quaternion_geometric.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../trigonometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../exponential.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_common.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_float.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/type_quat.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../detail/type_mat3x3.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../detail/type_mat4x4.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../detail/type_vec3.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../detail/type_vec4.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../ext/vector_relational.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../ext/quaternion_relational.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../ext/../vector_relational.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../ext/quaternion_relational.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../gtc/constants.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../gtc/matrix_transform.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/type_quat.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../trigonometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../exponential.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../ext/quaternion_common.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../detail/../ext/quaternion_geometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_float_precision.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_double.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_double_precision.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_relational.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_geometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_trigonometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/scalar_constants.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_trigonometric.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_transform.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/../geometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../ext/quaternion_transform.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../detail/type_mat3x3.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../detail/type_mat4x4.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../detail/type_vec3.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../detail/type_vec4.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/quaternion.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../trigonometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../geometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../exponential.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/epsilon.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../detail/setup.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../detail/qualifier.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/epsilon.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../vector_relational.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/../common.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/matrix_transform.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/matrix_decompose.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtc/constants.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/transform.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../glm.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../gtc/matrix_transform.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/transform.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/quaternion.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../glm.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../ext/quaternion_exponential.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../ext/../common.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../ext/../trigonometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../ext/../geometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../ext/../ext/scalar_constants.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../ext/quaternion_exponential.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../ext/scalar_constants.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/norm.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../geometric.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../gtx/quaternion.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../gtx/component_wise.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../gtx/../detail/setup.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../gtx/../detail/qualifier.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../gtx/component_wise.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../gtx/../ext/scalar_common.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../gtx/../ext/../common.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../gtx/../ext/scalar_common.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/norm.inl \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/../gtx/../detail/qualifier.hpp \
+  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtx/quaternion.inl \
+  /Users/angel/Desktop/C++/build/_deps/imgui-src/imgui.h \
+  /Users/angel/Desktop/C++/build/_deps/imgui-src/imconfig.h \
+  /Users/angel/Desktop/C++/external/imguizmo/ImGuizmo.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Layer.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Event.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/sstream \
@@ -736,16 +835,13 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/any \
   /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp \
   /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/PropertiesPanel.h \
-  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/SceneHierarchyPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/StatsPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/ViewportPanel.h \
   /Users/angel/Desktop/C++/build/_deps/glfw-src/include/GLFW/glfw3.h \
-  /Users/angel/Desktop/C++/build/_deps/imgui-src/imgui.h \
-  /Users/angel/Desktop/C++/build/_deps/imgui-src/imconfig.h \
-  /Users/angel/Desktop/C++/external/imguizmo/ImGuizmo.h \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/matrix_inverse.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../detail/setup.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../mat2x2.hpp \
@@ -753,67 +849,6 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/matrix_inverse.inl \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/type_ptr.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/quaternion.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../gtc/constants.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../gtc/matrix_transform.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/vector_relational.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/qualifier.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/vector_relational.inl \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../vector_relational.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../common.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/type_float.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/setup.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_common.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../ext/scalar_constants.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../ext/quaternion_geometric.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../ext/../geometric.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../ext/../exponential.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../ext/../ext/vector_relational.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../ext/quaternion_geometric.inl \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../trigonometric.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../exponential.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_common.inl \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_float.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/type_quat.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../detail/type_mat3x3.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../detail/type_mat4x4.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../detail/type_vec3.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../detail/type_vec4.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../ext/vector_relational.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_relational.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../ext/../vector_relational.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_relational.inl \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../gtc/constants.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../gtc/matrix_transform.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/type_quat.inl \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../trigonometric.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../exponential.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_common.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_geometric.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_float_precision.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_double.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_double_precision.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_relational.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_geometric.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_trigonometric.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/scalar_constants.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_trigonometric.inl \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_transform.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../geometric.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/quaternion_transform.inl \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../detail/type_mat3x3.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../detail/type_mat4x4.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../detail/type_vec3.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../detail/type_vec4.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/quaternion.inl \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../trigonometric.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../geometric.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../exponential.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/epsilon.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../detail/setup.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../detail/qualifier.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/epsilon.inl \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../vector_relational.hpp \
-  /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../common.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/vec1.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/vector_bool1.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/gtc/../gtc/../ext/../detail/type_vec1.hpp \

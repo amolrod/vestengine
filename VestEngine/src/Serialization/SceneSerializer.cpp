@@ -17,6 +17,7 @@ bool SceneSerializer::Serialize(const std::string& filepath, const std::vector<S
         entry["scale"] = {obj.scale.x, obj.scale.y, obj.scale.z};
         entry["color"] = {obj.color.r, obj.color.g, obj.color.b, obj.color.a};
         entry["textured"] = obj.textured;
+        entry["mesh"] = static_cast<int>(obj.mesh);
         json["objects"].push_back(entry);
     }
 
@@ -53,6 +54,7 @@ bool SceneSerializer::Deserialize(const std::string& filepath, std::vector<Scene
         auto color = entry["color"];
         obj.color = {color[0].get<float>(), color[1].get<float>(), color[2].get<float>(), color[3].get<float>()};
         obj.textured = entry.value("textured", false);
+        obj.mesh = static_cast<SceneObject::MeshType>(entry.value("mesh", 0));
         outObjects.push_back(obj);
     }
 

@@ -175,6 +175,30 @@ VestEditor/fast:
 	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/build
 .PHONY : VestEditor/fast
 
+__/external/imguizmo/ImGuizmo.o: __/external/imguizmo/ImGuizmo.cpp.o
+.PHONY : __/external/imguizmo/ImGuizmo.o
+
+# target to build an object file
+__/external/imguizmo/ImGuizmo.cpp.o:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o
+.PHONY : __/external/imguizmo/ImGuizmo.cpp.o
+
+__/external/imguizmo/ImGuizmo.i: __/external/imguizmo/ImGuizmo.cpp.i
+.PHONY : __/external/imguizmo/ImGuizmo.i
+
+# target to preprocess a source file
+__/external/imguizmo/ImGuizmo.cpp.i:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.i
+.PHONY : __/external/imguizmo/ImGuizmo.cpp.i
+
+__/external/imguizmo/ImGuizmo.s: __/external/imguizmo/ImGuizmo.cpp.s
+.PHONY : __/external/imguizmo/ImGuizmo.s
+
+# target to generate assembly for a file
+__/external/imguizmo/ImGuizmo.cpp.s:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.s
+.PHONY : __/external/imguizmo/ImGuizmo.cpp.s
+
 src/EditorApplication.o: src/EditorApplication.cpp.o
 .PHONY : src/EditorApplication.o
 
@@ -356,6 +380,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... VestEditor"
+	@echo "... __/external/imguizmo/ImGuizmo.o"
+	@echo "... __/external/imguizmo/ImGuizmo.i"
+	@echo "... __/external/imguizmo/ImGuizmo.s"
 	@echo "... src/EditorApplication.o"
 	@echo "... src/EditorApplication.i"
 	@echo "... src/EditorApplication.s"

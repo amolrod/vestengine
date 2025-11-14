@@ -512,6 +512,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/any \
   /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp \
   /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/glm.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/_fixes.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/setup.hpp \
@@ -696,5 +697,4 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o: \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/vector_relational.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/integer.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/func_integer.inl \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/fstream \
-  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/fstream

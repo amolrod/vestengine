@@ -31,17 +31,26 @@ OpenGLTexture2D::OpenGLTexture2D(const std::string& path) : m_Path(path) {
     m_Width = static_cast<uint32_t>(width);
     m_Height = static_cast<uint32_t>(height);
 
-    switch (channels) {
-        case 4:
-            m_InternalFormat = GL_RGBA8;
-            m_DataFormat = GL_RGBA;
-            break;
-        case 3:
-            m_InternalFormat = GL_RGB8;
-            m_DataFormat = GL_RGB;
-            break;
-        default:
-            assert(false && "Unsupported texture format");
+    if (channels < 3) {
+        if (loadedFromDisk) {
+            stbi_image_free(data);
+            data = stbi_load(path.c_str(), &width, &height, &channels, STBI_rgb_alpha);
+            channels = 4;
+            m_Width = static_cast<uint32_t>(width);
+            m_Height = static_cast<uint32_t>(height);
+        } else {
+            channels = 4;
+        }
+    }
+
+    if (channels == 4) {
+        m_InternalFormat = GL_RGBA8;
+        m_DataFormat = GL_RGBA;
+    } else if (channels == 3) {
+        m_InternalFormat = GL_RGB8;
+        m_DataFormat = GL_RGB;
+    } else {
+        assert(false && "Unsupported texture format");
     }
 
     Allocate(data);

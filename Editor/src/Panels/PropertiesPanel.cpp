@@ -23,7 +23,20 @@ void PropertiesPanel::OnImGuiRender() {
     ImGui::DragFloat3("Rotation", &object.rotation.x, 0.1f, -180.0f, 180.0f);
     ImGui::DragFloat3("Scale", &object.scale.x, 0.01f, 0.1f, 10.0f);
     ImGui::ColorEdit4("Color", &object.color.x);
+
+    const char* meshOptions[] = {"Triangle", "Quad"};
+    int meshIndex = static_cast<int>(object.mesh);
+    if (ImGui::Combo("Mesh", &meshIndex, meshOptions, IM_ARRAYSIZE(meshOptions))) {
+        object.mesh = static_cast<SceneObject::MeshType>(meshIndex);
+        if (object.mesh != SceneObject::MeshType::Quad) {
+            object.textured = false;
+        }
+    }
+
+    bool texturedEnabled = object.mesh == SceneObject::MeshType::Quad;
+    ImGui::BeginDisabled(!texturedEnabled);
     ImGui::Checkbox("Textured", &object.textured);
+    ImGui::EndDisabled();
 
     ImGui::End();
 }

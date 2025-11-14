@@ -4,11 +4,9 @@
 #include <vector>
 
 #include <nlohmann/json.hpp>
-#include <glm/glm.hpp>
+#include <Scene/SceneObject.h>
 
 namespace Vest {
-
-struct SceneObject;
 
 class SceneSerializer {
 public:

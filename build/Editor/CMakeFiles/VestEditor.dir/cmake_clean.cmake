@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o"
+  "CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o.d"
   "CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o"
   "CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o.d"
   "CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o"

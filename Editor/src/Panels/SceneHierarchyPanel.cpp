@@ -14,35 +14,11 @@ void SceneHierarchyPanel::SetSceneContext(std::vector<SceneObject>* objects, int
 void SceneHierarchyPanel::OnImGuiRender() {
     ImGui::Begin(m_Title.c_str());
 
-    if (!m_SceneObjects) {
-        ImGui::TextUnformatted("No scene loaded");
+    if (!m_SceneObjects || m_SceneObjects->empty()) {
+        ImGui::TextUnformatted("No entities in scene");
     } else {
-        if (ImGui::Button("+ Add Entity")) {
-            SceneObject newObject;
-            newObject.name = "Entity " + std::to_string(m_SceneObjects->size());
-            m_SceneObjects->push_back(newObject);
-            if (m_SelectedIndex) {
-                *m_SelectedIndex = static_cast<int>(m_SceneObjects->size()) - 1;
-            }
-        }
-
-        ImGui::Separator();
-
-        if (m_SceneObjects->empty()) {
-            ImGui::TextUnformatted("No entities in scene");
-        } else {
-            for (int i = 0; i < static_cast<int>(m_SceneObjects->size()); ++i) {
-                DrawEntityNode(i, (*m_SceneObjects)[static_cast<size_t>(i)]);
-            }
-
-            if (m_SelectedIndex && *m_SelectedIndex >= 0 && *m_SelectedIndex < static_cast<int>(m_SceneObjects->size())) {
-                if (ImGui::Button("Delete Selected")) {
-                    m_SceneObjects->erase(m_SceneObjects->begin() + *m_SelectedIndex);
-                    if (*m_SelectedIndex >= static_cast<int>(m_SceneObjects->size())) {
-                        *m_SelectedIndex = static_cast<int>(m_SceneObjects->size()) - 1;
-                    }
-                }
-            }
+        for (int i = 0; i < static_cast<int>(m_SceneObjects->size()); ++i) {
+            DrawEntityNode(i, (*m_SceneObjects)[static_cast<size_t>(i)]);
         }
     }
 

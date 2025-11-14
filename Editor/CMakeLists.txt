@@ -6,6 +6,7 @@ add_executable(VestEditor
     src/Panels/PropertiesPanel.cpp
     src/Panels/ContentBrowserPanel.cpp
     src/Panels/StatsPanel.cpp
+    ${CMAKE_SOURCE_DIR}/external/imguizmo/ImGuizmo.cpp
 )
 
 target_include_directories(VestEditor PRIVATE
