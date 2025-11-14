@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 option(VEST_BUILD_EDITOR "Build VestEngine Editor" ON)
 option(VEST_BUILD_EXAMPLES "Build examples" OFF)
+option(VEST_BUILD_TESTS "Build unit tests" ON)
 set(VEST_RENDERER_API "OpenGL" CACHE STRING "Rendering API (OpenGL/Vulkan)")
 set_property(CACHE VEST_RENDERER_API PROPERTY STRINGS "OpenGL" "Vulkan")
 option(VEST_ENABLE_SERIALIZATION "Enable scene serialization" ON)
@@ -27,10 +28,23 @@ FetchContent_Declare(spdlog
 if(VEST_ENABLE_SERIALIZATION)
     FetchContent_Declare(nlohmann_json URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
 endif()
+if(VEST_BUILD_TESTS)
+    FetchContent_Declare(googletest
+        GIT_REPOSITORY https://github.com/google/googletest.git
+        GIT_TAG v1.14.0
+        GIT_SHALLOW TRUE
+    )
+    # For Windows: Prevent overriding the parent project's compiler/linker settings
+    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+endif()
 
 FetchContent_MakeAvailable(glfw glm spdlog)
 if(VEST_ENABLE_SERIALIZATION)
     FetchContent_MakeAvailable(nlohmann_json)
+endif()
+if(VEST_BUILD_TESTS)
+    FetchContent_MakeAvailable(googletest)
+    enable_testing()
 endif()
 
 add_library(glad STATIC ${CMAKE_CURRENT_SOURCE_DIR}/external/glad/src/glad.c)
@@ -57,4 +71,8 @@ add_subdirectory(VestEngine)
 
 if(VEST_BUILD_EDITOR)
     add_subdirectory(Editor)
+endif()
+
+if(VEST_BUILD_TESTS)
+    add_subdirectory(Tests)
 endif()
