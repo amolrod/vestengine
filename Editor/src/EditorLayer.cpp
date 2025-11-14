@@ -21,7 +21,7 @@ EditorLayer::EditorLayer()
     : Layer("EditorLayer"),
       m_SceneHierarchyPanel("Scene Hierarchy"),
       m_PropertiesPanel("Properties"),
-      m_ContentBrowserPanel("Content Browser"),
+      m_ContentBrowserPanel("assets"),
       m_StatsPanel("Stats") {}
 
 void EditorLayer::OnAttach() {
