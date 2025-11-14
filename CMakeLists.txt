@@ -19,11 +19,16 @@ FetchContent_Declare(glm
     GIT_SHALLOW TRUE
 )
 FetchContent_Declare(imgui URL https://github.com/ocornut/imgui/archive/refs/tags/v1.91.8-docking.tar.gz)
+FetchContent_Declare(spdlog
+    GIT_REPOSITORY https://github.com/gabime/spdlog.git
+    GIT_TAG v1.12.0
+    GIT_SHALLOW TRUE
+)
 if(VEST_ENABLE_SERIALIZATION)
     FetchContent_Declare(nlohmann_json URL https://github.com/nlohmann/json/releases/download/v3.11.3/json.tar.xz)
 endif()
 
-FetchContent_MakeAvailable(glfw glm)
+FetchContent_MakeAvailable(glfw glm spdlog)
 if(VEST_ENABLE_SERIALIZATION)
     FetchContent_MakeAvailable(nlohmann_json)
 endif()

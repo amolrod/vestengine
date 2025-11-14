@@ -314,12 +314,13 @@ for (auto& obj : m_SceneObjects) {
 - **✅ COMPLETADO:** 14 de noviembre de 2025
 
 #### 1.2 Sistema de Logging
-- [ ] Integrar spdlog (header-only)
-- [ ] Crear macros `VEST_LOG_*`
-- [ ] Reemplazar prints/asserts
-- [ ] Configurar niveles por módulo
+- [x] Integrar spdlog (header-only)
+- [x] Crear macros `VEST_LOG_*`
+- [x] Reemplazar prints/asserts
+- [x] Configurar niveles por módulo
 - **Prioridad:** 🔥 ALTA
 - **Tiempo Estimado:** 2-3 días
+- **✅ COMPLETADO:** 14 de noviembre de 2025
 
 #### 1.3 Robustecer Serialización
 - [ ] Agregar versionado JSON
@@ -1160,15 +1161,15 @@ VestEngine es un proyecto **técnicamente sólido** con arquitectura **limpia y 
 
 ### Estado General
 - **Total Tasks:** 106
-- **Completadas:** 5 ✅
+- **Completadas:** 10 ✅
 - **En Progreso:** 0
-- **Pendientes:** 101
+- **Pendientes:** 96
 
 ### Quick Status
 ```
-FASE 1: Consolidación          [██░░░░░░░░] 1/5 sections (20%)
+FASE 1: Consolidación          [████░░░░░░] 2/5 sections (40%)
   ├─ 1.1 Desacoplar Engine      [████████████] COMPLETADO ✅
-  ├─ 1.2 Sistema de Logging     [░░░░░░░░░░░░] Pendiente
+  ├─ 1.2 Sistema de Logging     [████████████] COMPLETADO ✅
   ├─ 1.3 Serialización          [░░░░░░░░░░░░] Pendiente
   ├─ 1.4 Undo/Redo              [░░░░░░░░░░░░] Pendiente
   └─ 1.5 Tests Unitarios        [░░░░░░░░░░░░] Pendiente
@@ -1182,6 +1183,17 @@ FASE 5: Vulkan Real            [░░░░░░░░░░░░] 0/4 sectio
 ### Cambios Recientes
 
 **14 de noviembre de 2025:**
+- ✅ **COMPLETADO: Sistema de Logging (spdlog)**
+  - Integrado spdlog v1.12.0 via FetchContent
+  - Creado `Core/Log.h` con macros `VEST_CORE_*` y `VEST_*`
+  - Implementado `Core/Log.cpp` con loggers dual (Core + Client)
+  - Console output con colores + archivo `VestEngine.log`
+  - Inicialización automática en `Application::Application()`
+  - Reemplazados asserts críticos en Vulkan stubs con logging
+  - Agregado logging de info de OpenGL (Vendor, Renderer, Version)
+  - Logging de eventos importantes (init, shutdown, API selection)
+  - **Impacto:** Debugging profesional, trazabilidad de eventos ✨
+
 - ✅ **COMPLETADO: Desacoplamiento Engine-Editor**
   - Movido `SceneObject.h` de `Editor/src/Scene/` a `VestEngine/src/Scene/`
   - Actualizados includes en EditorLayer, SceneHierarchyPanel, PropertiesPanel

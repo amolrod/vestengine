@@ -7,6 +7,7 @@ set(VESTENGINE_HEADERS
     src/Core/Layer.h
     src/Core/LayerStack.h
     src/Core/EntryPoint.h
+    src/Core/Log.h
     src/Serialization/SceneSerializer.h
     src/Core/Input.h
     src/Rendering/RenderAPI.h
@@ -39,6 +40,7 @@ set(VESTENGINE_SOURCES
     src/Core/Application.cpp
     src/Core/Layer.cpp
     src/Core/LayerStack.cpp
+    src/Core/Log.cpp
     src/Serialization/SceneSerializer.cpp
     src/Core/Input.cpp
     src/Rendering/Renderer.cpp
@@ -73,7 +75,7 @@ target_include_directories(VestEngine PUBLIC
     ${CMAKE_SOURCE_DIR}/external/stb
 )
 
-target_link_libraries(VestEngine PUBLIC glfw glad imgui)
+target_link_libraries(VestEngine PUBLIC glfw glad imgui spdlog::spdlog)
 if(VEST_ENABLE_SERIALIZATION)
     target_link_libraries(VestEngine PUBLIC nlohmann_json::nlohmann_json)
 endif()

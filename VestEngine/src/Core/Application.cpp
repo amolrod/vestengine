@@ -4,6 +4,7 @@
 #include <chrono>
 
 #include "Core/Event.h"
+#include "Core/Log.h"
 #include "ImGui/ImGuiLayer.h"
 #include "Rendering/RenderCommand.h"
 
@@ -15,12 +16,18 @@ Application::Application(const std::string& name) {
     assert(!s_Instance && "Application already exists!");
     s_Instance = this;
 
+    // Initialize logging system
+    Log::Init();
+    VEST_CORE_INFO("VestEngine Application '{0}' starting...", name);
+
     WindowProps props;
     props.title = name;
     m_Window = Window::Create(props);
     m_Window->SetEventCallback([this](Event& event) { OnEvent(event); });
+    VEST_CORE_INFO("Window created: {0} ({1}x{2})", props.title, props.width, props.height);
 
     Renderer::Init();
+    VEST_CORE_INFO("Renderer initialized");
 
     m_ImGuiLayer = new ImGuiLayer();
     PushOverlay(m_ImGuiLayer);
@@ -29,6 +36,7 @@ Application::Application(const std::string& name) {
 }
 
 Application::~Application() {
+    VEST_CORE_INFO("VestEngine Application shutting down...");
     Renderer::Shutdown();
     s_Instance = nullptr;
 }
