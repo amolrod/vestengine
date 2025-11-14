@@ -108,7 +108,6 @@ Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Users/angel/Desktop/C++/build/_deps/imgui-src/imgui_internal.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stdio.h \

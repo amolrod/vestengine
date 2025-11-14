@@ -276,7 +276,6 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__memory/uninitialized_algorithms.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional/identity.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional/mem_fn.h \
@@ -579,6 +578,6 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o: \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/vector_relational.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/integer.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/func_integer.inl \
-  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Scene/SceneObject.h \
   /Users/angel/Desktop/C++/build/_deps/imgui-src/imgui.h \
   /Users/angel/Desktop/C++/build/_deps/imgui-src/imconfig.h

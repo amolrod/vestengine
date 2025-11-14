@@ -106,7 +106,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/setup.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/../simd/platform.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/climits \
@@ -578,4 +577,45 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_wctrans_t.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_wctrans_t.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Core/Log.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/spdlog.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/common.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/tweakme.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/null_mutex.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/fmt/fmt.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/fmt/bundled/core.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/fmt/bundled/format.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__errc \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cerrno \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/registry.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/periodic_worker.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/condition_variable \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__mutex_base \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/mutex \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/thread \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/unordered_map \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional/is_transparent.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__hash_table \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__node_handle \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/optional \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/logger.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/log_msg.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/backtracer.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/log_msg_buffer.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/circular_q.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/version.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/synchronous_factory.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/console_globals.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/sinks/sink.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/formatter.h \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/details/file_helper.h \
+  /Users/angel/Desktop/C++/build/_deps/spdlog-src/include/spdlog/sinks/base_sink.h

@@ -276,7 +276,6 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__memory/uninitialized_algorithms.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional/identity.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional/mem_fn.h \
@@ -392,7 +391,7 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
-  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Scene/SceneObject.h \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/glm.hpp \
   /Users/angel/Desktop/C++/build/_deps/glm-src/glm/detail/_fixes.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cmath \

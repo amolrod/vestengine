@@ -69,7 +69,8 @@ Soporte objetivo: Windows (prioritario), Linux y macOS.
 - Serialización JSON (`SceneSerializer`) con comandos de guardado/carga desde el menú.
 
 ### Pendiente
-1. Gizmos (ImGuizmo) para manipular entidades en el viewport.
-2. Undo/redo y duplicado de entidades.
-3. Persistencia de layout del editor y rutas de assets.
-4. Integración de sistemas avanzados (ECS, yaml-cpp, logging) en fases futuras.
+1. Persistir layout del editor, rutas de assets y configurar escenas múltiples.
+2. Añadir undo/redo persistente (historial por archivo) y snapshots diferenciales.
+3. Integrar ImGuizmo en modo local/world avanzados (snap, gizmos por eje) y ViewManipulate.
+4. Serializar meshes, texturas externas y futuros componentes (ECS + yaml-cpp).
+5. Añadir pipeline de build multiplataforma + documentación final (tutorial rápido).

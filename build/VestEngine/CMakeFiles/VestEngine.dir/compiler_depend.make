@@ -10,7 +10,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/Application.cpp.o: /Users/angel/De
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
@@ -380,6 +379,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/Application.cpp.o: /Users/angel/De
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/to_underlying.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__variant/monostate.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/array \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/atomic \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cassert \
@@ -391,6 +391,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/Application.cpp.o: /Users/angel/De
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/compare \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio \
@@ -431,6 +432,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/Application.cpp.o: /Users/angel/De
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
@@ -466,6 +468,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/Application.cpp.o: /Users/angel/De
   /Users/angel/Desktop/C++/VestEngine/src/Core/Event.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Layer.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/LayerStack.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Core/Log.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Timestep.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Window.h \
   /Users/angel/Desktop/C++/VestEngine/src/ImGui/ImGuiLayer.h \
@@ -655,7 +658,31 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/Application.cpp.o: /Users/angel/De
   _deps/glm-src/glm/vec2.hpp \
   _deps/glm-src/glm/vec3.hpp \
   _deps/glm-src/glm/vec4.hpp \
-  _deps/glm-src/glm/vector_relational.hpp
+  _deps/glm-src/glm/vector_relational.hpp \
+  _deps/spdlog-src/include/spdlog/common.h \
+  _deps/spdlog-src/include/spdlog/details/backtracer.h \
+  _deps/spdlog-src/include/spdlog/details/circular_q.h \
+  _deps/spdlog-src/include/spdlog/details/console_globals.h \
+  _deps/spdlog-src/include/spdlog/details/file_helper.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg_buffer.h \
+  _deps/spdlog-src/include/spdlog/details/null_mutex.h \
+  _deps/spdlog-src/include/spdlog/details/periodic_worker.h \
+  _deps/spdlog-src/include/spdlog/details/registry.h \
+  _deps/spdlog-src/include/spdlog/details/synchronous_factory.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/core.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/format.h \
+  _deps/spdlog-src/include/spdlog/fmt/fmt.h \
+  _deps/spdlog-src/include/spdlog/formatter.h \
+  _deps/spdlog-src/include/spdlog/logger.h \
+  _deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/base_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h \
+  _deps/spdlog-src/include/spdlog/spdlog.h \
+  _deps/spdlog-src/include/spdlog/tweakme.h \
+  _deps/spdlog-src/include/spdlog/version.h
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Core/Input.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -666,7 +693,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o: /Users/angel/Desktop/
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
@@ -1323,7 +1349,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/Layer.cpp.o: /Users/angel/Desktop/
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
@@ -1773,7 +1798,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.o: /Users/angel/Des
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
@@ -2217,6 +2241,439 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.o: /Users/angel/Des
   /Users/angel/Desktop/C++/VestEngine/src/Core/LayerStack.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Timestep.h
 
+VestEngine/CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Core/Log.cpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_strings.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_time.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint16_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint32_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint64_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint8_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_wctrans_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_wctype_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wchar.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/alloca.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_mcontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/errno.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/arm/_OSByteOrder.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/arm/_structs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine/_structs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_mcontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/limits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/pthread_impl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/qos.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/sched.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/runetype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sched.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdint.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/__endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_posix_availability.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_attr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_cond_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_key_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutex_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_once_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_clock_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ct_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int16_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_intptr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mbstate_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_seek_set.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigaltstack.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_size_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timespec.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int16_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int32_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int64_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int8_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ucontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wint_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/errno.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wchar.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wctype.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/adjacent_find.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/all_of.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/any_of.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/binary_search.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/clamp.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/comp.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/comp_ref_type.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/copy.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/copy_backward.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/copy_if.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/copy_n.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/count.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/count_if.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/equal.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/equal_range.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/fill.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/fill_n.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/find.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/find_end.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/find_first_of.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/find_if.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/find_if_not.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/for_each.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/for_each_n.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/generate.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/generate_n.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/half_positive.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/includes.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/inplace_merge.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/is_heap.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/is_heap_until.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/is_partitioned.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/is_permutation.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/is_sorted.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/is_sorted_until.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/iter_swap.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/lexicographical_compare.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/lower_bound.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/make_heap.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/max.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/max_element.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/merge.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/min.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/min_element.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/minmax.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/minmax_element.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/mismatch.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/move.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/move_backward.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/next_permutation.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/none_of.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/nth_element.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/partial_sort.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/partial_sort_copy.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/partition.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/partition_copy.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/partition_point.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/pop_heap.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/prev_permutation.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/push_heap.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/remove.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/remove_copy.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/remove_copy_if.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/remove_if.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/replace.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/replace_copy.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/replace_copy_if.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/replace_if.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/reverse.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/reverse_copy.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/rotate.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/rotate_copy.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/sample.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/search.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/search_n.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/set_difference.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/set_intersection.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/set_symmetric_difference.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/set_union.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/shift_left.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/shift_right.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/shuffle.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/sift_down.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/sort.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/sort_heap.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/stable_partition.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/stable_sort.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/swap_ranges.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/transform.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/unique.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/unique_copy.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/unwrap_iter.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/upper_bound.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__availability \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__bit_reference \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__bits \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__config \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__config_site \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__debug \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__errc \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__function_like.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/binary_function.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/binary_negate.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/bind.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/bind_front.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/binder1st.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/binder2nd.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/default_searcher.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/function.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/hash.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/identity.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/invoke.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/is_transparent.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/mem_fn.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/mem_fun_ref.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/not_fn.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/operations.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/perfect_forward.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/ranges_operations.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/reference_wrapper.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/unary_function.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/unary_negate.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/unwrap_ref.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/weak_result_type.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional_base \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__hash_table \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/access.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/advance.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/back_insert_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/common_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/concepts.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/counted_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/data.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/default_sentinel.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/distance.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/empty.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/erase_if_container.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/front_insert_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/incrementable_traits.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/insert_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/istream_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/istreambuf_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/iter_move.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/iter_swap.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/iterator_traits.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/move_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/next.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/ostream_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/ostreambuf_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/prev.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/projected.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/readable_traits.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/reverse_access.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/reverse_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/size.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/wrap_iter.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__mbstate_t.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/addressof.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/allocation_guard.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/allocator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/allocator_arg_t.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/allocator_traits.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/compressed_pair.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/construct_at.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/pointer_safety.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/pointer_traits.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/raw_storage_iterator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/shared_ptr.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/temporary_buffer.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/uninitialized_algorithms.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/unique_ptr.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/uses_allocator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__mutex_base \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__node_handle \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__nullptr \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__random/uniform_int_distribution.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__ranges/access.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__ranges/enable_borrowed_range.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__ranges/enable_view.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__split_buffer \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__string \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__thread/poll_with_backoff.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__threading_support \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__tuple \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__undef_macros \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/__decay_copy.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/as_const.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/cmp.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/declval.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/exchange.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/forward.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/in_place.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/integer_sequence.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/move.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/pair.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/piecewise_construct.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/rel_ops.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/swap.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/to_underlying.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__variant/monostate.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/array \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/atomic \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cassert \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cctype \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cerrno \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/chrono \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/climits \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/compare \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/condition_variable \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cstddef \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdint \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdlib \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cstring \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/ctime \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/ctype.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cwchar \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cwctype \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/errno.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/exception \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/functional \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/initializer_list \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/iosfwd \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/iterator \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/limits \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/math.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/memory \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/new \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/optional \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/ratio \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stddef.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdexcept \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdint.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdio.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/stdlib.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/string \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/string.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/thread \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/utility \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/variant \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/vector \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/version \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/wchar.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/wctype.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg___gnuc_va_list.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg___va_copy.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_header_macro.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_arg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_copy.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_list.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stddef_header_macro.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stddef_max_align_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stddef_null.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stddef_nullptr_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stddef_offsetof.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stddef_ptrdiff_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stddef_rsize_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stddef_size_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stddef_wchar_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/limits.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Core/Log.h \
+  _deps/spdlog-src/include/spdlog/common.h \
+  _deps/spdlog-src/include/spdlog/details/backtracer.h \
+  _deps/spdlog-src/include/spdlog/details/circular_q.h \
+  _deps/spdlog-src/include/spdlog/details/console_globals.h \
+  _deps/spdlog-src/include/spdlog/details/file_helper.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg_buffer.h \
+  _deps/spdlog-src/include/spdlog/details/null_mutex.h \
+  _deps/spdlog-src/include/spdlog/details/periodic_worker.h \
+  _deps/spdlog-src/include/spdlog/details/registry.h \
+  _deps/spdlog-src/include/spdlog/details/synchronous_factory.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/core.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/format.h \
+  _deps/spdlog-src/include/spdlog/fmt/fmt.h \
+  _deps/spdlog-src/include/spdlog/formatter.h \
+  _deps/spdlog-src/include/spdlog/logger.h \
+  _deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/base_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h \
+  _deps/spdlog-src/include/spdlog/spdlog.h \
+  _deps/spdlog-src/include/spdlog/tweakme.h \
+  _deps/spdlog-src/include/spdlog/version.h
+
 VestEngine/CMakeFiles/VestEngine.dir/src/Core/Window.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Core/Window.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
@@ -2226,7 +2683,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/Window.cpp.o: /Users/angel/Desktop
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
@@ -2679,7 +3135,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o: /Users/angel/De
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
@@ -3341,7 +3796,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o: /
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
@@ -3793,7 +4247,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Buffer.cpp.o: /Users/angel/De
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -4381,7 +4834,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Framebuffer.cpp.o: /Users/ang
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -4963,7 +5415,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLBuffer.
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -5548,7 +5999,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLContext
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h \
@@ -5648,7 +6098,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebu
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -5918,7 +6367,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendere
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -6141,6 +6589,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__config_site \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__debug \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__errc \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__function_like.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/binary_function.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/binary_negate.h \
@@ -6153,6 +6602,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/hash.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/identity.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/invoke.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/is_transparent.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/mem_fn.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/mem_fun_ref.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/not_fn.h \
@@ -6167,6 +6617,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/unwrap_ref.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/weak_result_type.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional_base \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__hash_table \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/access.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/advance.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/back_insert_iterator.h \
@@ -6214,6 +6665,8 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/uninitialized_algorithms.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/unique_ptr.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/uses_allocator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__mutex_base \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__node_handle \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__random/uniform_int_distribution.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__ranges/access.h \
@@ -6241,15 +6694,18 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/to_underlying.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__variant/monostate.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/array \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/atomic \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cctype \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cerrno \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cfloat \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/compare \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio \
@@ -6270,7 +6726,9 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/memory \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/new \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/optional \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stddef.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stdexcept \
@@ -6280,9 +6738,12 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/utility \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/variant \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/vector \
@@ -6310,6 +6771,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendere
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Base.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Core/Log.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Buffer.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/RenderAPI.h \
@@ -6495,6 +6957,30 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendere
   _deps/glm-src/glm/vec3.hpp \
   _deps/glm-src/glm/vec4.hpp \
   _deps/glm-src/glm/vector_relational.hpp \
+  _deps/spdlog-src/include/spdlog/common.h \
+  _deps/spdlog-src/include/spdlog/details/backtracer.h \
+  _deps/spdlog-src/include/spdlog/details/circular_q.h \
+  _deps/spdlog-src/include/spdlog/details/console_globals.h \
+  _deps/spdlog-src/include/spdlog/details/file_helper.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg_buffer.h \
+  _deps/spdlog-src/include/spdlog/details/null_mutex.h \
+  _deps/spdlog-src/include/spdlog/details/periodic_worker.h \
+  _deps/spdlog-src/include/spdlog/details/registry.h \
+  _deps/spdlog-src/include/spdlog/details/synchronous_factory.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/core.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/format.h \
+  _deps/spdlog-src/include/spdlog/fmt/fmt.h \
+  _deps/spdlog-src/include/spdlog/formatter.h \
+  _deps/spdlog-src/include/spdlog/logger.h \
+  _deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/base_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h \
+  _deps/spdlog-src/include/spdlog/spdlog.h \
+  _deps/spdlog-src/include/spdlog/tweakme.h \
+  _deps/spdlog-src/include/spdlog/version.h \
   /Users/angel/Desktop/C++/external/glad/include/KHR/khrplatform.h \
   /Users/angel/Desktop/C++/external/glad/include/glad/glad.h
 
@@ -6507,7 +6993,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLShader.
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
@@ -7272,7 +7757,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLTexture
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -7668,7 +8152,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLVertexA
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -8256,7 +8739,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanBuffer.
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -8839,7 +9321,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanContext
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h \
@@ -8925,7 +9406,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -9143,10 +9623,12 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/unwrap_iter.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/upper_bound.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__availability \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__bits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__config_site \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__debug \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__errc \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__function_like.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/binary_function.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/binary_negate.h \
@@ -9159,6 +9641,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/hash.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/identity.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/invoke.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/is_transparent.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/mem_fn.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/mem_fun_ref.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/not_fn.h \
@@ -9173,6 +9656,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/unwrap_ref.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/weak_result_type.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional_base \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__hash_table \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/access.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/advance.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/back_insert_iterator.h \
@@ -9220,11 +9704,14 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/uninitialized_algorithms.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/unique_ptr.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/uses_allocator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__mutex_base \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__node_handle \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__random/uniform_int_distribution.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__ranges/access.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__ranges/enable_borrowed_range.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__ranges/enable_view.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__string \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__thread/poll_with_backoff.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__threading_support \
@@ -9246,15 +9733,18 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/to_underlying.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__variant/monostate.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/array \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/atomic \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cctype \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cerrno \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cfloat \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/compare \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio \
@@ -9275,7 +9765,9 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/memory \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/new \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/optional \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stddef.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stdexcept \
@@ -9285,11 +9777,15 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/utility \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/variant \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/version \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/wchar.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/wctype.h \
@@ -9314,6 +9810,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Base.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Core/Log.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/Vulkan/VulkanRendererAPI.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/RenderAPI.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/RendererAPI.h \
@@ -9496,7 +9993,31 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
   _deps/glm-src/glm/vec2.hpp \
   _deps/glm-src/glm/vec3.hpp \
   _deps/glm-src/glm/vec4.hpp \
-  _deps/glm-src/glm/vector_relational.hpp
+  _deps/glm-src/glm/vector_relational.hpp \
+  _deps/spdlog-src/include/spdlog/common.h \
+  _deps/spdlog-src/include/spdlog/details/backtracer.h \
+  _deps/spdlog-src/include/spdlog/details/circular_q.h \
+  _deps/spdlog-src/include/spdlog/details/console_globals.h \
+  _deps/spdlog-src/include/spdlog/details/file_helper.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg_buffer.h \
+  _deps/spdlog-src/include/spdlog/details/null_mutex.h \
+  _deps/spdlog-src/include/spdlog/details/periodic_worker.h \
+  _deps/spdlog-src/include/spdlog/details/registry.h \
+  _deps/spdlog-src/include/spdlog/details/synchronous_factory.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/core.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/format.h \
+  _deps/spdlog-src/include/spdlog/fmt/fmt.h \
+  _deps/spdlog-src/include/spdlog/formatter.h \
+  _deps/spdlog-src/include/spdlog/logger.h \
+  _deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/base_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h \
+  _deps/spdlog-src/include/spdlog/spdlog.h \
+  _deps/spdlog-src/include/spdlog/tweakme.h \
+  _deps/spdlog-src/include/spdlog/version.h
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/Vulkan/VulkanShader.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -9506,7 +10027,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -10091,7 +10611,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: /Users/a
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -10314,6 +10833,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: /Users/a
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__config_site \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__debug \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__errc \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__function_like.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/binary_function.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/binary_negate.h \
@@ -10326,6 +10846,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: /Users/a
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/hash.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/identity.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/invoke.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/is_transparent.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/mem_fn.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/mem_fun_ref.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/not_fn.h \
@@ -10340,6 +10861,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: /Users/a
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/unwrap_ref.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional/weak_result_type.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__functional_base \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__hash_table \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/access.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/advance.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/back_insert_iterator.h \
@@ -10387,6 +10909,8 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: /Users/a
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/uninitialized_algorithms.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/unique_ptr.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/uses_allocator.h \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__mutex_base \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/__node_handle \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__nullptr \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__random/uniform_int_distribution.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__ranges/access.h \
@@ -10414,15 +10938,18 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: /Users/a
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__utility/to_underlying.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__variant/monostate.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/array \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/atomic \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cctype \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/cerrno \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cfloat \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/compare \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio \
@@ -10443,7 +10970,9 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: /Users/a
   /Library/Developer/CommandLineTools/usr/include/c++/v1/limits.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/memory \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/new \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/optional \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stddef.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/stdexcept \
@@ -10453,9 +10982,12 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: /Users/a
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/utility \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/variant \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/vector \
@@ -10483,6 +11015,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: /Users/a
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Base.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Core/Log.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Buffer.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/Vulkan/VulkanRendererAPI.h \
@@ -10669,7 +11202,31 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: /Users/a
   _deps/glm-src/glm/vec2.hpp \
   _deps/glm-src/glm/vec3.hpp \
   _deps/glm-src/glm/vec4.hpp \
-  _deps/glm-src/glm/vector_relational.hpp
+  _deps/glm-src/glm/vector_relational.hpp \
+  _deps/spdlog-src/include/spdlog/common.h \
+  _deps/spdlog-src/include/spdlog/details/backtracer.h \
+  _deps/spdlog-src/include/spdlog/details/circular_q.h \
+  _deps/spdlog-src/include/spdlog/details/console_globals.h \
+  _deps/spdlog-src/include/spdlog/details/file_helper.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg_buffer.h \
+  _deps/spdlog-src/include/spdlog/details/null_mutex.h \
+  _deps/spdlog-src/include/spdlog/details/periodic_worker.h \
+  _deps/spdlog-src/include/spdlog/details/registry.h \
+  _deps/spdlog-src/include/spdlog/details/synchronous_factory.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/core.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/format.h \
+  _deps/spdlog-src/include/spdlog/fmt/fmt.h \
+  _deps/spdlog-src/include/spdlog/formatter.h \
+  _deps/spdlog-src/include/spdlog/logger.h \
+  _deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/base_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h \
+  _deps/spdlog-src/include/spdlog/spdlog.h \
+  _deps/spdlog-src/include/spdlog/tweakme.h \
+  _deps/spdlog-src/include/spdlog/version.h
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Renderer.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -10679,7 +11236,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o: /Users/angel/
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -11296,7 +11852,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.o: /Users/angel/De
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -11884,7 +12439,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o: /Users/angel/D
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -12469,7 +13023,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o: /Users/ang
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -13056,7 +13609,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o: /U
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
@@ -13441,6 +13993,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o: /U
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/compare \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/condition_variable \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/cstdio \
@@ -13488,6 +14041,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o: /U
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/typeinfo \
@@ -13519,7 +14073,8 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o: /U
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h \
-  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Core/Log.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Scene/SceneObject.h \
   /Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.h \
   _deps/glm-src/glm/matrix.hpp \
   _deps/glm-src/glm/detail/type_mat2x2.hpp \
@@ -13745,7 +14300,31 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o: /U
   _deps/nlohmann_json-src/include/nlohmann/json_fwd.hpp \
   _deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp \
   _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
-  _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+  _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  _deps/spdlog-src/include/spdlog/common.h \
+  _deps/spdlog-src/include/spdlog/details/backtracer.h \
+  _deps/spdlog-src/include/spdlog/details/circular_q.h \
+  _deps/spdlog-src/include/spdlog/details/console_globals.h \
+  _deps/spdlog-src/include/spdlog/details/file_helper.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg.h \
+  _deps/spdlog-src/include/spdlog/details/log_msg_buffer.h \
+  _deps/spdlog-src/include/spdlog/details/null_mutex.h \
+  _deps/spdlog-src/include/spdlog/details/periodic_worker.h \
+  _deps/spdlog-src/include/spdlog/details/registry.h \
+  _deps/spdlog-src/include/spdlog/details/synchronous_factory.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/core.h \
+  _deps/spdlog-src/include/spdlog/fmt/bundled/format.h \
+  _deps/spdlog-src/include/spdlog/fmt/fmt.h \
+  _deps/spdlog-src/include/spdlog/formatter.h \
+  _deps/spdlog-src/include/spdlog/logger.h \
+  _deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/base_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/sink.h \
+  _deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h \
+  _deps/spdlog-src/include/spdlog/spdlog.h \
+  _deps/spdlog-src/include/spdlog/tweakme.h \
+  _deps/spdlog-src/include/spdlog/version.h
 
 
 _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp:
@@ -13870,8 +14449,6 @@ _deps/glm-src/glm/ext/quaternion_common.hpp:
 
 /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp:
 
-/Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp:
-
 /Users/angel/Desktop/C++/VestEngine/src/Rendering/Framebuffer.h:
 
 /Users/angel/Desktop/C++/VestEngine/src/Rendering/Framebuffer.cpp:
@@ -13898,19 +14475,43 @@ _deps/imgui-src/backends/imgui_impl_glfw.h:
 
 /Users/angel/Desktop/C++/VestEngine/src/Platform/Windows/WindowsWindow.h:
 
+/Users/angel/Desktop/C++/VestEngine/src/Core/Log.cpp:
+
 /Users/angel/Desktop/C++/VestEngine/src/Core/Input.h:
 
 /Users/angel/Desktop/C++/VestEngine/src/Core/Input.cpp:
+
+_deps/spdlog-src/include/spdlog/version.h:
+
+_deps/spdlog-src/include/spdlog/sinks/stdout_color_sinks.h:
+
+_deps/spdlog-src/include/spdlog/sinks/sink.h:
+
+_deps/spdlog-src/include/spdlog/sinks/basic_file_sink.h:
+
+_deps/spdlog-src/include/spdlog/sinks/base_sink.h:
+
+_deps/spdlog-src/include/spdlog/sinks/ansicolor_sink.h:
+
+_deps/spdlog-src/include/spdlog/details/registry.h:
+
+/Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp:
+
+_deps/spdlog-src/include/spdlog/details/periodic_worker.h:
+
+_deps/spdlog-src/include/spdlog/details/null_mutex.h:
+
+_deps/spdlog-src/include/spdlog/details/file_helper.h:
+
+_deps/spdlog-src/include/spdlog/details/console_globals.h:
+
+_deps/spdlog-src/include/spdlog/details/circular_q.h:
 
 _deps/glm-src/glm/integer.hpp:
 
 _deps/glm-src/glm/detail/type_half.inl:
 
 _deps/glm-src/glm/detail/type_half.hpp:
-
-_deps/glm-src/glm/ext/vector_relational.hpp:
-
-_deps/glm-src/glm/detail/func_integer.inl:
 
 _deps/glm-src/glm/simd/platform.h:
 
@@ -13994,6 +14595,8 @@ _deps/glm-src/glm/detail/_vectorize.hpp:
 
 _deps/glm-src/glm/detail/_fixes.hpp:
 
+_deps/spdlog-src/include/spdlog/details/backtracer.h:
+
 _deps/glm-src/glm/detail/qualifier.hpp:
 
 _deps/glm-src/glm/detail/func_vector_relational.inl:
@@ -14066,6 +14669,8 @@ _deps/glm-src/glm/detail/type_vec2.hpp:
 
 _deps/glm-src/glm/detail/type_mat2x3.hpp:
 
+_deps/spdlog-src/include/spdlog/details/log_msg.h:
+
 _deps/glm-src/glm/detail/type_mat2x2.hpp:
 
 _deps/glm-src/glm/matrix.hpp:
@@ -14135,6 +14740,12 @@ _deps/nlohmann_json-src/include/nlohmann/detail/input/parser.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/tuple:
+
+_deps/glm-src/glm/ext/vector_relational.hpp:
+
+_deps/glm-src/glm/detail/func_integer.inl:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/thread:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/string_view:
 
@@ -14270,9 +14881,7 @@ _deps/glm-src/glm/fwd.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__ranges/enable_view.h:
 
-/Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/set_union.h:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/ctype.h:
+_deps/spdlog-src/include/spdlog/common.h:
 
 _deps/glm-src/glm/ext/matrix_float3x2.hpp:
 
@@ -14325,6 +14934,8 @@ _deps/glm-src/glm/packing.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/prev.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/ostream_iterator.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/iterator_traits.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/iterator.h:
 
@@ -14432,6 +15043,8 @@ _deps/glm-src/glm/gtc/epsilon.inl:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/upper_bound.h:
 
+_deps/spdlog-src/include/spdlog/tweakme.h:
+
 /Users/angel/Desktop/C++/VestEngine/src/Rendering/VertexArray.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/unique_copy.h:
@@ -14496,6 +15109,10 @@ _deps/glm-src/glm/mat3x3.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/shift_left.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/array:
+
 _deps/glm-src/glm/ext/vector_int2.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__string:
@@ -14533,6 +15150,8 @@ _deps/glm-src/glm/detail/type_float.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/rotate_copy.h:
 
 _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp:
+
+/Users/angel/Desktop/C++/VestEngine/src/Scene/SceneObject.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/rotate.h:
 
@@ -14604,6 +15223,8 @@ _deps/glm-src/glm/ext/matrix_transform.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/is_heap.h:
 
+_deps/spdlog-src/include/spdlog/fmt/bundled/core.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_key_t.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/includes.h:
@@ -14636,6 +15257,8 @@ _deps/glm-src/glm/vec4.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/fill_n.h:
 
+_deps/spdlog-src/include/spdlog/details/log_msg_buffer.h:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__memory/allocator_traits.h:
 
 _deps/glm-src/glm/ext/quaternion_relational.inl:
@@ -14665,6 +15288,8 @@ _deps/nlohmann_json-src/include/nlohmann/detail/json_custom_base_class.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/find_if_not.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/find_first_of.h:
+
+_deps/spdlog-src/include/spdlog/logger.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/binary_search.h:
 
@@ -14718,6 +15343,10 @@ _deps/glm-src/glm/detail/type_mat2x4.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__config_site:
 
+/Library/Developer/CommandLineTools/usr/include/c++/v1/ctype.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/set_union.h:
+
 _deps/nlohmann_json-src/include/nlohmann/adl_serializer.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale.h:
@@ -14729,8 +15358,6 @@ _deps/glm-src/glm/ext/vector_double2.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/errno.h:
-
-/Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/memory:
 
@@ -14749,6 +15376,8 @@ _deps/glm-src/glm/mat3x4.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_posix_availability.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/_time.h:
+
+_deps/spdlog-src/include/spdlog/fmt/bundled/format.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/istreambuf_iterator.h:
 
@@ -14796,10 +15425,6 @@ _deps/glm-src/glm/detail/type_mat4x2.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h:
 
-/Library/Developer/CommandLineTools/usr/include/c++/v1/array:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h:
-
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/ostreambuf_iterator.h:
 
 _deps/glm-src/glm/detail/type_vec4.inl:
@@ -14841,6 +15466,10 @@ _deps/glm-src/glm/ext/vector_uint2.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h:
+
+_deps/spdlog-src/include/spdlog/spdlog.h:
+
+_deps/spdlog-src/include/spdlog/formatter.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h:
 
@@ -14910,13 +15539,7 @@ _deps/glm-src/glm/trigonometric.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_clr.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/for_each_n.h:
-
-_deps/glm-src/glm/ext/vector_double3_precision.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h:
+_deps/spdlog-src/include/spdlog/fmt/fmt.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/limits.h:
 
@@ -15012,6 +15635,8 @@ _deps/nlohmann_json-src/include/nlohmann/byte_container_with_subtype.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h:
 
+_deps/spdlog-src/include/spdlog/details/synchronous_factory.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h:
 
 _deps/glfw-src/include/GLFW/glfw3.h:
@@ -15031,6 +15656,8 @@ _deps/glm-src/glm/mat2x4.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/erase_if_container.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/arm/_OSByteOrder.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/condition_variable:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_endian.h:
 
@@ -15128,6 +15755,10 @@ _deps/glm-src/glm/ext/matrix_double2x3_precision.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_mcontext.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/signal.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wctype.h:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/partition_copy.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stddef_offsetof.h:
@@ -15154,6 +15785,14 @@ _deps/glm-src/glm/detail/type_mat4x3.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_nl_item.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/for_each_n.h:
+
+_deps/glm-src/glm/ext/vector_double3_precision.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h:
+
 _deps/glm-src/glm/ext/matrix_projection.inl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h:
@@ -15169,6 +15808,8 @@ _deps/glm-src/glm/ext/vector_float1.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/concepts:
 
 _deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp:
+
+/Users/angel/Desktop/C++/VestEngine/src/Core/Log.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h:
 
@@ -15269,13 +15910,5 @@ _deps/glm-src/glm/ext/matrix_float3x4_precision.hpp:
 _deps/glm-src/glm/detail/type_mat2x2.inl:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/signal.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wctype.h:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/iterator_traits.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h:
 
 /Users/angel/Desktop/C++/VestEngine/src/Core/Application.cpp:

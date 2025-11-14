@@ -1,0 +1,14 @@
+# Target labels
+ spdlog-populate
+# Source files and their labels
+/Users/angel/Desktop/C++/build/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate
+/Users/angel/Desktop/C++/build/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate.rule
+/Users/angel/Desktop/C++/build/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate-complete.rule
+/Users/angel/Desktop/C++/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-build.rule
+/Users/angel/Desktop/C++/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-configure.rule
+/Users/angel/Desktop/C++/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-download.rule
+/Users/angel/Desktop/C++/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-install.rule
+/Users/angel/Desktop/C++/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir.rule
+/Users/angel/Desktop/C++/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch.rule
+/Users/angel/Desktop/C++/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test.rule
+/Users/angel/Desktop/C++/build/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update.rule

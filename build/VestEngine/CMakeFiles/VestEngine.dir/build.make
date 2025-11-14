@@ -128,10 +128,24 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.s"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angel/Desktop/C++/VestEngine/src/Core/LayerStack.cpp -o CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.s
 
+VestEngine/CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
+VestEngine/CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Core/Log.cpp
+VestEngine/CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o"
+	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o -MF CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Core/Log.cpp
+
+VestEngine/CMakeFiles/VestEngine.dir/src/Core/Log.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VestEngine.dir/src/Core/Log.cpp.i"
+	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/angel/Desktop/C++/VestEngine/src/Core/Log.cpp > CMakeFiles/VestEngine.dir/src/Core/Log.cpp.i
+
+VestEngine/CMakeFiles/VestEngine.dir/src/Core/Log.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VestEngine.dir/src/Core/Log.cpp.s"
+	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angel/Desktop/C++/VestEngine/src/Core/Log.cpp -o CMakeFiles/VestEngine.dir/src/Core/Log.cpp.s
+
 VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o -MF CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.i: cmake_force
@@ -145,7 +159,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.s: cm
 VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Core/Input.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o -MF CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Core/Input.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.i: cmake_force
@@ -159,7 +173,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.s: cmake_force
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Renderer.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Renderer.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.i: cmake_force
@@ -173,7 +187,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.s: cmake_force
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/RenderCommand.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/RenderCommand.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.i: cmake_force
@@ -187,7 +201,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/RenderCommand.cpp.s: cmake_fo
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Shader.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Shader.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.i: cmake_force
@@ -201,7 +215,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Shader.cpp.s: cmake_force
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Buffer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Buffer.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Buffer.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Buffer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Buffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Buffer.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Buffer.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Buffer.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Buffer.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Buffer.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Buffer.cpp.i: cmake_force
@@ -215,7 +229,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Buffer.cpp.s: cmake_force
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/VertexArray.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/VertexArray.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.i: cmake_force
@@ -229,7 +243,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/VertexArray.cpp.s: cmake_forc
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Texture.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Texture.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.i: cmake_force
@@ -243,7 +257,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Texture.cpp.s: cmake_force
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Framebuffer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Framebuffer.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Framebuffer.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Framebuffer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Framebuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Framebuffer.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Framebuffer.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Framebuffer.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Framebuffer.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Framebuffer.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Framebuffer.cpp.i: cmake_force
@@ -257,7 +271,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Framebuffer.cpp.s: cmake_forc
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLContext.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLContext.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLContext.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLContext.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLContext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLContext.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLContext.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLContext.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLContext.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLContext.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLContext.cpp.i: cmake_force
@@ -271,7 +285,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLContext
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLShader.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLShader.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLShader.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLShader.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLShader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLShader.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLShader.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLShader.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLShader.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLShader.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLShader.cpp.i: cmake_force
@@ -285,7 +299,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLShader.
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLBuffer.cpp.i: cmake_force
@@ -299,7 +313,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLBuffer.
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLVertexArray.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLVertexArray.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLVertexArray.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLVertexArray.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLVertexArray.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLVertexArray.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLVertexArray.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLVertexArray.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLVertexArray.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLVertexArray.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLVertexArray.cpp.i: cmake_force
@@ -313,7 +327,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLVertexA
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLTexture.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLTexture.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLTexture.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLTexture.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLTexture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLTexture.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLTexture.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLTexture.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLTexture.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLTexture.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLTexture.cpp.i: cmake_force
@@ -327,7 +341,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLTexture
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebuffer.cpp.i: cmake_force
@@ -341,7 +355,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebu
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendererAPI.cpp.i: cmake_force
@@ -355,7 +369,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLRendere
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanContext.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanContext.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/Vulkan/VulkanContext.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanContext.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanContext.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanContext.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanContext.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanContext.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanContext.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/Vulkan/VulkanContext.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanContext.cpp.i: cmake_force
@@ -369,7 +383,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanContext
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/Vulkan/VulkanShader.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/Vulkan/VulkanShader.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.cpp.i: cmake_force
@@ -383,7 +397,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanShader.
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanBuffer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanBuffer.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/Vulkan/VulkanBuffer.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanBuffer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanBuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanBuffer.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanBuffer.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanBuffer.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanBuffer.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/Vulkan/VulkanBuffer.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanBuffer.cpp.i: cmake_force
@@ -397,7 +411,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanBuffer.
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendererAPI.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendererAPI.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/Vulkan/VulkanRendererAPI.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendererAPI.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendererAPI.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendererAPI.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendererAPI.cpp.o -MF CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendererAPI.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendererAPI.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Rendering/Platform/Vulkan/VulkanRendererAPI.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendererAPI.cpp.i: cmake_force
@@ -411,7 +425,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/Vulkan/VulkanRendere
 VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/ImGui/ImGuiLayer.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o -MF CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o.d -o CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/ImGui/ImGuiLayer.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.i: cmake_force
@@ -425,7 +439,7 @@ VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.s: cmake_force
 VestEngine/CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/flags.make
 VestEngine/CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o: /Users/angel/Desktop/C++/VestEngine/src/Platform/Windows/WindowsWindow.cpp
 VestEngine/CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o: VestEngine/CMakeFiles/VestEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object VestEngine/CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o"
 	cd /Users/angel/Desktop/C++/build/VestEngine && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT VestEngine/CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o -MF CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o.d -o CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o -c /Users/angel/Desktop/C++/VestEngine/src/Platform/Windows/WindowsWindow.cpp
 
 VestEngine/CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.i: cmake_force
@@ -442,6 +456,7 @@ VestEngine_OBJECTS = \
 "CMakeFiles/VestEngine.dir/src/Core/Application.cpp.o" \
 "CMakeFiles/VestEngine.dir/src/Core/Layer.cpp.o" \
 "CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.o" \
+"CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o" \
 "CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o" \
 "CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o" \
 "CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o" \
@@ -472,6 +487,7 @@ VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/src/Core/Window
 VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/src/Core/Application.cpp.o
 VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/src/Core/Layer.cpp.o
 VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.o
+VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o
 VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/src/Serialization/SceneSerializer.cpp.o
 VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o
 VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Renderer.cpp.o
@@ -496,7 +512,7 @@ VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGui
 VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o
 VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/build.make
 VestEngine/libVestEngine.a: VestEngine/CMakeFiles/VestEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX static library libVestEngine.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX static library libVestEngine.a"
 	cd /Users/angel/Desktop/C++/build/VestEngine && $(CMAKE_COMMAND) -P CMakeFiles/VestEngine.dir/cmake_clean_target.cmake
 	cd /Users/angel/Desktop/C++/build/VestEngine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VestEngine.dir/link.txt --verbose=$(VERBOSE)
 

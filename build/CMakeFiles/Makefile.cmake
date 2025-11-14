@@ -25,6 +25,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/nlohmann_json-src/cmake/config.cmake.in"
   "_deps/nlohmann_json-src/cmake/nlohmann_jsonConfigVersion.cmake.in"
   "_deps/nlohmann_json-src/cmake/pkg-config.pc.in"
+  "_deps/spdlog-src/CMakeLists.txt"
+  "_deps/spdlog-src/cmake/ide.cmake"
+  "_deps/spdlog-src/cmake/utils.cmake"
   "/opt/homebrew/share/cmake/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "/opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake"
@@ -85,6 +88,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/glfw-subbuild/CMakeLists.txt"
   "_deps/glm-subbuild/CMakeLists.txt"
+  "_deps/spdlog-subbuild/CMakeLists.txt"
   "_deps/nlohmann_json-subbuild/CMakeLists.txt"
   "_deps/imgui-subbuild/CMakeLists.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -97,6 +101,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/glfw-build/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/glm-build/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/glm-build/glm/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "_deps/spdlog-build/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/nlohmann_json-build/nlohmann_json.pc"
   "_deps/nlohmann_json-build/nlohmann_jsonConfigVersion.cmake"
   "_deps/nlohmann_json-build/nlohmann_jsonConfig.cmake"
@@ -113,6 +118,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "_deps/glfw-build/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   "_deps/glfw-build/src/CMakeFiles/update_mappings.dir/DependInfo.cmake"
   "_deps/glm-build/glm/CMakeFiles/glm.dir/DependInfo.cmake"
+  "_deps/spdlog-build/CMakeFiles/spdlog.dir/DependInfo.cmake"
   "VestEngine/CMakeFiles/VestEngine.dir/DependInfo.cmake"
   "Editor/CMakeFiles/VestEditor.dir/DependInfo.cmake"
   )

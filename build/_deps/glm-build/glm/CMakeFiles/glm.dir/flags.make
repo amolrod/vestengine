@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/angel/Desktop/C++/build/_deps/glm-src
 
-CXX_FLAGSarm64 = -std=c++20 -arch arm64 -Wno-c++98-compat -Wno-c++98-compat-pedantic
+CXX_FLAGSarm64 = -O3 -DNDEBUG -std=c++20 -arch arm64 -Wno-c++98-compat -Wno-c++98-compat-pedantic
 
-CXX_FLAGS = -std=c++20 -arch arm64 -Wno-c++98-compat -Wno-c++98-compat-pedantic
+CXX_FLAGS = -O3 -DNDEBUG -std=c++20 -arch arm64 -Wno-c++98-compat -Wno-c++98-compat-pedantic
 

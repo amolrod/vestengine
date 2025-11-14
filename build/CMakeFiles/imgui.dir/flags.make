@@ -6,7 +6,7 @@ CXX_DEFINES = -DIMGUI_IMPL_OPENGL_LOADER_GLAD
 
 CXX_INCLUDES = -I/Users/angel/Desktop/C++/build/_deps/imgui-src -I/Users/angel/Desktop/C++/build/_deps/imgui-src/backends -I/Users/angel/Desktop/C++/build/_deps/glfw-src/include
 
-CXX_FLAGSarm64 = -std=gnu++20 -arch arm64
+CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++20 -arch arm64
 
-CXX_FLAGS = -std=gnu++20 -arch arm64
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++20 -arch arm64
 

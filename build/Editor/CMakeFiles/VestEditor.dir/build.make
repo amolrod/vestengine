@@ -211,6 +211,7 @@ Editor/VestEditor: VestEngine/libVestEngine.a
 Editor/VestEditor: libglad.a
 Editor/VestEditor: libimgui.a
 Editor/VestEditor: _deps/glfw-build/src/libglfw3.a
+Editor/VestEditor: _deps/spdlog-build/libspdlog.a
 Editor/VestEditor: Editor/CMakeFiles/VestEditor.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable VestEditor"
 	cd /Users/angel/Desktop/C++/build/Editor && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VestEditor.dir/link.txt --verbose=$(VERBOSE)

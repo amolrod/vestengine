@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/angel/Desktop/C++/VestEngine/src/Core/Input.cpp" "VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o" "gcc" "VestEngine/CMakeFiles/VestEngine.dir/src/Core/Input.cpp.o.d"
   "/Users/angel/Desktop/C++/VestEngine/src/Core/Layer.cpp" "VestEngine/CMakeFiles/VestEngine.dir/src/Core/Layer.cpp.o" "gcc" "VestEngine/CMakeFiles/VestEngine.dir/src/Core/Layer.cpp.o.d"
   "/Users/angel/Desktop/C++/VestEngine/src/Core/LayerStack.cpp" "VestEngine/CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.o" "gcc" "VestEngine/CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.o.d"
+  "/Users/angel/Desktop/C++/VestEngine/src/Core/Log.cpp" "VestEngine/CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o" "gcc" "VestEngine/CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o.d"
   "/Users/angel/Desktop/C++/VestEngine/src/Core/Window.cpp" "VestEngine/CMakeFiles/VestEngine.dir/src/Core/Window.cpp.o" "gcc" "VestEngine/CMakeFiles/VestEngine.dir/src/Core/Window.cpp.o.d"
   "/Users/angel/Desktop/C++/VestEngine/src/ImGui/ImGuiLayer.cpp" "VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o" "gcc" "VestEngine/CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o.d"
   "/Users/angel/Desktop/C++/VestEngine/src/Platform/Windows/WindowsWindow.cpp" "VestEngine/CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o" "gcc" "VestEngine/CMakeFiles/VestEngine.dir/src/Platform/Windows/WindowsWindow.cpp.o.d"

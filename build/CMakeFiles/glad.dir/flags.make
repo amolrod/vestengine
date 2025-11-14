@@ -6,7 +6,7 @@ C_DEFINES =
 
 C_INCLUDES = -I/Users/angel/Desktop/C++/external/glad/include
 
-C_FLAGSarm64 =  -arch arm64
+C_FLAGSarm64 = -O3 -DNDEBUG -arch arm64
 
-C_FLAGS =  -arch arm64
+C_FLAGS = -O3 -DNDEBUG -arch arm64
 

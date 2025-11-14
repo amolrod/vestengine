@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/VestEngine.dir/src/Core/Layer.cpp.o.d"
   "CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.o"
   "CMakeFiles/VestEngine.dir/src/Core/LayerStack.cpp.o.d"
+  "CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o"
+  "CMakeFiles/VestEngine.dir/src/Core/Log.cpp.o.d"
   "CMakeFiles/VestEngine.dir/src/Core/Window.cpp.o"
   "CMakeFiles/VestEngine.dir/src/Core/Window.cpp.o.d"
   "CMakeFiles/VestEngine.dir/src/ImGui/ImGuiLayer.cpp.o"

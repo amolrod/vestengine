@@ -6,7 +6,7 @@ C_DEFINES = -D_GLFW_COCOA
 
 C_INCLUDES = -I/Users/angel/Desktop/C++/build/_deps/glfw-src/include -I/Users/angel/Desktop/C++/build/_deps/glfw-src/src -I/Users/angel/Desktop/C++/build/_deps/glfw-build/src
 
-C_FLAGSarm64 = -std=c99 -arch arm64 -fPIC -Wall
+C_FLAGSarm64 = -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall
 
-C_FLAGS = -std=c99 -arch arm64 -fPIC -Wall
+C_FLAGS = -O3 -DNDEBUG -std=c99 -arch arm64 -fPIC -Wall
 

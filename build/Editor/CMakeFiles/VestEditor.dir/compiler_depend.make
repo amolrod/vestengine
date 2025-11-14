@@ -7,7 +7,6 @@ Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o: /Users/ang
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
@@ -150,7 +149,6 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
@@ -619,7 +617,6 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Users/angel/Desktop/C++/Editor/src/Panels/SceneHierarchyPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/StatsPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/ViewportPanel.h \
-  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Application.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Base.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/EntryPoint.h \
@@ -638,6 +635,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: /Users/angel/Deskt
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Shader.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Texture.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/VertexArray.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Scene/SceneObject.h \
   /Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.h \
   _deps/glm-src/glm/matrix.hpp \
   _deps/glm-src/glm/detail/type_mat2x2.hpp \
@@ -997,7 +995,6 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h \
@@ -1466,7 +1463,6 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Users/angel/Desktop/C++/Editor/src/Panels/SceneHierarchyPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/StatsPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/ViewportPanel.h \
-  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Base.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Event.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Input.h \
@@ -1481,6 +1477,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o: /Users/angel/Desktop/C++
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Shader.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/Texture.h \
   /Users/angel/Desktop/C++/VestEngine/src/Rendering/VertexArray.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Scene/SceneObject.h \
   /Users/angel/Desktop/C++/VestEngine/src/Serialization/SceneSerializer.h \
   _deps/glfw-src/include/GLFW/glfw3.h \
   _deps/glm-src/glm/matrix.hpp \
@@ -1870,7 +1867,6 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o: /Users/an
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -2269,7 +2265,6 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o: /Users/angel/
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -2661,7 +2656,7 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o: /Users/angel/
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/PropertiesPanel.h \
-  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Scene/SceneObject.h \
   _deps/glm-src/glm/matrix.hpp \
   _deps/glm-src/glm/detail/type_mat2x2.hpp \
   _deps/glm-src/glm/detail/type_mat2x3.hpp \
@@ -2853,7 +2848,6 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o: /Users/an
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -3245,7 +3239,7 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o: /Users/an
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/SceneHierarchyPanel.h \
-  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Scene/SceneObject.h \
   _deps/glm-src/glm/matrix.hpp \
   _deps/glm-src/glm/detail/type_mat2x2.hpp \
   _deps/glm-src/glm/detail/type_mat2x3.hpp \
@@ -3437,7 +3431,6 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o: /Users/angel/Deskt
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -3833,7 +3826,6 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o: /Users/angel/De
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/___wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_printf.h \
@@ -4703,6 +4695,12 @@ _deps/glm-src/glm/detail/type_mat3x4.inl:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__tree:
 
+/Library/Developer/CommandLineTools/usr/include/c++/v1/cfloat:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__split_buffer:
+
 _deps/glm-src/glm/fwd.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h:
@@ -4748,6 +4746,8 @@ _deps/glm-src/glm/packing.hpp:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/prev.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/ostream_iterator.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/iterator_traits.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/iterator.h:
 
@@ -4927,6 +4927,8 @@ _deps/glm-src/glm/ext/vector_int4.hpp:
 
 _deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp:
 
+/Users/angel/Desktop/C++/VestEngine/src/Scene/SceneObject.h:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/rotate.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/min_element.h:
@@ -5078,8 +5080,6 @@ _deps/glm-src/glm/ext/matrix_projection.inl:
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/sort.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wint_t.h:
-
-/Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/memory:
 
@@ -5409,12 +5409,6 @@ _deps/glm-src/glm/ext/matrix_double4x3_precision.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/nth_element.h:
 
-/Library/Developer/CommandLineTools/usr/include/c++/v1/cfloat:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/__split_buffer:
-
-/Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h:
-
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/count_if.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/signal.h:
@@ -5725,6 +5719,12 @@ _deps/glm-src/glm/detail/type_mat4x3.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint64_t.h:
 
+_deps/glm-src/glm/ext/vector_uint1_sized.hpp:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/reverse_copy.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint16_t.h:
+
 _deps/glm-src/glm/ext/matrix_float4x4_precision.hpp:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/advance.h:
@@ -5757,26 +5757,6 @@ _deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h:
 
-_deps/glm-src/glm/detail/type_mat2x2.inl:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/__function_like.h:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/back_insert_iterator.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h:
-
-_deps/glm-src/glm/ext/vector_uint1_sized.hpp:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/__algorithm/reverse_copy.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint16_t.h:
-
-/Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/iterator_traits.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h:
-
 /Library/Developer/CommandLineTools/usr/include/c++/v1/compare:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
@@ -5786,3 +5766,13 @@ _deps/glm-src/glm/ext/vector_double2.hpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_types.h:
+
+_deps/glm-src/glm/detail/type_mat2x2.inl:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__function_like.h:
+
+/Library/Developer/CommandLineTools/usr/include/c++/v1/__iterator/back_insert_iterator.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h:

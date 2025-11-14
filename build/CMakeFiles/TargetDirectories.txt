@@ -40,6 +40,13 @@
 /Users/angel/Desktop/C++/build/_deps/glm-build/glm/CMakeFiles/install.dir
 /Users/angel/Desktop/C++/build/_deps/glm-build/glm/CMakeFiles/install/local.dir
 /Users/angel/Desktop/C++/build/_deps/glm-build/glm/CMakeFiles/install/strip.dir
+/Users/angel/Desktop/C++/build/_deps/spdlog-build/CMakeFiles/spdlog.dir
+/Users/angel/Desktop/C++/build/_deps/spdlog-build/CMakeFiles/edit_cache.dir
+/Users/angel/Desktop/C++/build/_deps/spdlog-build/CMakeFiles/rebuild_cache.dir
+/Users/angel/Desktop/C++/build/_deps/spdlog-build/CMakeFiles/list_install_components.dir
+/Users/angel/Desktop/C++/build/_deps/spdlog-build/CMakeFiles/install.dir
+/Users/angel/Desktop/C++/build/_deps/spdlog-build/CMakeFiles/install/local.dir
+/Users/angel/Desktop/C++/build/_deps/spdlog-build/CMakeFiles/install/strip.dir
 /Users/angel/Desktop/C++/build/_deps/nlohmann_json-build/CMakeFiles/edit_cache.dir
 /Users/angel/Desktop/C++/build/_deps/nlohmann_json-build/CMakeFiles/rebuild_cache.dir
 /Users/angel/Desktop/C++/build/_deps/nlohmann_json-build/CMakeFiles/list_install_components.dir

@@ -276,7 +276,6 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__memory/uninitialized_algorithms.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional/identity.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__functional/mem_fn.h \
@@ -835,7 +834,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/any \
   /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp \
   /Users/angel/Desktop/C++/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
-  /Users/angel/Desktop/C++/Editor/src/Scene/SceneObject.h \
+  /Users/angel/Desktop/C++/VestEngine/src/Scene/SceneObject.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/PropertiesPanel.h \
   /Users/angel/Desktop/C++/Editor/src/Panels/SceneHierarchyPanel.h \

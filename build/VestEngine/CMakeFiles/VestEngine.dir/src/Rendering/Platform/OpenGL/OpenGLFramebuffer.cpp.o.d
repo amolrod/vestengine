@@ -264,7 +264,6 @@ VestEngine/CMakeFiles/VestEngine.dir/src/Rendering/Platform/OpenGL/OpenGLFramebu
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__memory/uninitialized_algorithms.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
   /Users/angel/Desktop/C++/external/glad/include/glad/glad.h \
   /Users/angel/Desktop/C++/external/glad/include/KHR/khrplatform.h
