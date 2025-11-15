@@ -3,6 +3,7 @@ add_executable(VestEditor
     src/EditorLayer.cpp
     src/EditorCamera.cpp
     src/Rendering/SelectionRenderer.cpp
+    src/Rendering/GridRenderer.cpp
     src/Panels/ViewportPanel.cpp
     src/Panels/SceneHierarchyPanel.cpp
     src/Panels/PropertiesPanel.cpp

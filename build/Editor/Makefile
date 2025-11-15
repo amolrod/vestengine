@@ -401,6 +401,30 @@ src/Panels/ViewportPanel.cpp.s:
 	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.s
 .PHONY : src/Panels/ViewportPanel.cpp.s
 
+src/Rendering/GridRenderer.o: src/Rendering/GridRenderer.cpp.o
+.PHONY : src/Rendering/GridRenderer.o
+
+# target to build an object file
+src/Rendering/GridRenderer.cpp.o:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o
+.PHONY : src/Rendering/GridRenderer.cpp.o
+
+src/Rendering/GridRenderer.i: src/Rendering/GridRenderer.cpp.i
+.PHONY : src/Rendering/GridRenderer.i
+
+# target to preprocess a source file
+src/Rendering/GridRenderer.cpp.i:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.i
+.PHONY : src/Rendering/GridRenderer.cpp.i
+
+src/Rendering/GridRenderer.s: src/Rendering/GridRenderer.cpp.s
+.PHONY : src/Rendering/GridRenderer.s
+
+# target to generate assembly for a file
+src/Rendering/GridRenderer.cpp.s:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.s
+.PHONY : src/Rendering/GridRenderer.cpp.s
+
 src/Rendering/SelectionRenderer.o: src/Rendering/SelectionRenderer.cpp.o
 .PHONY : src/Rendering/SelectionRenderer.o
 
@@ -466,6 +490,9 @@ help:
 	@echo "... src/Panels/ViewportPanel.o"
 	@echo "... src/Panels/ViewportPanel.i"
 	@echo "... src/Panels/ViewportPanel.s"
+	@echo "... src/Rendering/GridRenderer.o"
+	@echo "... src/Rendering/GridRenderer.i"
+	@echo "... src/Rendering/GridRenderer.s"
 	@echo "... src/Rendering/SelectionRenderer.o"
 	@echo "... src/Rendering/SelectionRenderer.i"
 	@echo "... src/Rendering/SelectionRenderer.s"

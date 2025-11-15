@@ -164,6 +164,9 @@ void main() {
         .textured = true,
         .mesh = SceneObject::MeshType::Quad});
     m_SelectedEntityIndex = 0;
+    
+    // Initialize grid renderer
+    m_GridRenderer.Init();
 }
 
 void EditorLayer::OnUpdate(Timestep ts) {
@@ -184,6 +187,14 @@ void EditorLayer::OnUpdate(Timestep ts) {
         // Update camera aspect ratio if viewport changed
         float aspect = m_ViewportSize.x / m_ViewportSize.y;
         m_EditorCamera.SetAspectRatio(aspect);
+
+        // Render grid
+        m_GridRenderer.RenderGrid(
+            m_EditorCamera.GetViewProjectionMatrix(),
+            m_EditorCamera.GetPosition(),
+            m_EditorCamera.GetZoom(),
+            m_ViewportSize
+        );
 
         Renderer::BeginScene(m_EditorCamera.GetViewProjectionMatrix());
         for (const auto& object : m_SceneObjects) {
@@ -355,6 +366,34 @@ void EditorLayer::OnImGuiRender() {
     ImGui::SameLine();
     if (ImGui::RadioButton("Scale", m_GizmoOperation == ImGuizmo::SCALE)) {
         m_GizmoOperation = ImGuizmo::SCALE;
+    }
+
+    ImGui::SameLine(0.0f, 30.0f);
+    ImGui::Separator();
+    ImGui::SameLine();
+    
+    // Grid controls
+    bool gridEnabled = m_GridRenderer.GetGridSettings().enabled;
+    if (ImGui::Checkbox("Grid", &gridEnabled)) {
+        m_GridRenderer.GetGridSettings().enabled = gridEnabled;
+    }
+    
+    ImGui::SameLine();
+    bool snapEnabled = m_GridRenderer.GetSnapSettings().enabled;
+    if (ImGui::Checkbox("Snap", &snapEnabled)) {
+        m_GridRenderer.GetSnapSettings().enabled = snapEnabled;
+    }
+    
+    if (snapEnabled) {
+        ImGui::SameLine();
+        ImGui::SetNextItemWidth(80.0f);
+        float snapValue = m_GridRenderer.GetSnapSettings().gridSnap;
+        if (ImGui::DragFloat("##SnapSize", &snapValue, 0.05f, 0.1f, 10.0f, "%.2f")) {
+            m_GridRenderer.GetSnapSettings().gridSnap = snapValue;
+        }
+        if (ImGui::IsItemHovered()) {
+            ImGui::SetTooltip("Snap Grid Size");
+        }
     }
 
     ImGui::SameLine(0.0f, 20.0f);
@@ -615,7 +654,17 @@ void EditorLayer::HandleGizmos() {
     glm::mat4 viewMatrix = m_EditorCamera.GetViewMatrix();
     glm::mat4 projectionMatrix = m_EditorCamera.GetProjectionMatrix();
 
-    ImGuizmo::Manipulate(glm::value_ptr(viewMatrix), glm::value_ptr(projectionMatrix), m_GizmoOperation, m_GizmoMode, glm::value_ptr(transform));
+    // Enable snapping if needed
+    float snapValue = 0.0f;
+    float* snapPtr = nullptr;
+    if (m_GridRenderer.ShouldSnap()) {
+        snapValue = m_GridRenderer.GetSnapSettings().gridSnap;
+        snapPtr = &snapValue;
+    }
+
+    ImGuizmo::Manipulate(glm::value_ptr(viewMatrix), glm::value_ptr(projectionMatrix), 
+                        m_GizmoOperation, m_GizmoMode, glm::value_ptr(transform), 
+                        nullptr, snapPtr);
 
     if (ImGuizmo::IsUsing()) {
         if (!m_GizmoWasUsing) {

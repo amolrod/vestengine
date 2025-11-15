@@ -34,6 +34,7 @@
 #include "Commands/EntityCommands.h"
 #include "Commands/MacroCommand.h"
 #include "Rendering/SelectionRenderer.h"
+#include "Rendering/GridRenderer.h"
 
 namespace Vest {
 
@@ -75,6 +76,7 @@ private:
 
     EditorCamera m_EditorCamera;
     SelectionRenderer m_SelectionRenderer;
+    GridRenderer m_GridRenderer;
     bool m_ViewportFocused = false;
     bool m_ViewportHovered = false;
     glm::vec2 m_LastMousePos = glm::vec2(0.0f);

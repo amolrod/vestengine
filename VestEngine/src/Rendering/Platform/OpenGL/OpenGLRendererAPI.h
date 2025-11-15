@@ -13,6 +13,7 @@ public:
     void SetClearColor(const glm::vec4& color) override;
     void Clear() override;
     void DrawIndexed(const Ref<VertexArray>& vertexArray, uint32_t indexCount) override;
+    void DrawLines(const Ref<VertexArray>& vertexArray, uint32_t vertexCount) override;
 };
 
 }  // namespace Vest

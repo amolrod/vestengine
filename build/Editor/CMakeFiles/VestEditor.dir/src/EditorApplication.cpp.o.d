@@ -874,6 +874,7 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o: \
   /Users/angel/Desktop/C++/Editor/src/Commands/EntityCommands.h \
   /Users/angel/Desktop/C++/Editor/src/Commands/MacroCommand.h \
   /Users/angel/Desktop/C++/Editor/src/Rendering/SelectionRenderer.h \
+  /Users/angel/Desktop/C++/Editor/src/Rendering/GridRenderer.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/EntryPoint.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/Application.h \
   /Users/angel/Desktop/C++/VestEngine/src/Core/LayerStack.h \

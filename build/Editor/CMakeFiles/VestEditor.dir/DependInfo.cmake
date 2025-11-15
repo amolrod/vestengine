@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/angel/Desktop/C++/Editor/src/Panels/SceneHierarchyPanel.cpp" "Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o" "gcc" "Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o.d"
   "/Users/angel/Desktop/C++/Editor/src/Panels/StatsPanel.cpp" "Editor/CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o" "gcc" "Editor/CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o.d"
   "/Users/angel/Desktop/C++/Editor/src/Panels/ViewportPanel.cpp" "Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o" "gcc" "Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o.d"
+  "/Users/angel/Desktop/C++/Editor/src/Rendering/GridRenderer.cpp" "Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o" "gcc" "Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o.d"
   "/Users/angel/Desktop/C++/Editor/src/Rendering/SelectionRenderer.cpp" "Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o" "gcc" "Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o.d"
   )
 

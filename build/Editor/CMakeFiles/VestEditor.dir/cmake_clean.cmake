@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o.d"
   "CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o"
   "CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o.d"
+  "CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o"
+  "CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o.d"
   "CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o"
   "CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o.d"
   "VestEditor"
