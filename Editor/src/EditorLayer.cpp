@@ -188,13 +188,15 @@ void EditorLayer::OnUpdate(Timestep ts) {
         float aspect = m_ViewportSize.x / m_ViewportSize.y;
         m_EditorCamera.SetAspectRatio(aspect);
 
-        // Render grid
-        m_GridRenderer.RenderGrid(
-            m_EditorCamera.GetViewProjectionMatrix(),
-            m_EditorCamera.GetPosition(),
-            m_EditorCamera.GetZoom(),
-            m_ViewportSize
-        );
+        // Render grid (only in Edit mode)
+        if (m_EditorState == EditorState::Edit) {
+            m_GridRenderer.RenderGrid(
+                m_EditorCamera.GetViewProjectionMatrix(),
+                m_EditorCamera.GetPosition(),
+                m_EditorCamera.GetZoom(),
+                m_ViewportSize
+            );
+        }
 
         Renderer::BeginScene(m_EditorCamera.GetViewProjectionMatrix());
         for (const auto& object : m_SceneObjects) {
@@ -316,12 +318,15 @@ void EditorLayer::OnImGuiRender() {
 
     if (ImGui::BeginMenuBar()) {
         if (ImGui::BeginMenu("File")) {
+            bool isEditing = m_EditorState == EditorState::Edit;
+            ImGui::BeginDisabled(!isEditing);
             if (ImGui::MenuItem("Save Scene", "Ctrl+S")) {
                 SaveScene("assets/scenes/Default.json");
             }
             if (ImGui::MenuItem("Load Scene", "Ctrl+L")) {
                 LoadScene("assets/scenes/Default.json");
             }
+            ImGui::EndDisabled();
             ImGui::Separator();
             if (ImGui::MenuItem("Exit")) {
                 dockspaceOpen = false;
@@ -352,10 +357,34 @@ void EditorLayer::OnImGuiRender() {
             ImGui::MenuItem("Scene Hierarchy", nullptr, true, true);
             ImGui::EndMenu();
         }
+        
+        // Editor state indicator on the right
+        ImGui::SetCursorPosX(ImGui::GetWindowWidth() - 150.0f);
+        const char* stateText = "";
+        ImVec4 stateColor;
+        switch (m_EditorState) {
+            case EditorState::Edit:
+                stateText = "EDIT MODE";
+                stateColor = ImVec4(0.4f, 0.4f, 0.4f, 1.0f);
+                break;
+            case EditorState::Play:
+                stateText = "PLAYING";
+                stateColor = ImVec4(0.2f, 0.8f, 0.2f, 1.0f);
+                break;
+            case EditorState::Paused:
+                stateText = "PAUSED";
+                stateColor = ImVec4(1.0f, 0.7f, 0.0f, 1.0f);
+                break;
+        }
+        ImGui::TextColored(stateColor, "%s", stateText);
+        
         ImGui::EndMenuBar();
     }
 
     ImGui::Begin("Toolbar", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoScrollbar);
+    
+    bool isEditing = m_EditorState == EditorState::Edit;
+    ImGui::BeginDisabled(!isEditing);
     if (ImGui::RadioButton("Translate", m_GizmoOperation == ImGuizmo::TRANSLATE)) {
         m_GizmoOperation = ImGuizmo::TRANSLATE;
     }
@@ -367,12 +396,14 @@ void EditorLayer::OnImGuiRender() {
     if (ImGui::RadioButton("Scale", m_GizmoOperation == ImGuizmo::SCALE)) {
         m_GizmoOperation = ImGuizmo::SCALE;
     }
+    ImGui::EndDisabled();
 
     ImGui::SameLine(0.0f, 30.0f);
     ImGui::Separator();
     ImGui::SameLine();
     
-    // Grid controls
+    // Grid controls (only in Edit mode)
+    ImGui::BeginDisabled(!isEditing);
     bool gridEnabled = m_GridRenderer.GetGridSettings().enabled;
     if (ImGui::Checkbox("Grid", &gridEnabled)) {
         m_GridRenderer.GetGridSettings().enabled = gridEnabled;
@@ -383,8 +414,9 @@ void EditorLayer::OnImGuiRender() {
     if (ImGui::Checkbox("Snap", &snapEnabled)) {
         m_GridRenderer.GetSnapSettings().enabled = snapEnabled;
     }
+    ImGui::EndDisabled();
     
-    if (snapEnabled) {
+    if (snapEnabled && isEditing) {
         ImGui::SameLine();
         ImGui::SetNextItemWidth(80.0f);
         float snapValue = m_GridRenderer.GetSnapSettings().gridSnap;
@@ -397,7 +429,54 @@ void EditorLayer::OnImGuiRender() {
     }
 
     ImGui::SameLine(0.0f, 20.0f);
+    
+    // Play mode controls
+    ImGui::PushStyleColor(ImGuiCol_Button, m_EditorState == EditorState::Play ? 
+        ImVec4(0.2f, 0.7f, 0.2f, 1.0f) : ImVec4(0.26f, 0.59f, 0.98f, 0.40f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.2f, 0.8f, 0.2f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.1f, 0.6f, 0.1f, 1.0f));
+    
+    bool canPlay = m_EditorState == EditorState::Edit;
+    ImGui::BeginDisabled(!canPlay);
+    if (ImGui::Button("Play")) {
+        OnPlayButtonPressed();
+    }
+    ImGui::EndDisabled();
+    ImGui::PopStyleColor(3);
+    
+    ImGui::SameLine();
+    
+    ImGui::PushStyleColor(ImGuiCol_Button, m_EditorState == EditorState::Paused ? 
+        ImVec4(0.9f, 0.7f, 0.0f, 1.0f) : ImVec4(0.26f, 0.59f, 0.98f, 0.40f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(1.0f, 0.8f, 0.0f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.8f, 0.6f, 0.0f, 1.0f));
+    
+    bool canPause = m_EditorState == EditorState::Play;
+    ImGui::BeginDisabled(!canPause);
+    if (ImGui::Button("Pause")) {
+        OnPauseButtonPressed();
+    }
+    ImGui::EndDisabled();
+    ImGui::PopStyleColor(3);
+    
+    ImGui::SameLine();
+    
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.8f, 0.2f, 0.2f, 0.8f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.9f, 0.2f, 0.2f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.7f, 0.1f, 0.1f, 1.0f));
+    
+    bool canStop = m_EditorState != EditorState::Edit;
+    ImGui::BeginDisabled(!canStop);
+    if (ImGui::Button("Stop")) {
+        OnStopButtonPressed();
+    }
+    ImGui::EndDisabled();
+    ImGui::PopStyleColor(3);
+    
+    ImGui::SameLine(0.0f, 20.0f);
     bool hasSelection = m_SelectedEntityIndex >= 0;
+    
+    ImGui::BeginDisabled(!isEditing);
     if (ImGui::Button("Add")) {
         AddEntity();
     }
@@ -411,6 +490,7 @@ void EditorLayer::OnImGuiRender() {
         DeleteSelected();
     }
     ImGui::EndDisabled();
+    ImGui::EndDisabled();
 
     ImGui::End();
 
@@ -422,9 +502,13 @@ void EditorLayer::OnImGuiRender() {
     m_ViewportFocused = m_ViewportPanel.IsFocused();
     m_ViewportHovered = m_ViewportPanel.IsHovered();
     HandleViewportCameraControls();
-    HandleViewportHover();
-    HandleViewportPicking();
-    HandleGizmos();
+    
+    // Only allow editing in Edit mode
+    if (m_EditorState == EditorState::Edit) {
+        HandleViewportHover();
+        HandleViewportPicking();
+        HandleGizmos();
+    }
 
     m_SceneHierarchyPanel.OnImGuiRender();
     m_PropertiesPanel.OnImGuiRender();
@@ -721,6 +805,55 @@ void EditorLayer::DecomposeTransform(const glm::mat4& transform, glm::vec3& tran
     glm::quat orientation;
     glm::decompose(transform, scale, orientation, translation, skew, perspective);
     rotation = glm::degrees(glm::eulerAngles(orientation));
+}
+
+void EditorLayer::OnPlayButtonPressed() {
+    if (m_EditorState != EditorState::Edit) {
+        return;
+    }
+    
+    VEST_CORE_INFO("Entering Play Mode");
+    
+    // Backup current scene state
+    m_SceneBackup = m_SceneObjects;
+    
+    // Clear undo history (changes in play mode won't be saved)
+    m_CommandManager.Clear();
+    
+    // Change state
+    m_EditorState = EditorState::Play;
+}
+
+void EditorLayer::OnPauseButtonPressed() {
+    if (m_EditorState != EditorState::Play) {
+        return;
+    }
+    
+    VEST_CORE_INFO("Pausing Play Mode");
+    m_EditorState = EditorState::Paused;
+}
+
+void EditorLayer::OnStopButtonPressed() {
+    if (m_EditorState == EditorState::Edit) {
+        return;
+    }
+    
+    VEST_CORE_INFO("Stopping Play Mode - Restoring scene state");
+    
+    // Restore scene from backup
+    m_SceneObjects = m_SceneBackup;
+    m_SceneBackup.clear();
+    
+    // Restore selection if still valid
+    if (m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
+        m_SelectedEntityIndex = m_SceneObjects.empty() ? -1 : static_cast<int>(m_SceneObjects.size()) - 1;
+    }
+    
+    // Clear undo history
+    m_CommandManager.Clear();
+    
+    // Return to edit mode
+    m_EditorState = EditorState::Edit;
 }
 
 }  // namespace Vest
