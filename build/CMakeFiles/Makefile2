@@ -731,9 +731,9 @@ _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean:
 # Target rules for target VestEngine/CMakeFiles/VestEngine.dir
 
 # All Build rule for target.
-VestEngine/CMakeFiles/VestEngine.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 VestEngine/CMakeFiles/VestEngine.dir/all: CMakeFiles/glad.dir/all
 VestEngine/CMakeFiles/VestEngine.dir/all: CMakeFiles/imgui.dir/all
+VestEngine/CMakeFiles/VestEngine.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 VestEngine/CMakeFiles/VestEngine.dir/all: _deps/spdlog-build/CMakeFiles/spdlog.dir/all
 	$(MAKE) $(MAKESILENT) -f VestEngine/CMakeFiles/VestEngine.dir/build.make VestEngine/CMakeFiles/VestEngine.dir/depend
 	$(MAKE) $(MAKESILENT) -f VestEngine/CMakeFiles/VestEngine.dir/build.make VestEngine/CMakeFiles/VestEngine.dir/build
@@ -766,9 +766,9 @@ VestEngine/CMakeFiles/VestEngine.dir/clean:
 # Target rules for target Editor/CMakeFiles/VestEditor.dir
 
 # All Build rule for target.
-Editor/CMakeFiles/VestEditor.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 Editor/CMakeFiles/VestEditor.dir/all: CMakeFiles/glad.dir/all
 Editor/CMakeFiles/VestEditor.dir/all: CMakeFiles/imgui.dir/all
+Editor/CMakeFiles/VestEditor.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 Editor/CMakeFiles/VestEditor.dir/all: _deps/spdlog-build/CMakeFiles/spdlog.dir/all
 Editor/CMakeFiles/VestEditor.dir/all: VestEngine/CMakeFiles/VestEngine.dir/all
 	$(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/depend
@@ -802,9 +802,9 @@ Editor/CMakeFiles/VestEditor.dir/clean:
 # Target rules for target Tests/CMakeFiles/VestTests.dir
 
 # All Build rule for target.
-Tests/CMakeFiles/VestTests.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 Tests/CMakeFiles/VestTests.dir/all: CMakeFiles/glad.dir/all
 Tests/CMakeFiles/VestTests.dir/all: CMakeFiles/imgui.dir/all
+Tests/CMakeFiles/VestTests.dir/all: _deps/glfw-build/src/CMakeFiles/glfw.dir/all
 Tests/CMakeFiles/VestTests.dir/all: _deps/spdlog-build/CMakeFiles/spdlog.dir/all
 Tests/CMakeFiles/VestTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 Tests/CMakeFiles/VestTests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all

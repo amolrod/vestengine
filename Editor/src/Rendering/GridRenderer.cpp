@@ -47,9 +47,12 @@ void GridRenderer::Init() {
         {ShaderDataType::Float4, "a_Color"}
     };
     
-    // Start with empty buffer, will be updated each frame
-    std::vector<float> emptyData;
-    auto vb = VertexBuffer::Create(emptyData.data(), 0);
+    // Start with a minimal dummy buffer to avoid zero-size allocation
+    std::vector<float> dummyData = {
+        0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, // vertex 1
+        0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f  // vertex 2
+    };
+    auto vb = VertexBuffer::Create(dummyData.data(), static_cast<uint32_t>(dummyData.size() * sizeof(float)));
     vb->SetLayout(layout);
     m_GridVA->AddVertexBuffer(vb);
 }
@@ -161,6 +164,11 @@ void GridRenderer::RenderGrid(const glm::mat4& viewProjectionMatrix,
                               float cameraZoom,
                               const glm::vec2& viewportSize) {
     if (!m_GridSettings.enabled || !m_GridShader || !m_GridVA) {
+        return;
+    }
+    
+    // Don't render if viewport is invalid
+    if (viewportSize.x <= 0.0f || viewportSize.y <= 0.0f || cameraZoom <= 0.0f) {
         return;
     }
     
