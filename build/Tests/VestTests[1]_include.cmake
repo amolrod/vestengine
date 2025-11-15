@@ -1,5 +1,0 @@
-if(EXISTS "/Users/angel/Desktop/C++/build/Tests/VestTests[1]_tests.cmake")
-  include("/Users/angel/Desktop/C++/build/Tests/VestTests[1]_tests.cmake")
-else()
-  add_test(VestTests_NOT_BUILT VestTests_NOT_BUILT)
-endif()
