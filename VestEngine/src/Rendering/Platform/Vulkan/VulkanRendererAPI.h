@@ -11,6 +11,7 @@ public:
     void SetClearColor(const glm::vec4&) override;
     void Clear() override;
     void DrawIndexed(const Ref<VertexArray>&, uint32_t) override;
+    void DrawLines(const Ref<VertexArray>&, uint32_t) override;
 };
 
 }  // namespace Vest

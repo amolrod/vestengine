@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/angel/Desktop/C++/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -87,7 +97,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"gmock\" \"gtest\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -222,6 +232,30 @@ src/EditorApplication.s: src/EditorApplication.cpp.s
 src/EditorApplication.cpp.s:
 	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.s
 .PHONY : src/EditorApplication.cpp.s
+
+src/EditorCamera.o: src/EditorCamera.cpp.o
+.PHONY : src/EditorCamera.o
+
+# target to build an object file
+src/EditorCamera.cpp.o:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.o
+.PHONY : src/EditorCamera.cpp.o
+
+src/EditorCamera.i: src/EditorCamera.cpp.i
+.PHONY : src/EditorCamera.i
+
+# target to preprocess a source file
+src/EditorCamera.cpp.i:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.i
+.PHONY : src/EditorCamera.cpp.i
+
+src/EditorCamera.s: src/EditorCamera.cpp.s
+.PHONY : src/EditorCamera.s
+
+# target to generate assembly for a file
+src/EditorCamera.cpp.s:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.s
+.PHONY : src/EditorCamera.cpp.s
 
 src/EditorLayer.o: src/EditorLayer.cpp.o
 .PHONY : src/EditorLayer.o
@@ -367,6 +401,54 @@ src/Panels/ViewportPanel.cpp.s:
 	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.s
 .PHONY : src/Panels/ViewportPanel.cpp.s
 
+src/Rendering/GridRenderer.o: src/Rendering/GridRenderer.cpp.o
+.PHONY : src/Rendering/GridRenderer.o
+
+# target to build an object file
+src/Rendering/GridRenderer.cpp.o:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o
+.PHONY : src/Rendering/GridRenderer.cpp.o
+
+src/Rendering/GridRenderer.i: src/Rendering/GridRenderer.cpp.i
+.PHONY : src/Rendering/GridRenderer.i
+
+# target to preprocess a source file
+src/Rendering/GridRenderer.cpp.i:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.i
+.PHONY : src/Rendering/GridRenderer.cpp.i
+
+src/Rendering/GridRenderer.s: src/Rendering/GridRenderer.cpp.s
+.PHONY : src/Rendering/GridRenderer.s
+
+# target to generate assembly for a file
+src/Rendering/GridRenderer.cpp.s:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.s
+.PHONY : src/Rendering/GridRenderer.cpp.s
+
+src/Rendering/SelectionRenderer.o: src/Rendering/SelectionRenderer.cpp.o
+.PHONY : src/Rendering/SelectionRenderer.o
+
+# target to build an object file
+src/Rendering/SelectionRenderer.cpp.o:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o
+.PHONY : src/Rendering/SelectionRenderer.cpp.o
+
+src/Rendering/SelectionRenderer.i: src/Rendering/SelectionRenderer.cpp.i
+.PHONY : src/Rendering/SelectionRenderer.i
+
+# target to preprocess a source file
+src/Rendering/SelectionRenderer.cpp.i:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.i
+.PHONY : src/Rendering/SelectionRenderer.cpp.i
+
+src/Rendering/SelectionRenderer.s: src/Rendering/SelectionRenderer.cpp.s
+.PHONY : src/Rendering/SelectionRenderer.s
+
+# target to generate assembly for a file
+src/Rendering/SelectionRenderer.cpp.s:
+	cd /Users/angel/Desktop/C++/build && $(MAKE) $(MAKESILENT) -f Editor/CMakeFiles/VestEditor.dir/build.make Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.s
+.PHONY : src/Rendering/SelectionRenderer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -379,6 +461,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... VestEditor"
 	@echo "... __/external/imguizmo/ImGuizmo.o"
 	@echo "... __/external/imguizmo/ImGuizmo.i"
@@ -386,6 +469,9 @@ help:
 	@echo "... src/EditorApplication.o"
 	@echo "... src/EditorApplication.i"
 	@echo "... src/EditorApplication.s"
+	@echo "... src/EditorCamera.o"
+	@echo "... src/EditorCamera.i"
+	@echo "... src/EditorCamera.s"
 	@echo "... src/EditorLayer.o"
 	@echo "... src/EditorLayer.i"
 	@echo "... src/EditorLayer.s"
@@ -404,6 +490,12 @@ help:
 	@echo "... src/Panels/ViewportPanel.o"
 	@echo "... src/Panels/ViewportPanel.i"
 	@echo "... src/Panels/ViewportPanel.s"
+	@echo "... src/Rendering/GridRenderer.o"
+	@echo "... src/Rendering/GridRenderer.i"
+	@echo "... src/Rendering/GridRenderer.s"
+	@echo "... src/Rendering/SelectionRenderer.o"
+	@echo "... src/Rendering/SelectionRenderer.i"
+	@echo "... src/Rendering/SelectionRenderer.s"
 .PHONY : help
 
 

@@ -100,10 +100,52 @@ Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.s"
 	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angel/Desktop/C++/Editor/src/EditorLayer.cpp -o CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.s
 
+Editor/CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.o: Editor/CMakeFiles/VestEditor.dir/flags.make
+Editor/CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.o: /Users/angel/Desktop/C++/Editor/src/EditorCamera.cpp
+Editor/CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.o: Editor/CMakeFiles/VestEditor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.o"
+	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Editor/CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.o -MF CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.o.d -o CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.o -c /Users/angel/Desktop/C++/Editor/src/EditorCamera.cpp
+
+Editor/CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.i"
+	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/angel/Desktop/C++/Editor/src/EditorCamera.cpp > CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.i
+
+Editor/CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.s"
+	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angel/Desktop/C++/Editor/src/EditorCamera.cpp -o CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.s
+
+Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o: Editor/CMakeFiles/VestEditor.dir/flags.make
+Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o: /Users/angel/Desktop/C++/Editor/src/Rendering/SelectionRenderer.cpp
+Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o: Editor/CMakeFiles/VestEditor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o"
+	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o -MF CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o.d -o CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o -c /Users/angel/Desktop/C++/Editor/src/Rendering/SelectionRenderer.cpp
+
+Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.i"
+	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/angel/Desktop/C++/Editor/src/Rendering/SelectionRenderer.cpp > CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.i
+
+Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.s"
+	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angel/Desktop/C++/Editor/src/Rendering/SelectionRenderer.cpp -o CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.s
+
+Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o: Editor/CMakeFiles/VestEditor.dir/flags.make
+Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o: /Users/angel/Desktop/C++/Editor/src/Rendering/GridRenderer.cpp
+Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o: Editor/CMakeFiles/VestEditor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o"
+	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o -MF CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o.d -o CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o -c /Users/angel/Desktop/C++/Editor/src/Rendering/GridRenderer.cpp
+
+Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.i"
+	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/angel/Desktop/C++/Editor/src/Rendering/GridRenderer.cpp > CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.i
+
+Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.s"
+	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/angel/Desktop/C++/Editor/src/Rendering/GridRenderer.cpp -o CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.s
+
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o: Editor/CMakeFiles/VestEditor.dir/flags.make
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o: /Users/angel/Desktop/C++/Editor/src/Panels/ViewportPanel.cpp
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o: Editor/CMakeFiles/VestEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o"
 	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o -MF CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o.d -o CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o -c /Users/angel/Desktop/C++/Editor/src/Panels/ViewportPanel.cpp
 
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.i: cmake_force
@@ -117,7 +159,7 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.s: cmake_force
 Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o: Editor/CMakeFiles/VestEditor.dir/flags.make
 Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o: /Users/angel/Desktop/C++/Editor/src/Panels/SceneHierarchyPanel.cpp
 Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o: Editor/CMakeFiles/VestEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o"
 	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o -MF CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o.d -o CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o -c /Users/angel/Desktop/C++/Editor/src/Panels/SceneHierarchyPanel.cpp
 
 Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.i: cmake_force
@@ -131,7 +173,7 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.s: cmake_for
 Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o: Editor/CMakeFiles/VestEditor.dir/flags.make
 Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o: /Users/angel/Desktop/C++/Editor/src/Panels/PropertiesPanel.cpp
 Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o: Editor/CMakeFiles/VestEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o"
 	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o -MF CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o.d -o CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o -c /Users/angel/Desktop/C++/Editor/src/Panels/PropertiesPanel.cpp
 
 Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.i: cmake_force
@@ -145,7 +187,7 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.s: cmake_force
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o: Editor/CMakeFiles/VestEditor.dir/flags.make
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o: /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.cpp
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o: Editor/CMakeFiles/VestEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o"
 	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o -MF CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o.d -o CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.o -c /Users/angel/Desktop/C++/Editor/src/Panels/ContentBrowserPanel.cpp
 
 Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.i: cmake_force
@@ -159,7 +201,7 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/ContentBrowserPanel.cpp.s: cmake_for
 Editor/CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o: Editor/CMakeFiles/VestEditor.dir/flags.make
 Editor/CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o: /Users/angel/Desktop/C++/Editor/src/Panels/StatsPanel.cpp
 Editor/CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o: Editor/CMakeFiles/VestEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Editor/CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o"
 	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Editor/CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o -MF CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o.d -o CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.o -c /Users/angel/Desktop/C++/Editor/src/Panels/StatsPanel.cpp
 
 Editor/CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.i: cmake_force
@@ -173,7 +215,7 @@ Editor/CMakeFiles/VestEditor.dir/src/Panels/StatsPanel.cpp.s: cmake_force
 Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o: Editor/CMakeFiles/VestEditor.dir/flags.make
 Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o: /Users/angel/Desktop/C++/external/imguizmo/ImGuizmo.cpp
 Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o: Editor/CMakeFiles/VestEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o"
 	cd /Users/angel/Desktop/C++/build/Editor && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o -MF CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o.d -o CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.o -c /Users/angel/Desktop/C++/external/imguizmo/ImGuizmo.cpp
 
 Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.i: cmake_force
@@ -188,6 +230,9 @@ Editor/CMakeFiles/VestEditor.dir/__/external/imguizmo/ImGuizmo.cpp.s: cmake_forc
 VestEditor_OBJECTS = \
 "CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o" \
 "CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o" \
+"CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.o" \
+"CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o" \
+"CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o" \
 "CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o" \
 "CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o" \
 "CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o" \
@@ -200,6 +245,9 @@ VestEditor_EXTERNAL_OBJECTS =
 
 Editor/VestEditor: Editor/CMakeFiles/VestEditor.dir/src/EditorApplication.cpp.o
 Editor/VestEditor: Editor/CMakeFiles/VestEditor.dir/src/EditorLayer.cpp.o
+Editor/VestEditor: Editor/CMakeFiles/VestEditor.dir/src/EditorCamera.cpp.o
+Editor/VestEditor: Editor/CMakeFiles/VestEditor.dir/src/Rendering/SelectionRenderer.cpp.o
+Editor/VestEditor: Editor/CMakeFiles/VestEditor.dir/src/Rendering/GridRenderer.cpp.o
 Editor/VestEditor: Editor/CMakeFiles/VestEditor.dir/src/Panels/ViewportPanel.cpp.o
 Editor/VestEditor: Editor/CMakeFiles/VestEditor.dir/src/Panels/SceneHierarchyPanel.cpp.o
 Editor/VestEditor: Editor/CMakeFiles/VestEditor.dir/src/Panels/PropertiesPanel.cpp.o
@@ -213,7 +261,7 @@ Editor/VestEditor: libimgui.a
 Editor/VestEditor: _deps/glfw-build/src/libglfw3.a
 Editor/VestEditor: _deps/spdlog-build/libspdlog.a
 Editor/VestEditor: Editor/CMakeFiles/VestEditor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable VestEditor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/angel/Desktop/C++/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable VestEditor"
 	cd /Users/angel/Desktop/C++/build/Editor && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VestEditor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

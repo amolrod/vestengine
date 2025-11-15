@@ -38,4 +38,9 @@ void OpenGLRendererAPI::DrawIndexed(const Ref<VertexArray>& vertexArray, uint32_
     glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(count), GL_UNSIGNED_INT, nullptr);
 }
 
+void OpenGLRendererAPI::DrawLines(const Ref<VertexArray>& vertexArray, uint32_t vertexCount) {
+    vertexArray->Bind();
+    glDrawArrays(GL_LINES, 0, static_cast<GLsizei>(vertexCount));
+}
+
 }  // namespace Vest

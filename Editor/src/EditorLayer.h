@@ -33,6 +33,8 @@
 #include "Commands/TransformCommand.h"
 #include "Commands/EntityCommands.h"
 #include "Commands/MacroCommand.h"
+#include "Rendering/SelectionRenderer.h"
+#include "Rendering/GridRenderer.h"
 
 namespace Vest {
 
@@ -70,13 +72,18 @@ private:
 
     std::vector<SceneObject> m_SceneObjects;
     int m_SelectedEntityIndex = -1;
+    int m_HoveredEntityIndex = -1;
 
     EditorCamera m_EditorCamera;
+    SelectionRenderer m_SelectionRenderer;
+    GridRenderer m_GridRenderer;
     bool m_ViewportFocused = false;
     bool m_ViewportHovered = false;
     glm::vec2 m_LastMousePos = glm::vec2(0.0f);
     glm::vec2 m_SelectedOutline[4];
+    glm::vec2 m_HoveredOutline[4];
     bool m_DrawSelectionOutline = false;
+    bool m_DrawHoveredOutline = false;
     ImGuizmo::OPERATION m_GizmoOperation = ImGuizmo::TRANSLATE;
     ImGuizmo::MODE m_GizmoMode = ImGuizmo::WORLD;
     bool m_GizmoWasUsing = false;
@@ -88,6 +95,7 @@ private:
 
     void HandleViewportCameraControls();
     void HandleViewportPicking();
+    void HandleViewportHover();
     void HandleGizmos();
     void SaveScene(const std::string& filepath);
     void LoadScene(const std::string& filepath);
