@@ -138,7 +138,7 @@ Todas las dependencias se descargan automáticamente vía FetchContent:
 ### 1. Clonar el Repositorio
 
 ```bash
-git clone https://github.com/yourusername/VestEngine.git
+git clone https://github.com/amolrod/VestEngine.git
 cd VestEngine
 ```
 
