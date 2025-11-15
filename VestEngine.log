@@ -1,16 +1,12 @@
-[16:58:28] [info] VEST: VestEngine logging initialized
-[16:58:28] [info] VEST: VestEngine Application 'VestEditor' starting...
-[16:58:29] [info] VEST: Window created: VestEditor (1600x900)
-[16:58:29] [info] VEST: Initializing Render API: OpenGL
-[16:58:29] [info] VEST: OpenGL Renderer initializing...
-[16:58:29] [info] VEST: OpenGL Info:
-[16:58:29] [info] VEST:   Vendor: Apple
-[16:58:29] [info] VEST:   Renderer: Apple M1
-[16:58:29] [info] VEST:   Version: 4.1 Metal - 89.3
-[16:58:29] [info] VEST: Renderer initialized
-[16:58:39] [info] VEST: Serializing scene to: /Users/angel/Desktop/C++/assets/scenes/assets/scenes/Default.json
-[16:58:39] [info] VEST: Created backup: /Users/angel/Desktop/C++/assets/scenes/assets/scenes/Default.json.bak
-[16:58:39] [info] VEST: Scene serialized successfully: 2 objects
-[16:58:43] [info] VEST: Deserializing scene from: /Users/angel/Desktop/C++/assets/scenes/assets/scenes/Default.json
-[16:58:43] [info] VEST: Scene deserialized successfully: 2 objects
-[16:59:08] [info] VEST: VestEngine Application shutting down...
+[03:07:52] [info] VEST: VestEngine logging initialized
+[03:07:52] [info] VEST: VestEngine Application 'VestEditor' starting...
+[03:07:53] [info] VEST: Window created: VestEditor (1600x900)
+[03:07:53] [info] VEST: Initializing Render API: OpenGL
+[03:07:53] [info] VEST: OpenGL Renderer initializing...
+[03:07:53] [info] VEST: OpenGL Info:
+[03:07:53] [info] VEST:   Vendor: Apple
+[03:07:53] [info] VEST:   Renderer: Apple M1
+[03:07:53] [info] VEST:   Version: 4.1 Metal - 89.3
+[03:07:53] [info] VEST: Renderer initialized
+[03:07:53] [info] VEST: Content Browser initialized at: assets
+[03:08:03] [info] VEST: VestEngine Application shutting down...

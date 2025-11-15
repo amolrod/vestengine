@@ -21,7 +21,7 @@ EditorLayer::EditorLayer()
     : Layer("EditorLayer"),
       m_SceneHierarchyPanel("Scene Hierarchy"),
       m_PropertiesPanel("Properties"),
-      m_ContentBrowserPanel("Content Browser"),
+      m_ContentBrowserPanel("assets"),
       m_StatsPanel("Stats") {}
 
 void EditorLayer::OnAttach() {
@@ -30,6 +30,10 @@ void EditorLayer::OnAttach() {
     spec.height = 720;
     m_Framebuffer = Framebuffer::Create(spec);
     m_ViewportPanel.SetFramebuffer(m_Framebuffer);
+
+    // Initialize camera
+    float aspectRatio = static_cast<float>(spec.width) / static_cast<float>(spec.height);
+    m_EditorCamera = EditorCamera(aspectRatio, 1.5f);
 
     m_SceneHierarchyPanel.SetSceneContext(&m_SceneObjects, &m_SelectedEntityIndex);
     m_PropertiesPanel.SetSceneContext(&m_SceneObjects, &m_SelectedEntityIndex);
@@ -160,43 +164,41 @@ void main() {
         .textured = true,
         .mesh = SceneObject::MeshType::Quad});
     m_SelectedEntityIndex = 0;
+    
+    // Initialize grid renderer
+    m_GridRenderer.Init();
 }
 
 void EditorLayer::OnUpdate(Timestep ts) {
     m_FPS = ts.GetSeconds() > 0.0f ? 1.0f / ts.GetSeconds() : 0.0f;
     m_DrawCalls = 0;
 
+    // Update camera and selection renderer
     if (m_ViewportFocused) {
-        const float cameraSpeed = 2.0f;
-        if (Input::IsKeyPressed(GLFW_KEY_A)) {
-            m_CameraPosition.x -= cameraSpeed * ts.GetSeconds();
-        }
-        if (Input::IsKeyPressed(GLFW_KEY_D)) {
-            m_CameraPosition.x += cameraSpeed * ts.GetSeconds();
-        }
-        if (Input::IsKeyPressed(GLFW_KEY_W)) {
-            m_CameraPosition.y += cameraSpeed * ts.GetSeconds();
-        }
-        if (Input::IsKeyPressed(GLFW_KEY_S)) {
-            m_CameraPosition.y -= cameraSpeed * ts.GetSeconds();
-        }
+        m_EditorCamera.OnUpdate(ts);
     }
+    m_SelectionRenderer.Update(ts.GetSeconds());
 
     if (m_Framebuffer && m_ViewportSize.x > 0.0f && m_ViewportSize.y > 0.0f) {
         m_Framebuffer->Bind();
         RenderCommand::SetClearColor({0.1f, 0.1f, 0.1f, 1.0f});
         RenderCommand::Clear();
 
-        const float aspect = m_ViewportSize.x / m_ViewportSize.y;
-        const float orthoHeight = m_CameraZoom;
-        const float orthoWidth = orthoHeight * aspect;
-        glm::mat4 projection = glm::ortho(-orthoWidth, orthoWidth, -orthoHeight, orthoHeight, -1.0f, 10.0f);
-        glm::mat4 view = glm::translate(glm::mat4(1.0f), -m_CameraPosition);
-        m_ProjectionMatrix = projection;
-        m_ViewMatrix = view;
-        m_ViewProjectionMatrix = projection * view;
+        // Update camera aspect ratio if viewport changed
+        float aspect = m_ViewportSize.x / m_ViewportSize.y;
+        m_EditorCamera.SetAspectRatio(aspect);
 
-        Renderer::BeginScene(m_ViewProjectionMatrix);
+        // Render grid (only in Edit mode)
+        if (m_EditorState == EditorState::Edit) {
+            m_GridRenderer.RenderGrid(
+                m_EditorCamera.GetViewProjectionMatrix(),
+                m_EditorCamera.GetPosition(),
+                m_EditorCamera.GetZoom(),
+                m_ViewportSize
+            );
+        }
+
+        Renderer::BeginScene(m_EditorCamera.GetViewProjectionMatrix());
         for (const auto& object : m_SceneObjects) {
             glm::mat4 transform = CalculateTransform(object);
 
@@ -222,6 +224,7 @@ void EditorLayer::OnUpdate(Timestep ts) {
         }
         Renderer::EndScene();
 
+        // Calculate selection outline
         m_DrawSelectionOutline = false;
         if (m_SelectedEntityIndex >= 0 && m_SelectedEntityIndex < static_cast<int>(m_SceneObjects.size())) {
             const SceneObject& selected = m_SceneObjects[static_cast<size_t>(m_SelectedEntityIndex)];
@@ -233,13 +236,37 @@ void EditorLayer::OnUpdate(Timestep ts) {
                 outlineTransform * glm::vec4(0.5f, 0.5f, 0.0f, 1.0f),
                 outlineTransform * glm::vec4(-0.5f, 0.5f, 0.0f, 1.0f)};
 
+            glm::mat4 viewProjectionMatrix = m_EditorCamera.GetViewProjectionMatrix();
             for (int i = 0; i < 4; ++i) {
-                glm::vec4 clip = m_ViewProjectionMatrix * corners[i];
+                glm::vec4 clip = viewProjectionMatrix * corners[i];
                 glm::vec3 ndc = glm::vec3(clip) / clip.w;
                 m_SelectedOutline[i].x = (ndc.x * 0.5f + 0.5f) * m_ViewportSize.x;
                 m_SelectedOutline[i].y = (1.0f - (ndc.y * 0.5f + 0.5f)) * m_ViewportSize.y;
             }
             m_DrawSelectionOutline = true;
+        }
+
+        // Calculate hovered outline
+        m_DrawHoveredOutline = false;
+        if (m_HoveredEntityIndex >= 0 && m_HoveredEntityIndex < static_cast<int>(m_SceneObjects.size()) 
+            && m_HoveredEntityIndex != m_SelectedEntityIndex) {
+            const SceneObject& hovered = m_SceneObjects[static_cast<size_t>(m_HoveredEntityIndex)];
+            glm::mat4 outlineTransform = CalculateTransform(hovered) * glm::scale(glm::mat4(1.0f), glm::vec3(1.03f));
+
+            glm::vec4 corners[4] = {
+                outlineTransform * glm::vec4(-0.5f, -0.5f, 0.0f, 1.0f),
+                outlineTransform * glm::vec4(0.5f, -0.5f, 0.0f, 1.0f),
+                outlineTransform * glm::vec4(0.5f, 0.5f, 0.0f, 1.0f),
+                outlineTransform * glm::vec4(-0.5f, 0.5f, 0.0f, 1.0f)};
+
+            glm::mat4 viewProjectionMatrix = m_EditorCamera.GetViewProjectionMatrix();
+            for (int i = 0; i < 4; ++i) {
+                glm::vec4 clip = viewProjectionMatrix * corners[i];
+                glm::vec3 ndc = glm::vec3(clip) / clip.w;
+                m_HoveredOutline[i].x = (ndc.x * 0.5f + 0.5f) * m_ViewportSize.x;
+                m_HoveredOutline[i].y = (1.0f - (ndc.y * 0.5f + 0.5f)) * m_ViewportSize.y;
+            }
+            m_DrawHoveredOutline = true;
         }
 
         m_Framebuffer->Unbind();
@@ -291,12 +318,15 @@ void EditorLayer::OnImGuiRender() {
 
     if (ImGui::BeginMenuBar()) {
         if (ImGui::BeginMenu("File")) {
+            bool isEditing = m_EditorState == EditorState::Edit;
+            ImGui::BeginDisabled(!isEditing);
             if (ImGui::MenuItem("Save Scene", "Ctrl+S")) {
                 SaveScene("assets/scenes/Default.json");
             }
             if (ImGui::MenuItem("Load Scene", "Ctrl+L")) {
                 LoadScene("assets/scenes/Default.json");
             }
+            ImGui::EndDisabled();
             ImGui::Separator();
             if (ImGui::MenuItem("Exit")) {
                 dockspaceOpen = false;
@@ -327,10 +357,34 @@ void EditorLayer::OnImGuiRender() {
             ImGui::MenuItem("Scene Hierarchy", nullptr, true, true);
             ImGui::EndMenu();
         }
+        
+        // Editor state indicator on the right
+        ImGui::SetCursorPosX(ImGui::GetWindowWidth() - 150.0f);
+        const char* stateText = "";
+        ImVec4 stateColor;
+        switch (m_EditorState) {
+            case EditorState::Edit:
+                stateText = "EDIT MODE";
+                stateColor = ImVec4(0.4f, 0.4f, 0.4f, 1.0f);
+                break;
+            case EditorState::Play:
+                stateText = "PLAYING";
+                stateColor = ImVec4(0.2f, 0.8f, 0.2f, 1.0f);
+                break;
+            case EditorState::Paused:
+                stateText = "PAUSED";
+                stateColor = ImVec4(1.0f, 0.7f, 0.0f, 1.0f);
+                break;
+        }
+        ImGui::TextColored(stateColor, "%s", stateText);
+        
         ImGui::EndMenuBar();
     }
 
     ImGui::Begin("Toolbar", nullptr, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoScrollbar);
+    
+    bool isEditing = m_EditorState == EditorState::Edit;
+    ImGui::BeginDisabled(!isEditing);
     if (ImGui::RadioButton("Translate", m_GizmoOperation == ImGuizmo::TRANSLATE)) {
         m_GizmoOperation = ImGuizmo::TRANSLATE;
     }
@@ -342,9 +396,87 @@ void EditorLayer::OnImGuiRender() {
     if (ImGui::RadioButton("Scale", m_GizmoOperation == ImGuizmo::SCALE)) {
         m_GizmoOperation = ImGuizmo::SCALE;
     }
+    ImGui::EndDisabled();
+
+    ImGui::SameLine(0.0f, 30.0f);
+    ImGui::Separator();
+    ImGui::SameLine();
+    
+    // Grid controls (only in Edit mode)
+    ImGui::BeginDisabled(!isEditing);
+    bool gridEnabled = m_GridRenderer.GetGridSettings().enabled;
+    if (ImGui::Checkbox("Grid", &gridEnabled)) {
+        m_GridRenderer.GetGridSettings().enabled = gridEnabled;
+    }
+    
+    ImGui::SameLine();
+    bool snapEnabled = m_GridRenderer.GetSnapSettings().enabled;
+    if (ImGui::Checkbox("Snap", &snapEnabled)) {
+        m_GridRenderer.GetSnapSettings().enabled = snapEnabled;
+    }
+    ImGui::EndDisabled();
+    
+    if (snapEnabled && isEditing) {
+        ImGui::SameLine();
+        ImGui::SetNextItemWidth(80.0f);
+        float snapValue = m_GridRenderer.GetSnapSettings().gridSnap;
+        if (ImGui::DragFloat("##SnapSize", &snapValue, 0.05f, 0.1f, 10.0f, "%.2f")) {
+            m_GridRenderer.GetSnapSettings().gridSnap = snapValue;
+        }
+        if (ImGui::IsItemHovered()) {
+            ImGui::SetTooltip("Snap Grid Size");
+        }
+    }
 
     ImGui::SameLine(0.0f, 20.0f);
+    
+    // Play mode controls
+    ImGui::PushStyleColor(ImGuiCol_Button, m_EditorState == EditorState::Play ? 
+        ImVec4(0.2f, 0.7f, 0.2f, 1.0f) : ImVec4(0.26f, 0.59f, 0.98f, 0.40f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.2f, 0.8f, 0.2f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.1f, 0.6f, 0.1f, 1.0f));
+    
+    bool canPlay = m_EditorState == EditorState::Edit;
+    ImGui::BeginDisabled(!canPlay);
+    if (ImGui::Button("Play")) {
+        OnPlayButtonPressed();
+    }
+    ImGui::EndDisabled();
+    ImGui::PopStyleColor(3);
+    
+    ImGui::SameLine();
+    
+    ImGui::PushStyleColor(ImGuiCol_Button, m_EditorState == EditorState::Paused ? 
+        ImVec4(0.9f, 0.7f, 0.0f, 1.0f) : ImVec4(0.26f, 0.59f, 0.98f, 0.40f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(1.0f, 0.8f, 0.0f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.8f, 0.6f, 0.0f, 1.0f));
+    
+    bool canPause = m_EditorState == EditorState::Play;
+    ImGui::BeginDisabled(!canPause);
+    if (ImGui::Button("Pause")) {
+        OnPauseButtonPressed();
+    }
+    ImGui::EndDisabled();
+    ImGui::PopStyleColor(3);
+    
+    ImGui::SameLine();
+    
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.8f, 0.2f, 0.2f, 0.8f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.9f, 0.2f, 0.2f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.7f, 0.1f, 0.1f, 1.0f));
+    
+    bool canStop = m_EditorState != EditorState::Edit;
+    ImGui::BeginDisabled(!canStop);
+    if (ImGui::Button("Stop")) {
+        OnStopButtonPressed();
+    }
+    ImGui::EndDisabled();
+    ImGui::PopStyleColor(3);
+    
+    ImGui::SameLine(0.0f, 20.0f);
     bool hasSelection = m_SelectedEntityIndex >= 0;
+    
+    ImGui::BeginDisabled(!isEditing);
     if (ImGui::Button("Add")) {
         AddEntity();
     }
@@ -358,6 +490,7 @@ void EditorLayer::OnImGuiRender() {
         DeleteSelected();
     }
     ImGui::EndDisabled();
+    ImGui::EndDisabled();
 
     ImGui::End();
 
@@ -369,25 +502,36 @@ void EditorLayer::OnImGuiRender() {
     m_ViewportFocused = m_ViewportPanel.IsFocused();
     m_ViewportHovered = m_ViewportPanel.IsHovered();
     HandleViewportCameraControls();
-    HandleViewportPicking();
-    HandleGizmos();
+    
+    // Only allow editing in Edit mode
+    if (m_EditorState == EditorState::Edit) {
+        HandleViewportHover();
+        HandleViewportPicking();
+        HandleGizmos();
+    }
 
     m_SceneHierarchyPanel.OnImGuiRender();
     m_PropertiesPanel.OnImGuiRender();
     m_ContentBrowserPanel.OnImGuiRender();
     m_StatsPanel.OnImGuiRender();
 
-    if (m_DrawSelectionOutline) {
-        const glm::vec2* bounds = m_ViewportPanel.GetBounds();
-        if (bounds) {
-            ImDrawList* drawList = ImGui::GetForegroundDrawList();
-            for (int i = 0; i < 4; ++i) {
-                glm::vec2 offset1 = m_SelectedOutline[i];
-                glm::vec2 offset2 = m_SelectedOutline[(i + 1) % 4];
-                ImVec2 p1(bounds[0].x + offset1.x, bounds[0].y + offset1.y);
-                ImVec2 p2(bounds[0].x + offset2.x, bounds[0].y + offset2.y);
-                drawList->AddLine(p1, p2, IM_COL32(255, 255, 0, 255), 2.0f);
-            }
+    // Draw selection and hover highlights
+    const glm::vec2* bounds = m_ViewportPanel.GetBounds();
+    if (bounds) {
+        ImDrawList* drawList = ImGui::GetForegroundDrawList();
+        
+        // Draw hovered outline first (underneath)
+        if (m_DrawHoveredOutline) {
+            m_SelectionRenderer.DrawHighlight(drawList, m_HoveredOutline, bounds[0], SelectionState::Hovered);
+            m_SelectionRenderer.DrawOutline(drawList, m_HoveredOutline, bounds[0], SelectionState::Hovered);
+        }
+        
+        // Draw selected outline on top
+        if (m_DrawSelectionOutline) {
+            SelectionState state = (m_HoveredEntityIndex == m_SelectedEntityIndex && m_HoveredEntityIndex >= 0)
+                ? SelectionState::HoveredAndSelected
+                : SelectionState::Selected;
+            m_SelectionRenderer.DrawOutline(drawList, m_SelectedOutline, bounds[0], state);
         }
     }
 
@@ -402,20 +546,20 @@ void EditorLayer::HandleViewportCameraControls() {
     }
 
     ImGuiIO& io = ImGui::GetIO();
+    
+    // Mouse wheel zoom
     if (io.MouseWheel != 0.0f) {
-        m_CameraZoom -= io.MouseWheel * 0.2f;
-        m_CameraZoom = std::clamp(m_CameraZoom, 0.5f, 5.0f);
+        m_EditorCamera.OnMouseScroll(io.MouseWheel);
     }
 
+    // Pan with middle or right mouse button
     const bool panWithMiddle = ImGui::IsMouseDown(ImGuiMouseButton_Middle);
     const bool panWithRight = ImGui::IsMouseDown(ImGuiMouseButton_Right);
     if (panWithMiddle || panWithRight) {
         ImVec2 mousePosIm = ImGui::GetMousePos();
         glm::vec2 mousePos = {mousePosIm.x, mousePosIm.y};
         glm::vec2 delta = mousePos - m_LastMousePos;
-        const float panSpeed = 0.002f * m_CameraZoom;
-        m_CameraPosition.x -= delta.x * panSpeed;
-        m_CameraPosition.y += delta.y * panSpeed;
+        m_EditorCamera.Pan(delta);
         m_LastMousePos = mousePos;
     } else {
         ImVec2 mousePosIm = ImGui::GetMousePos();
@@ -434,6 +578,39 @@ static bool PointInEntity(const glm::vec2& point, const SceneObject& object) {
     return local.x >= -0.5f && local.x <= 0.5f && local.y >= -0.5f && local.y <= 0.5f;
 }
 
+void EditorLayer::HandleViewportHover() {
+    m_HoveredEntityIndex = -1;
+    
+    if (!m_ViewportHovered || ImGuizmo::IsOver()) {
+        return;
+    }
+
+    const glm::vec2* bounds = m_ViewportPanel.GetBounds();
+    if (!bounds) {
+        return;
+    }
+
+    ImVec2 mouseIm = ImGui::GetMousePos();
+    glm::vec2 mouse = {mouseIm.x, mouseIm.y};
+    if (mouse.x < bounds[0].x || mouse.y < bounds[0].y || mouse.x > bounds[1].x || mouse.y > bounds[1].y) {
+        return;
+    }
+
+    // Convert screen to viewport coordinates
+    glm::vec2 viewportPoint = mouse - bounds[0];
+    
+    // Use EditorCamera to convert to world space
+    glm::vec2 worldPoint = m_EditorCamera.ScreenToWorld(viewportPoint, m_ViewportSize);
+
+    // Check entities from front to back
+    for (int i = static_cast<int>(m_SceneObjects.size()) - 1; i >= 0; --i) {
+        if (PointInEntity(worldPoint, m_SceneObjects[static_cast<size_t>(i)])) {
+            m_HoveredEntityIndex = i;
+            return;
+        }
+    }
+}
+
 void EditorLayer::HandleViewportPicking() {
     if (!m_ViewportHovered || !ImGui::IsMouseClicked(ImGuiMouseButton_Left) || ImGuizmo::IsUsing()) {
         return;
@@ -450,20 +627,15 @@ void EditorLayer::HandleViewportPicking() {
         return;
     }
 
+    // Convert screen to viewport coordinates
     glm::vec2 viewportPoint = mouse - bounds[0];
-    glm::vec2 ndc;
-    ndc.x = (viewportPoint.x / m_ViewportSize.x) * 2.0f - 1.0f;
-    ndc.y = 1.0f - (viewportPoint.y / m_ViewportSize.y) * 2.0f;
+    
+    // Use EditorCamera to convert to world space
+    glm::vec2 worldPoint = m_EditorCamera.ScreenToWorld(viewportPoint, m_ViewportSize);
 
-    glm::vec4 clip = {ndc.x, ndc.y, 0.0f, 1.0f};
-    glm::vec4 world = glm::inverse(m_ViewProjectionMatrix) * clip;
-    if (world.w != 0.0f) {
-        world /= world.w;
-    }
-
-    glm::vec2 point = {world.x, world.y};
+    // Check entities from front to back
     for (int i = static_cast<int>(m_SceneObjects.size()) - 1; i >= 0; --i) {
-        if (PointInEntity(point, m_SceneObjects[static_cast<size_t>(i)])) {
+        if (PointInEntity(worldPoint, m_SceneObjects[static_cast<size_t>(i)])) {
             m_SelectedEntityIndex = i;
             return;
         }
@@ -563,7 +735,20 @@ void EditorLayer::HandleGizmos() {
     SceneObject& object = m_SceneObjects[static_cast<size_t>(m_SelectedEntityIndex)];
     glm::mat4 transform = CalculateTransform(object);
 
-    ImGuizmo::Manipulate(glm::value_ptr(m_ViewMatrix), glm::value_ptr(m_ProjectionMatrix), m_GizmoOperation, m_GizmoMode, glm::value_ptr(transform));
+    glm::mat4 viewMatrix = m_EditorCamera.GetViewMatrix();
+    glm::mat4 projectionMatrix = m_EditorCamera.GetProjectionMatrix();
+
+    // Enable snapping if needed
+    float snapValue = 0.0f;
+    float* snapPtr = nullptr;
+    if (m_GridRenderer.ShouldSnap()) {
+        snapValue = m_GridRenderer.GetSnapSettings().gridSnap;
+        snapPtr = &snapValue;
+    }
+
+    ImGuizmo::Manipulate(glm::value_ptr(viewMatrix), glm::value_ptr(projectionMatrix), 
+                        m_GizmoOperation, m_GizmoMode, glm::value_ptr(transform), 
+                        nullptr, snapPtr);
 
     if (ImGuizmo::IsUsing()) {
         if (!m_GizmoWasUsing) {
@@ -620,6 +805,55 @@ void EditorLayer::DecomposeTransform(const glm::mat4& transform, glm::vec3& tran
     glm::quat orientation;
     glm::decompose(transform, scale, orientation, translation, skew, perspective);
     rotation = glm::degrees(glm::eulerAngles(orientation));
+}
+
+void EditorLayer::OnPlayButtonPressed() {
+    if (m_EditorState != EditorState::Edit) {
+        return;
+    }
+    
+    VEST_CORE_INFO("Entering Play Mode");
+    
+    // Backup current scene state
+    m_SceneBackup = m_SceneObjects;
+    
+    // Clear undo history (changes in play mode won't be saved)
+    m_CommandManager.Clear();
+    
+    // Change state
+    m_EditorState = EditorState::Play;
+}
+
+void EditorLayer::OnPauseButtonPressed() {
+    if (m_EditorState != EditorState::Play) {
+        return;
+    }
+    
+    VEST_CORE_INFO("Pausing Play Mode");
+    m_EditorState = EditorState::Paused;
+}
+
+void EditorLayer::OnStopButtonPressed() {
+    if (m_EditorState == EditorState::Edit) {
+        return;
+    }
+    
+    VEST_CORE_INFO("Stopping Play Mode - Restoring scene state");
+    
+    // Restore scene from backup
+    m_SceneObjects = m_SceneBackup;
+    m_SceneBackup.clear();
+    
+    // Restore selection if still valid
+    if (m_SelectedEntityIndex >= static_cast<int>(m_SceneObjects.size())) {
+        m_SelectedEntityIndex = m_SceneObjects.empty() ? -1 : static_cast<int>(m_SceneObjects.size()) - 1;
+    }
+    
+    // Clear undo history
+    m_CommandManager.Clear();
+    
+    // Return to edit mode
+    m_EditorState = EditorState::Edit;
 }
 
 }  // namespace Vest

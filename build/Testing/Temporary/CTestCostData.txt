@@ -1,0 +1,58 @@
+LogTests.LoggerInitialization 0 0
+LogTests.CoreLoggerOutput 1 0.00657108
+LogTests.ClientLoggerOutput 1 0.00509113
+LogTests.LogFileCreation 0 0
+LogTests.FormattedLogging 1 0.00598588
+LogTests.TraceLogging 1 0.0055675
+SceneSerializerTests.SerializeEmptyScene 0 0
+SceneSerializerTests.SerializeValidScene 0 0
+SceneSerializerTests.DeserializeEmptyScene 0 0
+SceneSerializerTests.DeserializeValidScene 0 0
+SceneSerializerTests.PreserveObjectProperties 0 0
+SceneSerializerTests.BackupCreation 0 0
+SceneSerializerTests.InvalidFilePath 0 0
+SceneSerializerTests.DeserializeNonexistentFile 0 0
+SceneSerializerTests.DeserializeCorruptedJSON 0 0
+SceneSerializerTests.VersionCheck 0 0
+SceneSerializerTests.RoundTripConsistency 0 0
+CommandTests.TransformCommandPosition 1 0.003755
+CommandTests.TransformCommandRotation 1 0.00364804
+CommandTests.TransformCommandScale 1 0.00411271
+CommandTests.TransformCommandMerge 1 0.0042105
+CommandTests.TransformCommandNoMergeDifferentTypes 1 0.00391425
+CommandTests.CreateEntityCommand 1 0.00363583
+CommandTests.DeleteEntityCommand 1 0.00476592
+CommandTests.DeleteEntityCommandInvalidIndex 1 0.00410258
+CommandTests.ModifyColorCommand 1 0.00395492
+CommandTests.CommandManagerExecute 0 0
+CommandTests.CommandManagerUndoRedo 0 0
+CommandTests.CommandManagerMultipleCommands 0 0
+CommandTests.CommandManagerClearHistory 0 0
+CommandTests.CommandManagerHistoryLimit 0 0
+CommandTests.CommandManagerRedoClearedAfterNewCommand 0 0
+CommandTests.CommandManagerRegisterExecuted 0 0
+CommandTests.MacroCommandExecution 1 0.00353746
+CommandTests.MacroCommandUndo 1 0.00447713
+CommandTests.MacroCommandEmpty 1 0.00370067
+CommandTests.MacroCommandCount 1 0.00378321
+---
+LogTests.LoggerInitialization
+LogTests.LogFileCreation
+SceneSerializerTests.SerializeEmptyScene
+SceneSerializerTests.SerializeValidScene
+SceneSerializerTests.DeserializeEmptyScene
+SceneSerializerTests.DeserializeValidScene
+SceneSerializerTests.PreserveObjectProperties
+SceneSerializerTests.BackupCreation
+SceneSerializerTests.InvalidFilePath
+SceneSerializerTests.DeserializeNonexistentFile
+SceneSerializerTests.DeserializeCorruptedJSON
+SceneSerializerTests.VersionCheck
+SceneSerializerTests.RoundTripConsistency
+CommandTests.CommandManagerExecute
+CommandTests.CommandManagerUndoRedo
+CommandTests.CommandManagerMultipleCommands
+CommandTests.CommandManagerClearHistory
+CommandTests.CommandManagerHistoryLimit
+CommandTests.CommandManagerRedoClearedAfterNewCommand
+CommandTests.CommandManagerRegisterExecuted

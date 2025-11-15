@@ -28,12 +28,21 @@
 #include "Panels/ViewportPanel.h"
 #include <Scene/SceneObject.h>
 
+#include "EditorCamera.h"
 #include "Commands/CommandManager.h"
 #include "Commands/TransformCommand.h"
 #include "Commands/EntityCommands.h"
 #include "Commands/MacroCommand.h"
+#include "Rendering/SelectionRenderer.h"
+#include "Rendering/GridRenderer.h"
 
 namespace Vest {
+
+enum class EditorState {
+    Edit,
+    Play,
+    Paused
+};
 
 class EditorLayer : public Layer {
 public:
@@ -69,17 +78,18 @@ private:
 
     std::vector<SceneObject> m_SceneObjects;
     int m_SelectedEntityIndex = -1;
+    int m_HoveredEntityIndex = -1;
 
-    glm::vec3 m_CameraPosition = glm::vec3(0.0f, 0.0f, 1.0f);
-    float m_CameraZoom = 1.5f;
+    EditorCamera m_EditorCamera;
+    SelectionRenderer m_SelectionRenderer;
+    GridRenderer m_GridRenderer;
     bool m_ViewportFocused = false;
     bool m_ViewportHovered = false;
     glm::vec2 m_LastMousePos = glm::vec2(0.0f);
-    glm::mat4 m_ViewProjectionMatrix = glm::mat4(1.0f);
-    glm::mat4 m_ViewMatrix = glm::mat4(1.0f);
-    glm::mat4 m_ProjectionMatrix = glm::mat4(1.0f);
     glm::vec2 m_SelectedOutline[4];
+    glm::vec2 m_HoveredOutline[4];
     bool m_DrawSelectionOutline = false;
+    bool m_DrawHoveredOutline = false;
     ImGuizmo::OPERATION m_GizmoOperation = ImGuizmo::TRANSLATE;
     ImGuizmo::MODE m_GizmoMode = ImGuizmo::WORLD;
     bool m_GizmoWasUsing = false;
@@ -88,15 +98,23 @@ private:
     glm::vec3 m_GizmoOldScale;
 
     CommandManager m_CommandManager;
+    
+    // Play mode state
+    EditorState m_EditorState = EditorState::Edit;
+    std::vector<SceneObject> m_SceneBackup;
 
     void HandleViewportCameraControls();
     void HandleViewportPicking();
+    void HandleViewportHover();
     void HandleGizmos();
     void SaveScene(const std::string& filepath);
     void LoadScene(const std::string& filepath);
     void AddEntity();
     void DeleteSelected();
     void DuplicateSelected();
+    void OnPlayButtonPressed();
+    void OnPauseButtonPressed();
+    void OnStopButtonPressed();
     glm::mat4 CalculateTransform(const SceneObject& object) const;
     void DecomposeTransform(const glm::mat4& transform, glm::vec3& translation, glm::vec3& rotation, glm::vec3& scale);
 };

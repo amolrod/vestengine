@@ -29,4 +29,9 @@ void VulkanRendererAPI::DrawIndexed(const Ref<VertexArray>&, uint32_t) {
     assert(false && "Vulkan renderer API not implemented");
 }
 
+void VulkanRendererAPI::DrawLines(const Ref<VertexArray>&, uint32_t) {
+    VEST_CORE_ERROR("Vulkan renderer API not implemented - DrawLines() called");
+    assert(false && "Vulkan renderer API not implemented");
+}
+
 }  // namespace Vest

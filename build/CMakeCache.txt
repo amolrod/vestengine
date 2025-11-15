@@ -14,6 +14,9 @@
 # EXTERNAL cache entries
 ########################
 
+//Builds the googlemock subproject
+BUILD_GMOCK:BOOL=ON
+
 //Build shared libraries
 BUILD_SHARED_LIBS:BOOL=OFF
 
@@ -303,6 +306,10 @@ FETCHCONTENT_SOURCE_DIR_GLFW:PATH=
 FETCHCONTENT_SOURCE_DIR_GLM:PATH=
 
 //When not empty, overrides where to find pre-populated content
+// for googletest
+FETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=
+
+//When not empty, overrides where to find pre-populated content
 // for imgui
 FETCHCONTENT_SOURCE_DIR_IMGUI:PATH=
 
@@ -322,6 +329,9 @@ FETCHCONTENT_UPDATES_DISCONNECTED_GLFW:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of glm
 FETCHCONTENT_UPDATES_DISCONNECTED_GLM:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of googletest
+FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of imgui
 FETCHCONTENT_UPDATES_DISCONNECTED_IMGUI:BOOL=OFF
@@ -419,6 +429,14 @@ GLM_ENABLE_SIMD_SSSE3:BOOL=OFF
 
 //Force 'pure' instructions
 GLM_FORCE_PURE:BOOL=OFF
+
+//Use Abseil and RE2. Requires Abseil and RE2 to be separately
+// added to the build.
+GTEST_HAS_ABSL:BOOL=OFF
+
+//Enable installation of googletest. (Projects embedding googletest
+// may want to turn this OFF.)
+INSTALL_GTEST:BOOL=ON
 
 //Build the unit tests when BUILD_TESTING is enabled.
 JSON_BuildTests:BOOL=OFF
@@ -538,6 +556,9 @@ VEST_BUILD_EDITOR:BOOL=ON
 //Build examples
 VEST_BUILD_EXAMPLES:BOOL=OFF
 
+//Build unit tests
+VEST_BUILD_TESTS:BOOL=ON
+
 //Enable scene serialization
 VEST_ENABLE_SERIALIZATION:BOOL=ON
 
@@ -561,6 +582,52 @@ glm_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 glm_SOURCE_DIR:STATIC=/Users/angel/Desktop/C++/build/_deps/glm-src
+
+//Value Computed by CMake
+gmock_BINARY_DIR:STATIC=/Users/angel/Desktop/C++/build/_deps/googletest-build/googlemock
+
+//Value Computed by CMake
+gmock_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+gmock_SOURCE_DIR:STATIC=/Users/angel/Desktop/C++/build/_deps/googletest-src/googlemock
+
+//Build all of Google Mock's own tests.
+gmock_build_tests:BOOL=OFF
+
+//Value Computed by CMake
+googletest-distribution_BINARY_DIR:STATIC=/Users/angel/Desktop/C++/build/_deps/googletest-build
+
+//Value Computed by CMake
+googletest-distribution_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+googletest-distribution_SOURCE_DIR:STATIC=/Users/angel/Desktop/C++/build/_deps/googletest-src
+
+//Value Computed by CMake
+gtest_BINARY_DIR:STATIC=/Users/angel/Desktop/C++/build/_deps/googletest-build/googletest
+
+//Value Computed by CMake
+gtest_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+gtest_SOURCE_DIR:STATIC=/Users/angel/Desktop/C++/build/_deps/googletest-src/googletest
+
+//Build gtest's sample programs.
+gtest_build_samples:BOOL=OFF
+
+//Build all of gtest's own tests.
+gtest_build_tests:BOOL=OFF
+
+//Disable uses of pthreads in gtest.
+gtest_disable_pthreads:BOOL=OFF
+
+//Use shared (DLL) run-time lib even when Google Test is built
+// as static lib.
+gtest_force_shared_crt:BOOL=ON
+
+//Build gtest with internal symbols hidden in shared libraries.
+gtest_hide_internal_symbols:BOOL=OFF
 
 //Value Computed by CMake
 nlohmann_json_BINARY_DIR:STATIC=/Users/angel/Desktop/C++/build/_deps/nlohmann_json-build
@@ -715,7 +782,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=10
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -762,6 +829,8 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DOXYGEN_EXECUTABLE
 DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
+//Details about finding Python3
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13][found components: Interpreter ][v3.13.0()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
@@ -775,4 +844,30 @@ NLOHMANN_JSON_CONFIG_INSTALL_DIR:INTERNAL=share/cmake/nlohmann_json
 VEST_RENDERER_API-STRINGS:INTERNAL=OpenGL;Vulkan
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Compiler reason failure
+_Python3_Compiler_REASON_FAILURE:INTERNAL=
+//Development reason failure
+_Python3_Development_REASON_FAILURE:INTERNAL=
+//Path to a program.
+_Python3_EXECUTABLE:INTERNAL=/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13
+//Python3 Properties
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;0;64;32;<none>;cpython-313-darwin;abi3;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=9e6912d89a4d0d3afbdf9e7744974145
+//NumPy reason failure
+_Python3_NumPy_REASON_FAILURE:INTERNAL=
+cmake_package_name:INTERNAL=GTest
+generated_dir:INTERNAL=/Users/angel/Desktop/C++/build/_deps/googletest-build/googletest/generated
+//ADVANCED property for variable: gmock_build_tests
+gmock_build_tests-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_build_samples
+gtest_build_samples-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_build_tests
+gtest_build_tests-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_disable_pthreads
+gtest_disable_pthreads-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_force_shared_crt
+gtest_force_shared_crt-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_hide_internal_symbols
+gtest_hide_internal_symbols-ADVANCED:INTERNAL=1
+targets_export_name:INTERNAL=GTestTargets
 
