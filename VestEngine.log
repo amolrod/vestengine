@@ -1,28 +1,12 @@
-[01:56:18] [info] VEST: VestEngine logging initialized
-[01:56:18] [info] VEST: VestEngine Application 'VestEditor' starting...
-[01:56:19] [info] VEST: Window created: VestEditor (1600x900)
-[01:56:19] [info] VEST: Initializing Render API: OpenGL
-[01:56:19] [info] VEST: OpenGL Renderer initializing...
-[01:56:19] [info] VEST: OpenGL Info:
-[01:56:19] [info] VEST:   Vendor: Apple
-[01:56:19] [info] VEST:   Renderer: Apple M1
-[01:56:19] [info] VEST:   Version: 4.1 Metal - 89.3
-[01:56:19] [info] VEST: Renderer initialized
-[01:56:19] [info] VEST: Content Browser initialized at: assets
-[01:56:31] [trace] VEST: Navigated to: assets/textures
-[01:56:32] [info] VEST: Opening asset: assets/textures/Checkerboard.png
-[01:56:35] [info] VEST: Opening asset: assets/textures/Checkerboard.png
-[01:56:36] [trace] VEST: Navigated to: assets/scenes
-[01:56:36] [trace] VEST: Navigated to: assets/scenes/assets
-[01:56:37] [trace] VEST: Navigated to: assets/scenes/assets/scenes
-[01:56:37] [trace] VEST: Navigated to: assets/scenes/assets/scenes
-[01:56:39] [info] VEST: Opening asset: assets/scenes/assets/scenes/Default.json.bak
-[01:56:40] [trace] VEST: Navigated to: assets/textures
-[01:56:41] [info] VEST: Opening asset: assets/textures/White.png
-[01:56:41] [info] VEST: Opening asset: assets/textures/Checkerboard.png
-[01:57:00] [trace] VEST: Executed command: Create Entity: Entity 2
-[01:57:04] [info] VEST: Opening asset: assets/textures/White.png
-[01:57:05] [trace] VEST: Executed command: Delete Entity: Entity 2
-[01:57:07] [trace] VEST: Executed command: Delete Entity: Triangle
-[01:57:07] [trace] VEST: Executed command: Create Entity: Entity 1
-[01:58:00] [info] VEST: VestEngine Application shutting down...
+[03:07:52] [info] VEST: VestEngine logging initialized
+[03:07:52] [info] VEST: VestEngine Application 'VestEditor' starting...
+[03:07:53] [info] VEST: Window created: VestEditor (1600x900)
+[03:07:53] [info] VEST: Initializing Render API: OpenGL
+[03:07:53] [info] VEST: OpenGL Renderer initializing...
+[03:07:53] [info] VEST: OpenGL Info:
+[03:07:53] [info] VEST:   Vendor: Apple
+[03:07:53] [info] VEST:   Renderer: Apple M1
+[03:07:53] [info] VEST:   Version: 4.1 Metal - 89.3
+[03:07:53] [info] VEST: Renderer initialized
+[03:07:53] [info] VEST: Content Browser initialized at: assets
+[03:08:03] [info] VEST: VestEngine Application shutting down...

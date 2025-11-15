@@ -38,6 +38,12 @@
 
 namespace Vest {
 
+enum class EditorState {
+    Edit,
+    Play,
+    Paused
+};
+
 class EditorLayer : public Layer {
 public:
     EditorLayer();
@@ -92,6 +98,10 @@ private:
     glm::vec3 m_GizmoOldScale;
 
     CommandManager m_CommandManager;
+    
+    // Play mode state
+    EditorState m_EditorState = EditorState::Edit;
+    std::vector<SceneObject> m_SceneBackup;
 
     void HandleViewportCameraControls();
     void HandleViewportPicking();
@@ -102,6 +112,9 @@ private:
     void AddEntity();
     void DeleteSelected();
     void DuplicateSelected();
+    void OnPlayButtonPressed();
+    void OnPauseButtonPressed();
+    void OnStopButtonPressed();
     glm::mat4 CalculateTransform(const SceneObject& object) const;
     void DecomposeTransform(const glm::mat4& transform, glm::vec3& translation, glm::vec3& rotation, glm::vec3& scale);
 };
