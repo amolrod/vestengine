@@ -48,6 +48,11 @@ void WindowsWindow::Init(const WindowProps& props) {
     m_Window = glfwCreateWindow(static_cast<int>(props.width), static_cast<int>(props.height), m_Data.title.c_str(), nullptr, nullptr);
     assert(m_Window && "Failed to create window");
 
+#if defined(__APPLE__)
+    glfwShowWindow(m_Window);
+    glfwFocusWindow(m_Window);
+#endif
+
     m_Context = CreateScope<OpenGLContext>(m_Window);
     m_Context->Init();
 

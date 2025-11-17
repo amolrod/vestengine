@@ -17,4 +17,8 @@ target_include_directories(VestEditor PRIVATE
     ${CMAKE_SOURCE_DIR}/external/imguizmo
 )
 
+target_compile_definitions(VestEditor PRIVATE
+    VEST_ASSET_DIR="${CMAKE_SOURCE_DIR}/assets"
+)
+
 target_link_libraries(VestEditor PRIVATE VestEngine)

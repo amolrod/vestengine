@@ -42,6 +42,7 @@ Application::~Application() {
 }
 
 void Application::Run() {
+    VEST_CORE_INFO("Entering main loop...");
     auto lastTime = std::chrono::steady_clock::now();
 
     while (m_Running) {

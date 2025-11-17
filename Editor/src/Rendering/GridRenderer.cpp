@@ -62,32 +62,42 @@ float GridRenderer::CalculateAdaptiveSpacing(float cameraZoom, const glm::vec2& 
         return m_GridSettings.spacing;
     }
     
+    // Sanity checks
+    if (cameraZoom <= 0.0f || viewportSize.y <= 0.0f) {
+        return m_GridSettings.spacing;
+    }
+    
     // Calculate pixels per world unit
     float pixelsPerUnit = (viewportSize.y * 0.5f) / cameraZoom;
     
-    // Current spacing in pixels
-    float currentPixelSpacing = m_GridSettings.spacing * pixelsPerUnit;
-    
-    // If too dense, increase spacing
-    while (currentPixelSpacing < m_GridSettings.minSpacingPixels && m_GridSettings.spacing < 100.0f) {
-        float newSpacing = m_GridSettings.spacing * 2.0f;
-        currentPixelSpacing = newSpacing * pixelsPerUnit;
-        if (currentPixelSpacing >= m_GridSettings.minSpacingPixels) {
-            return newSpacing;
-        }
+    // If pixelsPerUnit is too small, just return default spacing
+    if (pixelsPerUnit < 0.001f) {
+        return m_GridSettings.spacing;
     }
     
-    // If too sparse, decrease spacing
-    while (currentPixelSpacing > m_GridSettings.maxSpacingPixels && m_GridSettings.spacing > 0.1f) {
-        float newSpacing = m_GridSettings.spacing * 0.5f;
-        currentPixelSpacing = newSpacing * pixelsPerUnit;
-        if (currentPixelSpacing <= m_GridSettings.maxSpacingPixels) {
-            return newSpacing;
-        }
+    float spacing = m_GridSettings.spacing;
+    float currentPixelSpacing = spacing * pixelsPerUnit;
+    
+    // If too dense, increase spacing (with iteration limit)
+    int iterations = 0;
+    const int maxIterations = 20;
+    while (currentPixelSpacing < m_GridSettings.minSpacingPixels && spacing < 100.0f && iterations < maxIterations) {
+        spacing *= 2.0f;
+        currentPixelSpacing = spacing * pixelsPerUnit;
+        iterations++;
     }
     
-    return m_GridSettings.spacing;
+    // If too sparse, decrease spacing (with iteration limit)
+    iterations = 0;
+    while (currentPixelSpacing > m_GridSettings.maxSpacingPixels && spacing > 0.1f && iterations < maxIterations) {
+        spacing *= 0.5f;
+        currentPixelSpacing = spacing * pixelsPerUnit;
+        iterations++;
+    }
+    
+    return spacing;
 }
+
 
 void GridRenderer::UpdateGridGeometry(const glm::vec3& cameraPosition,
                                        float visibleWidth,
